@@ -1,10 +1,12 @@
 .nav {
+  position: fixed;
   display: flex;
   align-items: center;
   margin: 40px 5.55%;
   margin-bottom: 80px;
   justify-content: space-between;
   gap: 35%;
+  z-index: 2;
 }
 .nav .company-name {
   height: 24px;
@@ -19,6 +21,43 @@
 .nav li {
   font-size: 18px;
   padding: 17.5px 32px;
+}
+
+.hero {
+  position: relative;
+  padding: 177px 5.55% 120px;
+  background-color: rgba(128, 128, 128, 0.079);
+}
+.hero__title {
+  font-size: 64px;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 2px #1C1C1C;
+  font-family: sans-serif;
+  margin-bottom: 32px;
+}
+.hero__main {
+  display: flex;
+}
+.hero__main .hero-swiper {
+  margin-right: 2.22%;
+}
+.hero__main .description__title {
+  font-size: 64px;
+  font-family: sans-serif;
+  margin-bottom: 40px;
+}
+.hero__main .description__button {
+  display: flex;
+  gap: 12px;
+  padding: 16px 32px;
+  align-items: center;
+  border: 3px solid #F13414;
+  color: #F13414;
+  font-weight: 600;
+}
+.hero__main .description__button .arrow {
+  margin-top: -3px;
 }
 
 html, * {

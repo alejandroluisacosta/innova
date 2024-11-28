@@ -1,0 +1,38 @@
+.hero {
+    position: relative;
+    padding: 177px 5.55% 120px;
+    background-color: rgba(128, 128, 128, 0.079);
+    &__title {
+        font-size: 64px;
+        font-weight: 700;
+        color: transparent;
+        -webkit-text-stroke: 2px #1C1C1C;
+        font-family: sans-serif;
+        margin-bottom: 32px;
+    }
+    &__main {
+        display: flex;
+        .hero-swiper {
+            margin-right: 2.22%;
+        }
+        .description {
+            &__title {
+                font-size: 64px;
+                font-family: sans-serif;
+                margin-bottom: 40px;
+            }
+            &__button {
+                display: flex;
+                gap: 12px;
+                padding: 16px 32px;
+                align-items: center;
+                border: 3px solid #F13414;
+                color: #F13414;
+                font-weight: 600;
+                .arrow {
+                    margin-top: -3px;
+                }
+            }
+        }
+    }
+}
