@@ -1,0 +1,61 @@
+// HTML
+<div class="text-container">
+  <span id="animated-text"></span>
+</div>
+
+// CSS
+.text-container {
+  font-size: 2em; /* Adjust size as needed */
+  font-family: Arial, sans-serif; /* Choose your preferred font */
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid black; /* Cursor effect */
+  width: 12ch; /* Adjust to fit the longest word */
+  animation: caret-blink 0.7s infinite;
+}
+
+@keyframes caret-blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+//JS
+const words = ["WORK-", "LIVING", "SPACES"];
+let currentWordIndex = 0;
+let currentCharIndex = 0;
+let isDeleting = false;
+const typingSpeed = 150; // Time in ms between each character
+const erasingSpeed = 100; // Time in ms between each character being erased
+const delayBetweenWords = 1000; // Time in ms to wait before starting to erase
+
+function type() {
+  const textElement = document.getElementById("animated-text");
+  const currentWord = words[currentWordIndex];
+
+  if (isDeleting) {
+    textElement.textContent = currentWord.substring(0, currentCharIndex - 1);
+    currentCharIndex--;
+    if (currentCharIndex === 0) {
+      isDeleting = false;
+      currentWordIndex = (currentWordIndex + 1) % words.length;
+      setTimeout(type, 500); // Pause before typing the next word
+    } else {
+      setTimeout(type, erasingSpeed);
+    }
+  } else {
+    textElement.textContent = currentWord.substring(0, currentCharIndex + 1);
+    currentCharIndex++;
+    if (currentCharIndex === currentWord.length) {
+      isDeleting = true;
+      setTimeout(type, delayBetweenWords);
+    } else {
+      setTimeout(type, typingSpeed);
+    }
+  }
+}
+
+// Start the typing effect
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(type, 500);
+});
