@@ -19,12 +19,34 @@
     <div class="hero">
         <h2 class="hero__title">EXPERTOS EN</h2>
         <div class="hero__main">
-            <div class="hero-swiper swiper">
-                <img src="./assets/image1.png" alt="Obreros en construcción" />
+            <div class="swiper hero-swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img class="hero__image" src="./assets/image1.png" alt="Constructores en obra" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="hero__image" src="./assets/image1.png" alt="Constructores en obra" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="hero__image" src="./assets/image1.png" alt="Constructores en obra" />
+                    </div>
+                </div>
+                
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
             </div>
             <div class="description">
-                <h1>PROYECTOS DE INGENIERIA Y CONSTRUCCION</h1>
-                <button class="button">CONTACTO</button>
+                <h1 class="description__title">PROYECTOS DE INGENIERIA Y CONSTRUCCION</h1>
+                <button class="description__button">
+                    CONTACTO
+                    <img class="arrow" src="./assets/Arrow1.svg" alt="Arrow icon" />
+                </button>
             </div>
         </div>
         <div class="hero__facts">
@@ -42,5 +64,28 @@
             </div>
         </div>
     </div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.js"></script>
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+      
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            slidesPerView: 'auto',
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+            });
+      </script>
 </body>
 </html>
