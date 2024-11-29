@@ -97,6 +97,31 @@
 .hero__facts .fact__number {
   font-size: 64px;
 }
+.hero__learn-more {
+  position: absolute;
+  bottom: 120px;
+  left: 5.55%;
+}
+.hero__learn-more .relative-container {
+  position: relative;
+}
+.hero__learn-more .text {
+  animation: rotate 20s linear infinite;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.hero__learn-more .arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+}
 
 html, * {
   box-sizing: border-box;
