@@ -4,7 +4,7 @@
 </div>
 
 // CSS
-.text-container {
+.description-title {
   font-size: 2em; /* Adjust size as needed */
   font-family: sans-serif; /* Choose your preferred font */
   white-space: nowrap;
