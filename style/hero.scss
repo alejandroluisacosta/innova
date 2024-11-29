@@ -14,9 +14,29 @@
         margin-bottom: 55px;
         .hero-swiper {
             margin-right: 2.22%;
+            max-width: 560px;
             .swiper-slide {
                 margin-right: 5%;
                 flex-grow: 1;
+            }
+            .swiper-scrollbar {
+                width: 40%;
+                position: absolute;
+                bottom: 22px;
+                left: 50%;
+                transform: translateX(-28%);
+            }
+            .swiper-button-prev,
+            .swiper-button-next {
+                position: absolute;
+                top: unset;
+                bottom: 0;
+            }
+            .swiper-button-prev {
+                left: 120px;
+            }
+            .swiper-button-next {
+                right: 0;
             }
         }
         .description {
