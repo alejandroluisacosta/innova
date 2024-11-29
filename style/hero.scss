@@ -14,6 +14,10 @@
         margin-bottom: 55px;
         .hero-swiper {
             margin-right: 2.22%;
+            .swiper-slide {
+                margin-right: 5%;
+                flex-grow: 1;
+            }
         }
         .description {
             &__title {
