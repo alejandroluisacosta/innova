@@ -1,0 +1,22 @@
+.nav {
+    display: flex;
+    align-items: center;
+    margin: 40px 5.55%;
+    margin-bottom: 80px;
+    justify-content: space-between;
+    gap: 35%;
+    .company-name {
+        height: 24px;
+    }
+    &__links {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        padding-inline-start: 0;
+        width: 68%;
+    }
+    li {
+        font-size: 18px;
+        padding: 17.5px 32px;
+    }
+}
