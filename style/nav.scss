@@ -2,11 +2,15 @@
     position: fixed;
     display: flex;
     align-items: center;
-    margin: 40px 5.55%;
+    padding: 40px 5.55%;
     margin-bottom: 80px;
     justify-content: space-between;
     gap: 35%;
+    width: 100%;
     z-index: 2;
+    background: transparent;
+    transform: translateY(0);
+    transition: backdrop-filter 0.3s ease, transform 0.3s ease;;
     .company-name {
         height: 24px;
     }
@@ -21,4 +25,16 @@
         font-size: 18px;
         padding: 17.5px 32px;
     }
+}
+
+.nav.scrolled {
+    background: rgba(255, 255, 255, 0.1); /* semi-transparent background */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: soft shadow for better contrast */
+}
+
+.nav.hidden {
+    transform: translateY(-100%); /* Move navbar out of view */
 }

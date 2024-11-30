@@ -2,11 +2,15 @@
   position: fixed;
   display: flex;
   align-items: center;
-  margin: 40px 5.55%;
+  padding: 40px 5.55%;
   margin-bottom: 80px;
   justify-content: space-between;
   gap: 35%;
+  width: 100%;
   z-index: 2;
+  background: transparent;
+  transform: translateY(0);
+  transition: backdrop-filter 0.3s ease, transform 0.3s ease;
 }
 .nav .company-name {
   height: 24px;
@@ -23,10 +27,22 @@
   padding: 17.5px 32px;
 }
 
+.nav.scrolled {
+  background: rgba(255, 255, 255, 0.1); /* semi-transparent background */
+  backdrop-filter: blur(10px); /* Apply blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border-radius: 10px; /* Optional: rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: soft shadow for better contrast */
+}
+
+.nav.hidden {
+  transform: translateY(-100%); /* Move navbar out of view */
+}
+
 .hero {
   position: relative;
   padding: 177px 5.55% 120px;
-  background-color: rgba(128, 128, 128, 0.079);
+  background: url("../assets/GraniteBackground.png");
 }
 .hero__title {
   font-size: 64px;
@@ -75,17 +91,12 @@
   font-family: sans-serif;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 2px solid black;
-  animation: caret-blink 0.7s infinite;
   max-width: 100%;
 }
 .hero__main .description__title #animated-text {
   font-size: 64px;
-}
-@keyframes caret-blink {
-  50% {
-    border-color: transparent;
-  }
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 .hero__main .description__button {
   position: absolute;
@@ -140,6 +151,46 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -55%);
+}
+
+.services .services-swiper {
+  height: 860px;
+}
+.services .services-slide {
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center;
+  padding: 80px 5.55%;
+  color: #F8F8F8;
+}
+.services .services-slide--construction {
+  background: url("../assets/Construccion.png");
+}
+.services .services-slide--procurement {
+  background: url("../assets/Procurement.webp");
+}
+.services__title {
+  font-size: 24px;
+  color: #797979;
+  font-weight: 400;
+}
+.services__service-name {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+.services__service-description {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  margin-bottom: 25px;
+}
+.services__button {
+  padding: 18px 32px;
+  border-radius: 2px;
+  font-weight: 600;
+  display: flex;
+  gap: 12px;
 }
 
 html, * {

@@ -1,7 +1,8 @@
 .hero {
     position: relative;
     padding: 177px 5.55% 120px;
-    background-color: rgba(128, 128, 128, 0.079);
+    // background-color: rgba(128, 128, 128, 0.079);
+    background: url('../assets/GraniteBackground.png');
     &__title {
         font-size: 64px;
         font-weight: 700;
@@ -47,16 +48,11 @@
                 font-family: sans-serif; 
                 white-space: nowrap;
                 overflow: hidden;
-                border-right: 2px solid black;
-                animation: caret-blink 0.7s infinite;
                 max-width: 100%;
                 #animated-text {
                     font-size: 64px;
-                }
-            }
-            @keyframes caret-blink {
-                50% {
-                    border-color: transparent;
+                    opacity: 0;
+                    transition: opacity 0.5s ease-in-out; 
                 }
             }
             &__button {
