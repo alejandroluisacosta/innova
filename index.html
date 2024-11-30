@@ -16,7 +16,7 @@
             <li>CONTACTO</li>
         </ul>
     </nav>
-    <div class="hero">
+    <section class="hero">
         <h2 class="hero__title">EXPERTOS EN</h2>
         <div class="hero__main">
             <div class="swiper hero-swiper">
@@ -65,8 +65,13 @@
                 <img class="arrow" src="./assets/DescubreMasArrow.svg" alt="Elemento decorativo" />
             </div>
         </div>
-    </div>
-    <div class="services">
+    </section>
+    <section class="about">
+        <p class="about__name">Nosotros</p>
+        <h3 class="about__title">Innovación y excelencia para proyectos integrales</h3>
+        <p class="about__description">INNOVA lleva soluciones integrales de ingeniería, construcción y consultoría a todo el territorio nacional e internacional. Desde 2015 trabajamos con sectores públicos y privados, liderando proyectos multidisciplinarios en áreas civiles, mecánicas, eléctricas y petroleras. Con sede en Puerto La Cruz, ofrecemos servicios que abarcan <strong>diseño, procura, mantenimiento y ejecución,</strong> adaptándonos a las necesidades únicas de cada cliente, industria y ubicación.</p>
+    </section>
+    <section class="services">
         <div class="swiper services-swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide services-slide services-slide--construction">
@@ -77,47 +82,63 @@
                         Más información
                         <img class="arrow" src="./assets/ButtonArrowBlack.svg" alt="Arrow icon" />
                     </button>
+                    <div class="autoplay-progress" id="progress-slide-1">
+                        <svg viewBox="0 0 300 48">
+                          <line x1="4" y1="24" x2="300" y2="24" stroke="#ffffff" stroke-width="4"></line>
+                        </svg>
+                      </div>
                 </div>
                 <div class="swiper-slide services-slide services-slide--procurement">
                     <h3 class="services__title">Servicios</h3>
                     <h1 class="services__service-name">PROCURA Y SUMINISTROS</h1>
-                    <p class="services__service-description">Diseño y ejecución de obras civiles, eléctricas e hidráulicas.<br>Supervisión, gerencia y mantenimiento industrial.<br>Proyectos urbanísticos y ambientales.</p>
+                    <p class="services__service-description">Compra y suministro de equipos de protección industrial.<br>Gestión nacional e internacional de materiales y equipos.<br>Soluciones integrales de equipamiento.</p>
                     <button class="services__button">
                         Más información
                         <img class="arrow" src="./assets/ButtonArrowBlack.svg" alt="Arrow icon" />
                     </button>
+                    <div class="autoplay-progress" id="progress-slide-2">
+                        <svg viewBox="0 0 300 48">
+                          <line x1="4" y1="24" x2="300" y2="24" stroke="#ffffff" stroke-width="4"></line>
+                        </svg>
+                      </div>
                 </div>
             </div>
             
             <img class="swiper-button-prev" src="./assets/HeroSwiperArrowLeft.svg" alt="Botón 'anterior' carrusel de imágenes principal"/>
             <img class="swiper-button-next" src="./assets/HeroSwiperArrowRight.svg" alt="Botón 'siguiente' carrusel de imágenes principal"/>
-            
-            <div class="swiper-scrollbar"></div>
         </div>
-    </div>
+    </section>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.js"></script>
     <script type="module">
-        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
-      
+        const progressLines = [...document.querySelectorAll(".autoplay-progress svg")];
+        const progressLine = document.querySelector(".autoplay-progress svg");
+    
         const servicesSwiper = new Swiper('.services-swiper', {
             loop: true,
             slidesPerView: 'auto',
             effect: "fade",
-
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
             pagination: {
                 el: '.swiper-pagination',
             },
-
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
-
             scrollbar: {
                 el: '.swiper-scrollbar',
             },
-            });
+            on: {
+                autoplayTimeLeft(s, time, progress) {
+                    const activeIndex = s.realIndex;
+                    progressLines[activeIndex].style.setProperty("--progress", 1 - progress);
+                }
+            }
+        });
     </script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
@@ -177,38 +198,37 @@
         });
     </script>
     <script>
-document.addEventListener("DOMContentLoaded", () => {
-    const navbar = document.querySelector(".nav");
-    let lastScrollY = window.scrollY; // Keep track of last scroll position
+        document.addEventListener("DOMContentLoaded", () => {
+            const navbar = document.querySelector(".nav");
+            let lastScrollY = window.scrollY;
 
-    // Function to handle scroll event
-    const handleScroll = () => {
-        if (window.scrollY > 100) { // Apply frosted effect when scroll > 50px
-            navbar.classList.add("scrolled");
-        } else {
-            navbar.classList.remove("scrolled");
-        }
+            // Handle scroll event
+            const handleScroll = () => {
+                if (window.scrollY > 100) {
+                    navbar.classList.add("scrolled");
+                } else {
+                    navbar.classList.remove("scrolled");
+                }
 
-        // Check scroll direction (down or up)
-        if (window.scrollY > lastScrollY) { 
-            // Scrolling down: hide navbar
-            navbar.classList.add("hidden");
-        } else {
-            // Scrolling up: show navbar
-            navbar.classList.remove("hidden");
-        }
+                // Check scroll direction (down or up)
+                if (window.scrollY > lastScrollY) { 
+                    // Scrolling down: hide navbar
+                    navbar.classList.add("hidden");
+                } else {
+                    // Scrolling up: show navbar
+                    navbar.classList.remove("hidden");
+                }
 
-        // Update the last scroll position
-        lastScrollY = window.scrollY;
-    };
+                // Update the last scroll position
+                lastScrollY = window.scrollY;
+            };
 
-    // Listen for scroll events
-    window.addEventListener("scroll", handleScroll);
+            // Listen for scroll events
+            window.addEventListener("scroll", handleScroll);
 
-    // Call it once to apply the styles on page load (in case the page is already scrolled)
-    handleScroll();
-});
-
+            // Call it once to apply the styles on page load (in case the page is already scrolled)
+            handleScroll();
+        });
     </script>
 </body>
 </html>
