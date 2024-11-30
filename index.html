@@ -82,11 +82,6 @@
                         Más información
                         <img class="arrow" src="./assets/ButtonArrowBlack.svg" alt="Arrow icon" />
                     </button>
-                    <div class="autoplay-progress" id="progress-slide-1">
-                        <svg viewBox="0 0 300 48">
-                          <line x1="4" y1="24" x2="300" y2="24" stroke="#ffffff" stroke-width="4"></line>
-                        </svg>
-                      </div>
                 </div>
                 <div class="swiper-slide services-slide services-slide--procurement">
                     <h3 class="services__title">Servicios</h3>
@@ -96,22 +91,38 @@
                         Más información
                         <img class="arrow" src="./assets/ButtonArrowBlack.svg" alt="Arrow icon" />
                     </button>
-                    <div class="autoplay-progress" id="progress-slide-2">
-                        <svg viewBox="0 0 300 48">
-                          <line x1="4" y1="24" x2="300" y2="24" stroke="#ffffff" stroke-width="4"></line>
-                        </svg>
-                      </div>
                 </div>
             </div>
-            
             <img class="swiper-button-prev" src="./assets/HeroSwiperArrowLeft.svg" alt="Botón 'anterior' carrusel de imágenes principal"/>
             <img class="swiper-button-next" src="./assets/HeroSwiperArrowRight.svg" alt="Botón 'siguiente' carrusel de imágenes principal"/>
+            <div class="autoplay-progress autoplay-progress--empty progress-1">
+                <svg viewBox="0 0 300 48">
+                    <line x1="4" y1="24" x2="300" y2="24" stroke="#7d7d7d" stroke-width="4"></line>
+                </svg>
+            </div>
+            <div class="autoplay-progress autoplay-progress--empty progress-2">
+                <svg viewBox="0 0 300 48">
+                    <line x1="4" y1="24" x2="300" y2="24" stroke="#7d7d7d" stroke-width="4"></line>
+                </svg>
+            </div>
+            <div class="autoplay-progress autoplay-progress--slide progress-1" id="progress-slide-1">
+                <svg viewBox="0 0 300 48">
+                    <line x1="4" y1="24" x2="300" y2="24" stroke="#ffffff" stroke-width="4"></line>
+                </svg>
+                <p class="progress-text progress-text--0 active">01<br>CONSTRUCCION</p>
+            </div>
+            <div class="autoplay-progress autoplay-progress--slide progress-2" id="progress-slide-2">
+                <svg viewBox="0 0 300 48">
+                    <line x1="4" y1="24" x2="300" y2="24" stroke="#ffffff" stroke-width="4"></line>
+                </svg>
+                <p class="progress-text progress-text--1">02<br>PROCURA</p>
+              </div>
         </div>
     </section>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.js"></script>
     <script type="module">
-        const progressLines = [...document.querySelectorAll(".autoplay-progress svg")];
+        const progressLines = [...document.querySelectorAll(".autoplay-progress--slide svg")];
         const progressLine = document.querySelector(".autoplay-progress svg");
     
         const servicesSwiper = new Swiper('.services-swiper', {
@@ -135,7 +146,18 @@
             on: {
                 autoplayTimeLeft(s, time, progress) {
                     const activeIndex = s.realIndex;
-                    progressLines[activeIndex].style.setProperty("--progress", 1 - progress);
+                    if (activeIndex === 0) {
+                        progressLines.forEach(line => {
+                            line.style.setProperty("--progress", 0);
+                        })
+                    }
+                    progressLines[activeIndex].style.setProperty("--progress", 0.7 * (1 - progress));
+
+                    document.querySelectorAll(".progress-text.active").forEach(el => el.classList.remove("active"));
+                        const currentText = document.querySelector(`.progress-text--${activeIndex}`);
+                        if (currentText) {
+                            currentText.classList.add("active");
+                    }
                 }
             }
         });

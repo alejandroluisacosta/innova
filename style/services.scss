@@ -43,15 +43,36 @@
 .autoplay-progress {
     position: absolute;
     left: 5.55%;
-    bottom: 77px;
+    bottom: 120px;
     z-index: 10;
-    width: 15%;
-    height: 50px;
+    width: 21%;
+    height: 75px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
     color: white;
+    &--empty {
+        svg {
+            --progress: 1 !important;
+            stroke: gray !important;
+            width: 120%;
+        }
+    }
+    .progress-text {
+        position: absolute;
+        bottom: 0;
+        left: 5px;
+        font-weight: 400;
+        color: #535353;
+    }
+    .active {
+        color: #C3C3C3;
+    }
+}
+
+.progress-2 {
+    left: 27%;
 }
 
 .autoplay-progress svg {
@@ -61,10 +82,9 @@
     top: 0px;
     z-index: 10;
     width: 100%;
-    height: 100%;
     stroke-width: 4px;
     stroke: #ffffff;
     fill: none;
     stroke-dashoffset: calc(300px * (1 - var(--progress)));
     stroke-dasharray: 300;
-  }
+}
