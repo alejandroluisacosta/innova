@@ -30,18 +30,6 @@
                     <div class="swiper-slide" data-text="PETROLEO">
                         <img class="hero__image" src="./assets/image1.png" alt="Constructores en obra" />
                     </div>
-                    <!-- <div class="swiper-slide">
-                        <img class="hero__image" src="./assets/image1.png" alt="Constructores en obra" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="hero__image" src="./assets/image1.png" alt="Constructores en obra" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="hero__image" src="./assets/image1.png" alt="Constructores en obra" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="hero__image" src="./assets/image1.png" alt="Constructores en obra" />
-                    </div> -->
                 </div>
                 
                 <img class="swiper-button-prev" src="./assets/HeroSwiperArrowLeft.svg" alt="Botón 'anterior' carrusel de imágenes principal"/>
@@ -159,6 +147,33 @@
             heroSwiper.on("slideChangeTransitionEnd", updateText);
 
             updateText();
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const numbers = document.querySelectorAll('.fact__number');
+            
+            // Function to animate numbers
+            const animateNumber = (element, target, speed) => {
+                const symbol = element.textContent.replace(/[0-9]/g, '');
+                let current = 0;
+                const increment = target / (speed); // Adjust the speed to target ratio
+
+                const interval = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        element.textContent = `${target}${symbol}`; // Ensure it stops at the target value
+                        clearInterval(interval);
+                    } else {
+                        element.textContent = `${Math.round(current)}${symbol}`;
+                    }
+                }, 10);
+            };
+
+            // Set different speeds for each number
+            animateNumber(numbers[0], 9, 200); // Slower increment for the first number
+            animateNumber(numbers[1], 72, 200); // Standard speed for the second number
+            animateNumber(numbers[2], 100, 200); // Same speed for the third number
         });
     </script>
 </body>
