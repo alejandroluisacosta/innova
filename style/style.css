@@ -154,7 +154,7 @@
 }
 
 .services .services-swiper {
-  height: 860px;
+  height: 700px;
 }
 .services .services-slide {
   background-size: cover !important;
@@ -164,10 +164,13 @@
   color: #F8F8F8;
 }
 .services .services-slide--construction {
-  background: url("../assets/Construccion.png");
+  background: url("../assets/Construction.webp");
 }
 .services .services-slide--procurement {
   background: url("../assets/Procurement.webp");
+}
+.services .services-slide--oil {
+  background: url("../assets/Oil1.webp");
 }
 .services__title {
   font-size: 24px;
@@ -191,6 +194,90 @@
   font-weight: 600;
   display: flex;
   gap: 12px;
+}
+.services .swiper-button-prev,
+.services .swiper-button-next {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2.5px solid rgba(236, 236, 236, 0.7490196078);
+  top: unset;
+  bottom: 100px;
+  padding: 12px;
+}
+.services .swiper-button-prev {
+  left: unset;
+  right: 10%;
+}
+.services .swiper-button-next {
+  right: 5.5%;
+}
+
+.autoplay-progress {
+  position: absolute;
+  left: 5.55%;
+  bottom: 80px;
+  z-index: 10;
+  width: 21%;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+}
+.autoplay-progress--empty svg {
+  --progress: 1 !important;
+  stroke: gray !important;
+  width: 120%;
+}
+.autoplay-progress .progress-text {
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+  font-weight: 400;
+  color: #535353;
+}
+.autoplay-progress .active {
+  color: #C3C3C3;
+}
+
+.progress-2 {
+  left: 27%;
+}
+
+.progress-3 {
+  left: 48.5%;
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  stroke-width: 4px;
+  stroke: #ffffff;
+  fill: none;
+  stroke-dashoffset: calc(300px * (1 - var(--progress)));
+  stroke-dasharray: 300;
+}
+
+.about {
+  padding: 250px 0;
+  width: 45%;
+  margin: 0 auto;
+}
+.about__name {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.about__title {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 30px;
 }
 
 html, * {

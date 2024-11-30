@@ -1,6 +1,6 @@
 .services {
     .services-swiper {
-        height: 860px;
+        height: 700px;
     }
     .services-slide {
         background-size: cover !important;
@@ -9,10 +9,13 @@
         padding: 80px 5.55%;
         color: #F8F8F8;
         &--construction {
-            background: url('../assets/Construccion.png');
+            background: url('../assets/Construction.webp');
         }
         &--procurement {
             background: url('../assets/Procurement.webp');
+        }
+        &--oil {
+            background: url('../assets/Oil1.webp')
         }
     }
     &__title {
@@ -38,4 +41,75 @@
         display: flex;
         gap: 12px;
     }
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: transparent;
+        border: 2.5px solid #ECECECBF;
+        top: unset;
+        bottom: 100px;
+        padding: 12px;
+    }
+    .swiper-button-prev {
+        left: unset;
+        right: 10%;
+    }
+    .swiper-button-next {
+        right: 5.5%;
+    }
+}
+
+.autoplay-progress {
+    position: absolute;
+    left: 5.55%;
+    bottom: 80px;
+    z-index: 10;
+    width: 21%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    &--empty {
+        svg {
+            --progress: 1 !important;
+            stroke: gray !important;
+            width: 120%;
+        }
+    }
+    .progress-text {
+        position: absolute;
+        bottom: 0;
+        left: 5px;
+        font-weight: 400;
+        color: #535353;
+    }
+    .active {
+        color: #C3C3C3;
+    }
+}
+
+.progress-2 {
+    left: 27%;
+}
+
+.progress-3 {
+    left: 48.5%;
+}
+
+.autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    stroke-width: 4px;
+    stroke: #ffffff;
+    fill: none;
+    stroke-dashoffset: calc(300px * (1 - var(--progress)));
+    stroke-dasharray: 300;
 }
