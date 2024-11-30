@@ -38,6 +38,24 @@
         display: flex;
         gap: 12px;
     }
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: transparent;
+        border: 2.5px solid #ECECECBF;
+        top: unset;
+        bottom: 140px;
+        padding: 12px;
+    }
+    .swiper-button-prev {
+        left: unset;
+        right: 9.5%;
+    }
+    .swiper-button-next {
+        right: 5.5%;
+    }
 }
 
 .autoplay-progress {

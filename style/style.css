@@ -192,6 +192,24 @@
   display: flex;
   gap: 12px;
 }
+.services .swiper-button-prev,
+.services .swiper-button-next {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2.5px solid rgba(236, 236, 236, 0.7490196078);
+  top: unset;
+  bottom: 140px;
+  padding: 12px;
+}
+.services .swiper-button-prev {
+  left: unset;
+  right: 9.5%;
+}
+.services .swiper-button-next {
+  right: 5.5%;
+}
 
 .autoplay-progress {
   position: absolute;
