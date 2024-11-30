@@ -4,5 +4,8 @@
   },
   "scripts": {
     "sass": "sass style/style.scss style/style.css"
+  },
+  "dependencies": {
+    "swiper": "^11.1.15"
   }
 }

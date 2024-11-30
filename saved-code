@@ -4,9 +4,9 @@
 </div>
 
 // CSS
-.text-container {
+.description-title {
   font-size: 2em; /* Adjust size as needed */
-  font-family: Arial, sans-serif; /* Choose your preferred font */
+  font-family: sans-serif; /* Choose your preferred font */
   white-space: nowrap;
   overflow: hidden;
   border-right: 0.15em solid black; /* Cursor effect */

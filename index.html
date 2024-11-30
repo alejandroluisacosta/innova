@@ -19,12 +19,42 @@
     <div class="hero">
         <h2 class="hero__title">EXPERTOS EN</h2>
         <div class="hero__main">
-            <div class="hero-swiper swiper">
-                <img src="./assets/image1.png" alt="Obreros en construcción" />
+            <div class="swiper hero-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img class="hero__image" src="./assets/image1.png" alt="Constructores en obra" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="hero__image" src="./assets/image1.png" alt="Constructores en obra" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="hero__image" src="./assets/image1.png" alt="Constructores en obra" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="hero__image" src="./assets/image1.png" alt="Constructores en obra" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="hero__image" src="./assets/image1.png" alt="Constructores en obra" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="hero__image" src="./assets/image1.png" alt="Constructores en obra" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="hero__image" src="./assets/image1.png" alt="Constructores en obra" />
+                    </div>
+                </div>
+                
+                <img class="swiper-button-prev" src="./assets/HeroSwiperArrowLeft.svg" alt="Botón 'anterior' carrusel de imágenes principal"/>
+                <img class="swiper-button-next" src="./assets/HeroSwiperArrowRight.svg" alt="Botón 'siguiente' carrusel de imágenes principal"/>
+                
+                <div class="swiper-scrollbar"></div>
             </div>
             <div class="description">
-                <h1>PROYECTOS DE INGENIERIA Y CONSTRUCCION</h1>
-                <button class="button">CONTACTO</button>
+                <h1 class="description__title"><span id="animated-text"></span></h1>
+                <button class="description__button">
+                    CONTACTO
+                    <img class="arrow" src="./assets/Arrow1.svg" alt="Arrow icon" />
+                </button>
             </div>
         </div>
         <div class="hero__facts">
@@ -41,6 +71,91 @@
                 <p class="fact__text">Clientes satisfechos</p>
             </div>
         </div>
+        <div class="hero__learn-more">
+            <div class="relative-container">
+                <img class="text" src="./assets/DescubreMasText.svg" alt="Texto decorativo" />
+                <img class="arrow" src="./assets/DescubreMasArrow.svg" alt="Elemento decorativo" />
+            </div>
+        </div>
     </div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.js"></script>
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+      
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            slidesPerView: 'auto',
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+            });
+    </script>
+<script>
+    const words = ["PROYECTOS DE & INGENIERIA Y & CONSTRUCCION", "PROCURA DE & MATERIALES"];
+    let currentWordIndex = 0;
+    let currentCharIndex = 0;
+    let isDeleting = false;
+    const typingSpeed = 60; // Time in ms between each character
+    const erasingSpeed = 60; // Time in ms between each character being erased
+    const delayBetweenWords = 1000; // Time in ms to wait before starting to erase
+  
+    let firstTime = true; // Flag to track first-time appearance
+  
+    function type() {
+      const textElement = document.getElementById("animated-text");
+      const currentWord = words[currentWordIndex];
+  
+      if (isDeleting) {
+        textElement.innerHTML = currentWord.substring(0, currentCharIndex - 1).replace(/&/g, '<br>');
+        currentCharIndex--;
+        if (currentCharIndex === 0) {
+          isDeleting = false;
+          currentWordIndex = (currentWordIndex + 1) % words.length;
+        } else {
+          setTimeout(type, erasingSpeed);
+        }
+      } else {
+        textElement.innerHTML = currentWord.substring(0, currentCharIndex + 1).replace(/&/g, '<br>');
+        currentCharIndex++;
+        if (currentCharIndex === currentWord.length) {
+          isDeleting = true;
+          setTimeout(type, delayBetweenWords);
+        } else {
+          setTimeout(type, typingSpeed);
+        }
+      }
+    }
+  
+    // Start the typing effect
+    document.addEventListener("DOMContentLoaded", () => {
+      const nextButton = document.querySelector(".swiper-button-next");
+  
+      // Start typing automatically the first time
+      if (firstTime) {
+        setTimeout(type, 500);
+        firstTime = false; // Set the flag to false after the first automatic typing
+      }
+  
+      // Add click event to trigger typing of the next word
+      nextButton.addEventListener("click", () => {
+        // Reset typing state and move to the next word
+        currentWordIndex = (currentWordIndex + 1) % words.length;
+        currentCharIndex = 0;
+        isDeleting = false;
+        setTimeout(type, 500); // Start typing the next word
+      });
+    });
+  </script>
 </body>
 </html>

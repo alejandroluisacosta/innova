@@ -1,10 +1,12 @@
 .nav {
+  position: fixed;
   display: flex;
   align-items: center;
   margin: 40px 5.55%;
   margin-bottom: 80px;
   justify-content: space-between;
   gap: 35%;
+  z-index: 2;
 }
 .nav .company-name {
   height: 24px;
@@ -21,11 +23,152 @@
   padding: 17.5px 32px;
 }
 
+.hero {
+  position: relative;
+  padding: 177px 5.55% 120px;
+  background-color: rgba(128, 128, 128, 0.079);
+}
+.hero__title {
+  font-size: 64px;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 2px #1C1C1C;
+  margin-bottom: 32px;
+}
+.hero__main {
+  display: flex;
+  margin-bottom: 55px;
+}
+.hero__main .hero-swiper {
+  margin-right: 2.22%;
+  max-width: 560px;
+}
+.hero__main .hero-swiper .swiper-slide {
+  margin-right: 5%;
+  flex-grow: 1;
+}
+.hero__main .hero-swiper .swiper-scrollbar {
+  width: 40%;
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-28%);
+}
+.hero__main .hero-swiper .swiper-button-prev,
+.hero__main .hero-swiper .swiper-button-next {
+  position: absolute;
+  top: unset;
+  bottom: 0;
+}
+.hero__main .hero-swiper .swiper-button-prev {
+  left: 120px;
+}
+.hero__main .hero-swiper .swiper-button-next {
+  right: 0;
+}
+.hero__main .description {
+  position: relative;
+  width: 100%;
+}
+.hero__main .description__title {
+  margin-bottom: 40px;
+  font-family: sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid black;
+  animation: caret-blink 0.7s infinite;
+  max-width: 100%;
+}
+.hero__main .description__title #animated-text {
+  font-size: 64px;
+}
+@keyframes caret-blink {
+  50% {
+    border-color: transparent;
+  }
+}
+.hero__main .description__button {
+  position: absolute;
+  bottom: 120px;
+  display: flex;
+  gap: 12px;
+  padding: 16px 32px;
+  align-items: center;
+  border: 3px solid #F13414;
+  color: #F13414;
+  font-weight: 600;
+}
+.hero__main .description__button .arrow {
+  margin-top: -3px;
+}
+.hero__facts {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 24px;
+}
+.hero__facts .fact {
+  min-width: 172px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero__facts .fact__number {
+  font-size: 64px;
+}
+.hero__learn-more {
+  position: absolute;
+  bottom: 120px;
+  left: 5.55%;
+}
+.hero__learn-more .relative-container {
+  position: relative;
+}
+.hero__learn-more .text {
+  animation: rotate 20s linear infinite;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.hero__learn-more .arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+}
+
 html, * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-size: 16px;
+  font-family: "New Science", Tahoma, Verdana;
+}
+
+.swiper {
+  width: 100%;
+  height: 420px;
+}
+
+@font-face {
+  font-family: "New Science";
+  src: url("../fonts/New_Science_Light.otf") format("opentype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "New Science";
+  src: url("../fonts/New_Science_Medium.otf") format("opentype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "New Science";
+  src: url("../fonts/New_Science_Bold.otf") format("opentype");
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */
