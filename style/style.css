@@ -154,7 +154,7 @@
 }
 
 .services .services-swiper {
-  height: 860px;
+  height: 700px;
 }
 .services .services-slide {
   background-size: cover !important;
@@ -164,10 +164,13 @@
   color: #F8F8F8;
 }
 .services .services-slide--construction {
-  background: url("../assets/Construccion.png");
+  background: url("../assets/Construction.webp");
 }
 .services .services-slide--procurement {
   background: url("../assets/Procurement.webp");
+}
+.services .services-slide--oil {
+  background: url("../assets/Oil1.webp");
 }
 .services__title {
   font-size: 24px;
@@ -200,12 +203,12 @@
   background: transparent;
   border: 2.5px solid rgba(236, 236, 236, 0.7490196078);
   top: unset;
-  bottom: 140px;
+  bottom: 100px;
   padding: 12px;
 }
 .services .swiper-button-prev {
   left: unset;
-  right: 9.5%;
+  right: 10%;
 }
 .services .swiper-button-next {
   right: 5.5%;
@@ -214,7 +217,7 @@
 .autoplay-progress {
   position: absolute;
   left: 5.55%;
-  bottom: 120px;
+  bottom: 80px;
   z-index: 10;
   width: 21%;
   height: 75px;
@@ -242,6 +245,10 @@
 
 .progress-2 {
   left: 27%;
+}
+
+.progress-3 {
+  left: 48.5%;
 }
 
 .autoplay-progress svg {
