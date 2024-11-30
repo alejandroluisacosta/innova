@@ -75,17 +75,12 @@
   font-family: sans-serif;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 2px solid black;
-  animation: caret-blink 0.7s infinite;
   max-width: 100%;
 }
 .hero__main .description__title #animated-text {
   font-size: 64px;
-}
-@keyframes caret-blink {
-  50% {
-    border-color: transparent;
-  }
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 .hero__main .description__button {
   position: absolute;
