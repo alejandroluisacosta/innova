@@ -280,6 +280,35 @@
   margin-bottom: 30px;
 }
 
+.allies {
+  padding: 80px 5.55%;
+  text-align: center;
+}
+.allies__title-small {
+  margin-bottom: 10px;
+}
+.allies__title-big {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 80px;
+}
+.allies__why-us {
+  display: flex;
+  gap: 10%;
+  align-items: center;
+}
+.allies__why-us .text {
+  text-align: start;
+}
+.allies__why-us .text .title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 35px;
+}
+.allies__why-us .text .fact {
+  display: flex;
+}
+
 html, * {
   box-sizing: border-box;
   margin: 0;
