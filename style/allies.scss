@@ -1,27 +1,62 @@
 .allies {
-    padding: 80px 5.55%;
+    position: relative;
+    padding: 80px 5.5%;
     text-align: center;
+    background: url('../assets/GraniteBackground.png');
     &__title-small {
         margin-bottom: 10px;
     }
     &__title-big {
         font-size: 32px;
         font-weight: 600;
+        margin-bottom: 400px;
+    }
+    &-swiper {
+        position: absolute !important;
+        top: 285px !important;
+        left: 0 !important;
+        height: 100px !important;
+        width: 100% !important;
         margin-bottom: 80px;
+        .swiper-slide {
+            font-size: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            border: 1px solid #E5E6E6;
+        }
     }
     &__why-us {
         display: flex;
-        gap: 10%;
+        gap: 5%;
         align-items: center;
+        justify-content: space-between;
         .text {
             text-align: start;
             .title {
                 font-size: 24px;
                 font-weight: 600;
-                margin-bottom: 35px;
+                margin-bottom: 55px;
             }
             .fact {
                 display: flex;
+                gap: 30px;
+                font-size: 18px;
+                margin-bottom: 25px;
+                &--last {
+                    margin-bottom: 55px;
+                }
+            }
+            .button {
+                display: flex;
+                gap: 12px;
+                padding: 16px 32px;
+                border-radius: 2px;
+                font-weight: 400;
+                align-items: center;
+                color: var(--button-white);
+                background-color: var(--button-black);
             }
         }
     }

@@ -142,27 +142,46 @@
     <section class="allies">
         <p class="allies__title-small">Confianza y excelencia</p>
         <h4 class="allies__title-big">EMPRESAS LIDERES QUE RESPALDAN NUESTRA EXPERIENCIA</h4>
+        <div class="swiper allies-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">LOGO</div>
+              <div class="swiper-slide">LOGO</div>
+              <div class="swiper-slide">LOGO</div>
+              <div class="swiper-slide">LOGO</div>
+              <div class="swiper-slide">LOGO</div>
+              <div class="swiper-slide">LOGO</div>
+              <div class="swiper-slide">LOGO</div>
+              <div class="swiper-slide">LOGO</div>
+              <div class="swiper-slide">LOGO</div>
+              <div class="swiper-slide">LOGO</div>
+              <div class="swiper-slide">LOGO</div>
+            </div>
+          </div>
         <div class="allies__why-us">
             <div class="text">
                 <h4 class="title">¿POR QUE ELEGIRNOS?</h4>
                 <p class="fact">
                     <span>
-                        <img src="./assets/AlliesArrow.svg" alt="Ícono de flecha" />
+                        <img class="arrow" src="./assets/AlliesArrow.svg" alt="Ícono de flecha" />
                     </span>
                     Soluciones rápidas y de calidad a precios competitivos.
                 </p>
                 <p class="fact">
                     <span>
-                        <img src="./assets/AlliesArrow.svg" alt="Ícono de flecha" />
+                        <img class="arrow" src="./assets/AlliesArrow.svg" alt="Ícono de flecha" />
                     </span>
                     Un equipo experto que asegura resultados precisos y eficientes.
                 </p>
-                <p class="fact">
+                <p class="fact fact--last">
                     <span>
-                        <img src="./assets/AlliesArrow.svg" alt="Ícono de flecha" />
+                        <img class="arrow" src="./assets/AlliesArrow.svg" alt="Ícono de flecha" />
                     </span>
                     Compromiso con los altos estándares de seguridad y sostenibilidad.
                 </p>
+                <button class="button">
+                    Contáctanos
+                    <img class="arrow" src="./assets/Arrow1.svg" alt="Arrow icon" />
+                </button>
             </div>
             <img class="image" src="./assets/Handshake.webp" alt="Apretón de manos"/>
         </div>
@@ -238,6 +257,17 @@
             heroSwiper.on("slideChangeTransitionEnd", updateText);
 
             updateText();
+        });
+    </script>
+    <script>
+        const alliesSwiper = new Swiper('.allies-swiper', {
+            loop: true,
+            slidesPerView: '5',
+            autoplay: {
+                delay: 1000,
+                disableOnInteraction: false,
+            },
+            speed: 2000,
         });
     </script>
     <script>
