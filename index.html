@@ -142,6 +142,21 @@
     <section class="allies">
         <p class="allies__title-small">Confianza y excelencia</p>
         <h4 class="allies__title-big">EMPRESAS LIDERES QUE RESPALDAN NUESTRA EXPERIENCIA</h4>
+        <div class="swiper allies-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">LOGO</div>
+              <div class="swiper-slide">LOGO</div>
+              <div class="swiper-slide">LOGO</div>
+              <div class="swiper-slide">LOGO</div>
+              <div class="swiper-slide">LOGO</div>
+              <div class="swiper-slide">LOGO</div>
+              <div class="swiper-slide">LOGO</div>
+              <div class="swiper-slide">LOGO</div>
+              <div class="swiper-slide">LOGO</div>
+              <div class="swiper-slide">LOGO</div>
+              <div class="swiper-slide">LOGO</div>
+            </div>
+          </div>
         <div class="allies__why-us">
             <div class="text">
                 <h4 class="title">¿POR QUE ELEGIRNOS?</h4>
@@ -242,6 +257,17 @@
             heroSwiper.on("slideChangeTransitionEnd", updateText);
 
             updateText();
+        });
+    </script>
+    <script>
+        const alliesSwiper = new Swiper('.allies-swiper', {
+            loop: true,
+            slidesPerView: '5',
+            autoplay: {
+                delay: 1000,
+                disableOnInteraction: false,
+            },
+            speed: 2000,
         });
     </script>
     <script>
