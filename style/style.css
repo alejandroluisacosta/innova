@@ -281,8 +281,9 @@
 }
 
 .allies {
-  padding: 80px 5.55%;
+  padding: 80px 5.5%;
   text-align: center;
+  background: url("../assets/GraniteBackground.png");
 }
 .allies__title-small {
   margin-bottom: 10px;
@@ -296,6 +297,7 @@
   display: flex;
   gap: 10%;
   align-items: center;
+  justify-content: space-between;
 }
 .allies__why-us .text {
   text-align: start;
@@ -307,6 +309,21 @@
 }
 .allies__why-us .text .fact {
   display: flex;
+  gap: 30px;
+  margin-bottom: 15px;
+}
+.allies__why-us .text .fact--last {
+  margin-bottom: 35px;
+}
+.allies__why-us .text .button {
+  display: flex;
+  gap: 12px;
+  padding: 16px 32px;
+  border-radius: 2px;
+  font-weight: 400;
+  align-items: center;
+  color: var(--button-white);
+  background-color: var(--button-black);
 }
 
 html, * {
@@ -315,6 +332,8 @@ html, * {
   padding: 0;
   font-size: 16px;
   font-family: "New Science", Tahoma, Verdana;
+  --button-black: #303030;
+  --button-white: #F8F8F8;
 }
 
 .swiper {
