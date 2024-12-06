@@ -1,0 +1,26 @@
+.working-with-us {
+    position: relative;
+    height: 700px;
+    background: url('../assets/GraniteBackground.png');
+    background-color: #532501;
+    padding: 125px 5.55%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    &__text-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 30px;
+        .text {
+            font-size: 56px;
+            font-weight: 600;
+            color: #E5E6E6;
+            &--outlined {
+                color: transparent;
+                -webkit-text-stroke: 1px #CBCDCD;
+                text-stroke: 1px #CBCDCD;
+            }
+        }
+    }
+}
