@@ -371,6 +371,52 @@
   text-stroke: 1px #CBCDCD;
 }
 
+.testimonies {
+  padding: 150px 5.55%;
+  text-align: center;
+  background-color: #F9FAF9;
+}
+.testimonies__title {
+  font-size: 32px;
+  margin-bottom: 80px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.testimonies__testimonies-container {
+  display: flex;
+  gap: 2%;
+  justify-content: space-between;
+}
+.testimonies__testimonies-container .single-testimony {
+  width: 400px;
+  font-weight: 400;
+  text-align: start;
+  line-height: 27px;
+}
+.testimonies__testimonies-container .single-testimony .quotes {
+  transform: translate(7.5px, 0);
+  margin-bottom: 15px;
+}
+.testimonies__testimonies-container .single-testimony .testimony {
+  font-size: 18px;
+  letter-spacing: 0;
+  margin-bottom: 25px;
+}
+.testimonies__testimonies-container .single-testimony .testimony strong {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.testimonies__testimonies-container .single-testimony .person-name {
+  letter-spacing: 0;
+  font-size: 18px;
+}
+.testimonies__testimonies-container .single-testimony .company-name {
+  font-weight: 600;
+  letter-spacing: 0;
+  font-size: 18px;
+}
+
 html, * {
   box-sizing: border-box;
   margin: 0;
