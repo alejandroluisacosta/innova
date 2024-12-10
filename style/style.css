@@ -2,13 +2,12 @@
   position: fixed;
   display: flex;
   align-items: center;
-  padding: 40px 5.55%;
+  padding: 0px 5.55%;
   margin-bottom: 80px;
   justify-content: space-between;
   gap: 35%;
   width: 100%;
   z-index: 2;
-  background: transparent;
   transform: translateY(0);
   transition: backdrop-filter 0.3s ease, transform 0.3s ease;
 }
@@ -24,14 +23,13 @@
 }
 .nav li {
   font-size: 18px;
-  padding: 17.5px 32px;
+  padding: 24px 32px;
 }
 
 .nav.scrolled {
-  background: rgba(255, 255, 255, 0.1); /* semi-transparent background */
+  background-color: rgba(249, 250, 249, 0.5490196078);
   backdrop-filter: blur(10px); /* Apply blur effect */
   -webkit-backdrop-filter: blur(10px); /* Safari support */
-  border-radius: 10px; /* Optional: rounded corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: soft shadow for better contrast */
 }
 
@@ -347,7 +345,7 @@
 .working-with-us {
   position: relative;
   height: 700px;
-  background: url("../assets/GraniteBackground.png");
+  background: url("../assets/BrownGraniteBackground.png");
   background-color: #532501;
   padding: 125px 5.55%;
   display: flex;
