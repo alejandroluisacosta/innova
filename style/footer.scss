@@ -1,19 +1,23 @@
 .footer {
+    position: relative;
+    height: 100vh;
     background-color: #191A1A;
-    padding: 80px 5.55% 100px 37%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    row-gap: 64px;
-    column-gap: 60px;
-    grid-auto-flow: column;
-    letter-spacing: unset;
-    align-items: start;
+    padding: 80px 37% 100px 5.55%;
+    &__grid {
+        display: grid;
+        height: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        column-gap: 60px;
+        grid-auto-flow: column;
+        letter-spacing: unset;
+        align-items: start;
+    }
     &__company-name {
         grid-column: span 2;
       }
     &__subsection {
-        max-width: 500px;
+        min-width: 500px;
         .title {
             display: flex;
             gap: 4px;
@@ -29,7 +33,21 @@
         }
         .text {
             color: #CBCDCD;
-            margin-bottom: 12px;
+            margin-left: 19px;
+            letter-spacing: 0;
+            line-height: 27px;
         }
+    }
+    &__bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 24px 5.55%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 0.5px solid #303030;
+        color: #ECECEC;
     }
 }
