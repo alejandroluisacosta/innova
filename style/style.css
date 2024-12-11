@@ -2,13 +2,12 @@
   position: fixed;
   display: flex;
   align-items: center;
-  padding: 40px 5.55%;
+  padding: 0px 5.55%;
   margin-bottom: 80px;
   justify-content: space-between;
   gap: 35%;
   width: 100%;
   z-index: 2;
-  background: transparent;
   transform: translateY(0);
   transition: backdrop-filter 0.3s ease, transform 0.3s ease;
 }
@@ -24,14 +23,13 @@
 }
 .nav li {
   font-size: 18px;
-  padding: 17.5px 32px;
+  padding: 24px 32px;
 }
 
 .nav.scrolled {
-  background: rgba(255, 255, 255, 0.1); /* semi-transparent background */
+  background-color: rgba(249, 250, 249, 0.5490196078);
   backdrop-filter: blur(10px); /* Apply blur effect */
   -webkit-backdrop-filter: blur(10px); /* Safari support */
-  border-radius: 10px; /* Optional: rounded corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: soft shadow for better contrast */
 }
 
@@ -347,7 +345,7 @@
 .working-with-us {
   position: relative;
   height: 700px;
-  background: url("../assets/GraniteBackground.png");
+  background: url("../assets/BrownGraniteBackground.png");
   background-color: #532501;
   padding: 125px 5.55%;
   display: flex;
@@ -415,6 +413,60 @@
   font-weight: 600;
   letter-spacing: 0;
   font-size: 18px;
+}
+
+.footer {
+  position: relative;
+  height: 100vh;
+  background-color: #191A1A;
+  padding: 80px 37% 100px 5.55%;
+}
+.footer__grid {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  column-gap: 60px;
+  grid-auto-flow: column;
+  letter-spacing: unset;
+  align-items: start;
+}
+.footer__company-name {
+  grid-column: span 2;
+}
+.footer__subsection {
+  min-width: 500px;
+}
+.footer__subsection .title {
+  display: flex;
+  gap: 4px;
+  color: #E5E6E6;
+  margin-bottom: 16px;
+}
+.footer__subsection .title__number {
+  font-size: 14px;
+}
+.footer__subsection .title__title {
+  font-size: 24px;
+  font-weight: 700;
+}
+.footer__subsection .text {
+  color: #CBCDCD;
+  margin-left: 19px;
+  letter-spacing: 0;
+  line-height: 27px;
+}
+.footer__bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 24px 5.55%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 0.5px solid #303030;
+  color: #ECECEC;
 }
 
 html, * {
