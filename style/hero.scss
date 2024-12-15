@@ -94,13 +94,14 @@
     }
     &__learn-more {
         position: absolute;
-        bottom: 120px;
+        bottom: 130px;
         left: 5.55%;
         .relative-container {
             position: relative;
         }
         .text {
             animation: rotate 20s linear infinite;
+            width: 80%;
             }
             @keyframes rotate {
             from {
@@ -112,9 +113,9 @@
         }
         .arrow {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -55%);
+            top: 26%;
+            left: 28%;
+            transform: scale(0.8);
         }
     }
 }

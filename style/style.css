@@ -133,7 +133,7 @@
 }
 .hero__learn-more {
   position: absolute;
-  bottom: 120px;
+  bottom: 130px;
   left: 5.55%;
 }
 .hero__learn-more .relative-container {
@@ -141,6 +141,7 @@
 }
 .hero__learn-more .text {
   animation: rotate 20s linear infinite;
+  width: 80%;
 }
 @keyframes rotate {
   from {
@@ -152,9 +153,9 @@
 }
 .hero__learn-more .arrow {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -55%);
+  top: 26%;
+  left: 28%;
+  transform: scale(0.8);
 }
 
 .services .services-swiper {
