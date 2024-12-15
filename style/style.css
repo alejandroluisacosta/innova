@@ -284,10 +284,14 @@
   font-size: 48px;
   font-weight: 600;
   margin-bottom: 30px;
+  line-height: 108%;
 }
 .about__description {
   line-height: 27px;
   font-size: 18px;
+}
+.about__description strong {
+  font-weight: 600;
 }
 
 .allies {

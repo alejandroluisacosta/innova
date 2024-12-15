@@ -9,9 +9,13 @@
         font-size: 48px;
         font-weight: 600;
         margin-bottom: 30px;
+        line-height: 108%;
     }
     &__description {
         line-height: 27px;
         font-size: 18px;
+        strong {
+            font-weight: 600;
+        }
     }
 }
