@@ -38,41 +38,41 @@
 
 .hero {
   position: relative;
-  padding: 130px 5.55% 120px;
+  padding: 115px 5.55% 120px;
   background: url("../assets/GraniteBackground.png");
 }
 .hero__title {
-  font-size: 48px;
+  font-size: 54px;
   font-weight: 700;
   color: transparent;
   -webkit-text-stroke: 2px #1C1C1C;
-  margin-bottom: 32px;
+  margin-bottom: 18px;
 }
 .hero__image {
   width: 100%;
 }
 .hero__main {
   display: flex;
-  margin-bottom: 55px;
+  margin-bottom: 45px;
 }
 .hero__main .hero-swiper {
   margin-right: 2.22%;
   max-width: 560px;
-  height: 300px;
+  height: 340px;
 }
 .hero__main .hero-swiper .swiper-slide {
   margin-right: 5%;
   flex-grow: 1;
   text-align: right;
-  height: 258px;
+  height: 285px;
   overflow-y: hidden;
 }
 .hero__main .hero-swiper .swiper-scrollbar {
-  width: 40%;
+  width: 50%;
   position: absolute;
-  bottom: 22px;
+  bottom: 25px;
   left: 50%;
-  transform: translateX(-28%);
+  transform: translateX(-50%);
 }
 .hero__main .hero-swiper .swiper-button-prev,
 .hero__main .hero-swiper .swiper-button-next {
@@ -81,10 +81,10 @@
   bottom: 0;
 }
 .hero__main .hero-swiper .swiper-button-prev {
-  left: 120px;
+  left: 75px;
 }
 .hero__main .hero-swiper .swiper-button-next {
-  right: 0;
+  right: 75px;
 }
 .hero__main .description {
   position: relative;
@@ -98,19 +98,19 @@
   max-width: 100%;
 }
 .hero__main .description__title #animated-text {
-  font-size: 48px;
+  font-size: 54px;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
 .hero__main .description__button {
   position: absolute;
-  bottom: 120px;
+  bottom: 55px;
   display: flex;
   gap: 12px;
   padding: 16px 32px;
   align-items: center;
-  border: 3px solid #F13414;
-  color: #F13414;
+  background-color: #303030;
+  color: #F8F8F8;
   font-weight: 600;
 }
 .hero__main .description__button .arrow {
@@ -129,11 +129,11 @@
   align-items: center;
 }
 .hero__facts .fact__number {
-  font-size: 64px;
+  font-size: 54px;
 }
 .hero__learn-more {
   position: absolute;
-  bottom: 130px;
+  bottom: 120px;
   left: 5.55%;
 }
 .hero__learn-more .relative-container {
