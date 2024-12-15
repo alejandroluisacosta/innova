@@ -35,7 +35,7 @@
                 <img class="swiper-button-prev" src="./assets/HeroSwiperArrowLeft.svg" alt="Botón 'anterior' carrusel de imágenes principal"/>
                 <img class="swiper-button-next" src="./assets/HeroSwiperArrowRight.svg" alt="Botón 'siguiente' carrusel de imágenes principal"/>
                 
-                <div class="swiper-scrollbar"></div>
+                <div class="swiper-scrollbar swiper-scrollbar--hero"></div>
             </div>
             <div class="description">
                 <h1 class="description__title"><span id="animated-text"></span></h1>
@@ -294,7 +294,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.js"></script>
     <script type="module">
         const progressLines = [...document.querySelectorAll(".autoplay-progress--slide svg")];
-        const progressLine = document.querySelector(".autoplay-progress svg");
     
         const servicesSwiper = new Swiper('.services-swiper', {
             loop: true,
@@ -312,7 +311,7 @@
                 prevEl: '.swiper-button-prev',
             },
             scrollbar: {
-                el: '.swiper-scrollbar',
+                el: '.swiper-scrollbar--services',
             },
             on: {
                 autoplayTimeLeft(s, time, progress) {
@@ -344,7 +343,7 @@
                 prevEl: ".swiper-button-prev",
                 },
                 scrollbar: {
-                    el: '.swiper-scrollbar',
+                    el: '.swiper-scrollbar--hero',
                 },
             });
         
