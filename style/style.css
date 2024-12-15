@@ -504,6 +504,15 @@ html, * {
   height: 420px;
 }
 
+#wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../assets/noise.svg");
+  width: 100%;
+  height: 100vh;
+}
+
 @font-face {
   font-family: "New Science";
   src: url("../fonts/New_Science_Light.otf") format("opentype");
