@@ -42,7 +42,7 @@
                 left: 68px;
             }
             .swiper-button-next {
-                right: 90px;
+                right: 83px;
             }
         }
         .description {
@@ -55,6 +55,7 @@
                 white-space: nowrap;
                 overflow: hidden;
                 max-width: 100%;
+                vertical-align: bottom;
                 #animated-text {
                     font-size: 54px;
                     opacity: 0;
