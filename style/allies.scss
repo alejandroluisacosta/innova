@@ -1,6 +1,6 @@
 .allies {
     position: relative;
-    padding: 80px 5.5%;
+    padding: 165px 5.5% 90px;
     text-align: center;
     background: url('../assets/GraniteBackground.png');
     &__title-small {
@@ -13,7 +13,7 @@
     }
     &-swiper {
         position: absolute !important;
-        top: 285px !important;
+        top: 325px !important;
         left: 0 !important;
         height: 100px !important;
         width: 100% !important;

@@ -49,5 +49,10 @@
         align-items: center;
         border-top: 0.5px solid #303030;
         color: #ECECEC;
+        .credits {
+            img {
+                transform: translateY(4px);
+            }
+        }
     }
 }

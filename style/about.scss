@@ -1,14 +1,21 @@
 .about {
-    padding: 250px 0 ;
-    width: 45%;
-    margin: 0 auto;
+    padding: 250px 28.5%;
+    background: url('../assets/GraniteBackground.png');
+    background-color: #F9F9F9;
     &__name {
         font-size: 24px;
-        margin-bottom: 20px;
     }
     &__title {
         font-size: 48px;
         font-weight: 600;
         margin-bottom: 30px;
+        line-height: 108%;
+    }
+    &__description {
+        line-height: 27px;
+        font-size: 18px;
+        strong {
+            font-weight: 600;
+        }
     }
 }
