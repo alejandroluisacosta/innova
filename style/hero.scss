@@ -1,6 +1,6 @@
 .hero {
     position: relative;
-    padding: 115px 5.55% 120px;
+    padding: 115px 5.55% 120px 5.25%;
     background: url('../assets/GraniteBackground.png');
     &__title {
         font-size: 54px;
@@ -10,7 +10,8 @@
         margin-bottom: 18px;
     }
     &__image {
-        width: 100%;
+        margin-left: 3px;
+        width: 85%;
     }
     &__main {
         display: flex;
@@ -20,9 +21,7 @@
             max-width: 560px;
             height: 340px;
             .swiper-slide {
-                margin-right: 5%;
                 flex-grow: 1;
-                text-align: right;
                 height: 285px;
                 overflow-y: hidden;
             }
@@ -40,15 +39,16 @@
                 bottom: 0;
             }
             .swiper-button-prev {
-                left: 75px;
+                left: 68px;
             }
             .swiper-button-next {
-                right: 75px;
+                right: 90px;
             }
         }
         .description {
             position: relative;
             width: 100%;
+            transform: translateX(-11%);
             &__title {
                 margin-bottom: 40px;
                 font-family: sans-serif; 
@@ -95,7 +95,7 @@
     }
     &__learn-more {
         position: absolute;
-        bottom: 120px;
+        bottom: 110px;
         left: 5.55%;
         .relative-container {
             position: relative;
