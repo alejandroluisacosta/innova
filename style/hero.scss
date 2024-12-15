@@ -1,13 +1,16 @@
 .hero {
     position: relative;
-    padding: 177px 5.55% 120px;
+    padding: 130px 5.55% 120px;
     background: url('../assets/GraniteBackground.png');
     &__title {
-        font-size: 64px;
+        font-size: 48px;
         font-weight: 700;
         color: transparent;
         -webkit-text-stroke: 2px #1C1C1C;
         margin-bottom: 32px;
+    }
+    &__image {
+        width: 100%;
     }
     &__main {
         display: flex;
@@ -15,9 +18,13 @@
         .hero-swiper {
             margin-right: 2.22%;
             max-width: 560px;
+            height: 300px;
             .swiper-slide {
                 margin-right: 5%;
                 flex-grow: 1;
+                text-align: right;
+                height: 258px;
+                overflow-y: hidden;
             }
             .swiper-scrollbar {
                 width: 40%;
@@ -49,7 +56,7 @@
                 overflow: hidden;
                 max-width: 100%;
                 #animated-text {
-                    font-size: 64px;
+                    font-size: 48px;
                     opacity: 0;
                     transition: opacity 0.5s ease-in-out; 
                 }

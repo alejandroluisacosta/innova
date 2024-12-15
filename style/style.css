@@ -3,7 +3,6 @@
   display: flex;
   align-items: center;
   padding: 0px 5.55%;
-  margin-bottom: 80px;
   justify-content: space-between;
   gap: 35%;
   width: 100%;
@@ -39,15 +38,18 @@
 
 .hero {
   position: relative;
-  padding: 177px 5.55% 120px;
+  padding: 130px 5.55% 120px;
   background: url("../assets/GraniteBackground.png");
 }
 .hero__title {
-  font-size: 64px;
+  font-size: 48px;
   font-weight: 700;
   color: transparent;
   -webkit-text-stroke: 2px #1C1C1C;
   margin-bottom: 32px;
+}
+.hero__image {
+  width: 100%;
 }
 .hero__main {
   display: flex;
@@ -56,10 +58,14 @@
 .hero__main .hero-swiper {
   margin-right: 2.22%;
   max-width: 560px;
+  height: 300px;
 }
 .hero__main .hero-swiper .swiper-slide {
   margin-right: 5%;
   flex-grow: 1;
+  text-align: right;
+  height: 258px;
+  overflow-y: hidden;
 }
 .hero__main .hero-swiper .swiper-scrollbar {
   width: 40%;
@@ -92,7 +98,7 @@
   max-width: 100%;
 }
 .hero__main .description__title #animated-text {
-  font-size: 64px;
+  font-size: 48px;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
