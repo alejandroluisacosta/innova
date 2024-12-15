@@ -321,7 +321,7 @@
                             line.style.setProperty("--progress", 0);
                         })
                     }
-                    progressLines[activeIndex].style.setProperty("--progress", 0.7 * (1 - progress));
+                    progressLines[activeIndex].style.setProperty("--progress", (1 - progress));
 
                     document.querySelectorAll(".progress-text.active").forEach(el => el.classList.remove("active"));
                         const currentText = document.querySelector(`.progress-text--${activeIndex}`);
