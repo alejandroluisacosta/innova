@@ -1,0 +1,29 @@
+.equipment {
+    position: relative;
+    background: url('../assets/GraniteBackground.png');
+    padding: 250px 5.5% 180px;
+    text-align: center;
+    &__title-small {
+        margin-bottom: 10px;
+    }
+    &__title-big {
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 75px;
+    }
+    &-swiper {
+        position: absolute !important;
+        left: 0 !important;
+        height: 100px !important;
+        width: 100% !important;
+        margin-bottom: 80px;
+        .swiper-slide {
+            font-size: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            border: 1px solid #E5E6E6;
+        }
+    }
+}
