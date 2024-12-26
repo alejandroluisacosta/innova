@@ -43,3 +43,22 @@
         }
     }
 }
+
+@media only screen and (max-width: 1000px) {
+    .testimonies {
+        &__testimonies-container {
+            gap: 5%;
+            font-size: 16px;
+            .single-testimony {
+                .testimony {
+                    strong {
+                        font-size: 16px;
+                    }
+                }
+            }
+            .person-name {
+                font-size: 16px;
+            }
+        }
+    }
+}

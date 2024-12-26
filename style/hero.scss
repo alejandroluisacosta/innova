@@ -122,3 +122,62 @@
         }
     }
 }
+
+@media only screen and (max-width: 1000px) {
+    .hero {
+        padding: 80px 5.55%;
+        &__title {
+            font-size: 30px;
+            letter-spacing: 1px;
+        }
+        &__image {
+            max-width: 270px;
+        }
+        &__main {
+            max-width: 665px;
+            .hero-swiper {
+                height: 235px;
+                .swiper-button-next {
+                    right: 46px;
+                }
+                .swiper-button-prev {
+                    left: 62px;
+                }
+                .swiper-scrollbar {
+                    width: 40%;
+                    bottom: 24px;
+                    left: 52%;
+                }
+            }
+            .description {
+                &__title {
+                    font-size: 30px;
+                    & #animated-text {
+                        font-size: 30px;
+                    }
+                }
+                &__button {
+                    padding: 12px 32px;
+                    bottom: 55px;
+                    font-size: 14px;
+                }
+            }
+        }
+        &__facts {
+            .fact {
+                min-width: unset;
+                width: 20%;
+                justify-content: center;
+                &__number {
+                    font-size: 40px;
+                }
+                &__text {
+                    text-align: center;
+                }
+            }
+        }
+        &__learn-more {
+            bottom: 68px;
+        }
+    }
+}

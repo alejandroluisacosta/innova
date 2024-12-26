@@ -1,6 +1,7 @@
 .services {
+    height: 100vh;
     .services-swiper {
-        height: 700px;
+        height: 100vh;
     }
     .services-slide {
         background-size: cover !important;
@@ -112,4 +113,15 @@
     fill: none;
     stroke-dashoffset: calc(300px * (1 - var(--progress)));
     stroke-dasharray: 300;
+}
+
+@media only screen and (max-width: 1000px) {
+    .services {
+        .swiper-button-prev {
+            right: 15%;
+        }
+        .progress-text {
+            font-size: 16px;
+        }
+    }
 }

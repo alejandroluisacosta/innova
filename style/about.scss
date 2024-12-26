@@ -19,3 +19,15 @@
         }
     }
 }
+
+@media only screen and (max-width: 1000px) {
+    .about {
+        &__name {
+            font-size: 18px;
+        }
+        &__title {
+            font-size: 35px;
+        }
+        padding: 120px 19%;
+    }
+}

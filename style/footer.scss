@@ -56,3 +56,22 @@
         }
     }
 }
+
+@media only screen and (max-width: 1000px) {
+    .footer {
+        padding: 80px 5.5%;
+        column-gap: 20px;
+        height: 70vh;
+        &__grid {
+            grid-template-columns: 3.5fr 1fr;
+            height: 100%;
+            column-gap: 5px;
+        }
+        &__subsection {
+            min-width: unset;
+            .text {
+                margin-left: 15px;
+            }
+        }
+    }
+}

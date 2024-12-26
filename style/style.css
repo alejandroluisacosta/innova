@@ -27,15 +27,23 @@
 
 .nav.scrolled {
   background-color: rgba(249, 250, 249, 0.5490196078);
-  backdrop-filter: blur(10px); /* Apply blur effect */
-  -webkit-backdrop-filter: blur(10px); /* Safari support */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: soft shadow for better contrast */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nav.hidden {
-  transform: translateY(-100%); /* Move navbar out of view */
+  transform: translateY(-100%);
 }
 
+@media only screen and (max-width: 1000px) {
+  .nav .company-name {
+    height: 20px;
+  }
+  .nav li {
+    font-size: 12px;
+  }
+}
 .hero {
   position: relative;
   padding: 115px 5.55% 120px 5.25%;
@@ -161,8 +169,65 @@
   transform: scale(0.8);
 }
 
+@media only screen and (max-width: 1000px) {
+  .hero {
+    padding: 80px 5.55%;
+  }
+  .hero__title {
+    font-size: 30px;
+    letter-spacing: 1px;
+  }
+  .hero__image {
+    max-width: 270px;
+  }
+  .hero__main {
+    max-width: 665px;
+  }
+  .hero__main .hero-swiper {
+    height: 235px;
+  }
+  .hero__main .hero-swiper .swiper-button-next {
+    right: 46px;
+  }
+  .hero__main .hero-swiper .swiper-button-prev {
+    left: 62px;
+  }
+  .hero__main .hero-swiper .swiper-scrollbar {
+    width: 40%;
+    bottom: 24px;
+    left: 52%;
+  }
+  .hero__main .description__title {
+    font-size: 30px;
+  }
+  .hero__main .description__title #animated-text {
+    font-size: 30px;
+  }
+  .hero__main .description__button {
+    padding: 12px 32px;
+    bottom: 55px;
+    font-size: 14px;
+  }
+  .hero__facts .fact {
+    min-width: unset;
+    width: 20%;
+    justify-content: center;
+  }
+  .hero__facts .fact__number {
+    font-size: 40px;
+  }
+  .hero__facts .fact__text {
+    text-align: center;
+  }
+  .hero__learn-more {
+    bottom: 68px;
+  }
+}
+.services {
+  height: 100vh;
+}
 .services .services-swiper {
-  height: 700px;
+  height: 100vh;
 }
 .services .services-slide {
   background-size: cover !important;
@@ -273,6 +338,14 @@
   stroke-dasharray: 300;
 }
 
+@media only screen and (max-width: 1000px) {
+  .services .swiper-button-prev {
+    right: 15%;
+  }
+  .services .progress-text {
+    font-size: 16px;
+  }
+}
 .about {
   padding: 250px 28.5%;
   background: url("../assets/GraniteBackground.png");
@@ -295,6 +368,17 @@
   font-weight: 600;
 }
 
+@media only screen and (max-width: 1000px) {
+  .about {
+    padding: 120px 19%;
+  }
+  .about__name {
+    font-size: 18px;
+  }
+  .about__title {
+    font-size: 35px;
+  }
+}
 .allies {
   position: relative;
   padding: 165px 5.5% 90px;
@@ -359,6 +443,27 @@
   background-color: var(--button-black);
 }
 
+@media only screen and (max-width: 1000px) {
+  .allies__why-us .text {
+    font-size: 16px;
+  }
+  .allies__why-us .text .title {
+    margin-bottom: 30px;
+  }
+  .allies__why-us .text .fact {
+    gap: 5px;
+  }
+  .allies__why-us .text .fact--last {
+    margin-bottom: 30px;
+  }
+  .allies__why-us .text .fact .arrow {
+    width: 20px;
+    transform: translate(0, 2px);
+  }
+  .allies__why-us .image {
+    width: 350px;
+  }
+}
 .working-with-us {
   position: relative;
   height: 700px;
@@ -386,6 +491,15 @@
   text-stroke: 1px #CBCDCD;
 }
 
+@media only screen and (max-width: 1000px) {
+  .working-with-us {
+    height: unset;
+    padding: 100px 5.5%;
+  }
+  .working-with-us .text {
+    font-size: 32px;
+  }
+}
 .testimonies {
   padding: 150px 5.55%;
   text-align: center;
@@ -432,6 +546,18 @@
   font-size: 18px;
 }
 
+@media only screen and (max-width: 1000px) {
+  .testimonies__testimonies-container {
+    gap: 5%;
+    font-size: 16px;
+  }
+  .testimonies__testimonies-container .single-testimony .testimony strong {
+    font-size: 16px;
+  }
+  .testimonies__testimonies-container .person-name {
+    font-size: 16px;
+  }
+}
 .footer {
   position: relative;
   height: 100vh;
@@ -489,6 +615,24 @@
   transform: translateY(4px);
 }
 
+@media only screen and (max-width: 1000px) {
+  .footer {
+    padding: 80px 5.5%;
+    column-gap: 20px;
+    height: 70vh;
+  }
+  .footer__grid {
+    grid-template-columns: 3.5fr 1fr;
+    height: 100%;
+    column-gap: 5px;
+  }
+  .footer__subsection {
+    min-width: unset;
+  }
+  .footer__subsection .text {
+    margin-left: 15px;
+  }
+}
 .contact {
   padding: 144px 5.55%;
   text-align: center;
@@ -539,7 +683,7 @@
   gap: 20px;
   align-items: center;
   justify-content: center;
-  background-color: #949998;
+  background-color: #303030;
   color: #F8F8F8;
   border: 0;
   padding: 18px;
@@ -550,6 +694,20 @@
   transform: translate(0, 1px);
 }
 
+@media only screen and (max-width: 1000px) {
+  .contact__title {
+    font-size: 30px;
+  }
+  .contact__form {
+    max-width: 400px;
+  }
+  .contact__form input {
+    padding: 16px;
+  }
+  .contact__form button {
+    padding: 16px;
+  }
+}
 .equipment {
   position: relative;
   background: url("../assets/GraniteBackground.png");

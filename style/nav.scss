@@ -26,13 +26,23 @@
 }
 
 .nav.scrolled {
-    // background: url('../assets/GraniteBackground.png'); /* semi-transparent background */
     background-color: #F9FAF98C;
-    backdrop-filter: blur(10px); /* Apply blur effect */
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: soft shadow for better contrast */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nav.hidden {
-    transform: translateY(-100%); /* Move navbar out of view */
+    transform: translateY(-100%);
+}
+
+@media only screen and (max-width: 1000px) {
+    .nav {
+        .company-name {
+            height: 20px;
+        }
+        li {
+            font-size: 12px;
+        }
+    }
 }
