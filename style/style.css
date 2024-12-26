@@ -171,7 +171,7 @@
 
 @media only screen and (max-width: 1000px) {
   .hero {
-    padding: 80ps 5.55%;
+    padding: 80px 5.55%;
   }
   .hero__title {
     font-size: 30px;
@@ -612,6 +612,24 @@
   transform: translateY(4px);
 }
 
+@media only screen and (max-width: 768px) {
+  .footer {
+    padding: 80px 5.5%;
+    column-gap: 20px;
+    height: 70vh;
+  }
+  .footer__grid {
+    grid-template-columns: 3.5fr 1fr;
+    height: 100%;
+    column-gap: 5px;
+  }
+  .footer__subsection {
+    min-width: unset;
+  }
+  .footer__subsection .text {
+    margin-left: 15px;
+  }
+}
 .contact {
   padding: 144px 5.55%;
   text-align: center;
