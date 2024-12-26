@@ -335,7 +335,7 @@
   stroke-dasharray: 300;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   .services .swiper-button-prev {
     right: 15%;
   }
@@ -365,7 +365,7 @@
   font-weight: 600;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   .about {
     padding: 120px 19%;
   }
@@ -440,7 +440,7 @@
   background-color: var(--button-black);
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   .allies__why-us .text {
     font-size: 16px;
   }
@@ -488,6 +488,15 @@
   text-stroke: 1px #CBCDCD;
 }
 
+@media only screen and (max-width: 768px) {
+  .working-with-us {
+    height: unset;
+    padding: 100px 5.5%;
+  }
+  .working-with-us .text {
+    font-size: 32px;
+  }
+}
 .testimonies {
   padding: 150px 5.55%;
   text-align: center;
