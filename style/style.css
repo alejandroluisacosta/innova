@@ -36,7 +36,7 @@
   transform: translateY(-100%);
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1000px) {
   .nav .company-name {
     height: 20px;
   }
@@ -219,6 +219,9 @@
   .hero__facts .fact__text {
     text-align: center;
   }
+  .hero__learn-more {
+    bottom: 68px;
+  }
 }
 .services {
   height: 100vh;
@@ -335,7 +338,7 @@
   stroke-dasharray: 300;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1000px) {
   .services .swiper-button-prev {
     right: 15%;
   }
@@ -365,7 +368,7 @@
   font-weight: 600;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1000px) {
   .about {
     padding: 120px 19%;
   }
@@ -440,7 +443,7 @@
   background-color: var(--button-black);
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1000px) {
   .allies__why-us .text {
     font-size: 16px;
   }
@@ -458,7 +461,7 @@
     transform: translate(0, 2px);
   }
   .allies__why-us .image {
-    width: 300px;
+    width: 350px;
   }
 }
 .working-with-us {
@@ -488,7 +491,7 @@
   text-stroke: 1px #CBCDCD;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1000px) {
   .working-with-us {
     height: unset;
     padding: 100px 5.5%;
@@ -543,7 +546,7 @@
   font-size: 18px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1000px) {
   .testimonies__testimonies-container {
     gap: 5%;
     font-size: 16px;
@@ -612,7 +615,7 @@
   transform: translateY(4px);
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1000px) {
   .footer {
     padding: 80px 5.5%;
     column-gap: 20px;
@@ -691,7 +694,7 @@
   transform: translate(0, 1px);
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1000px) {
   .contact__title {
     font-size: 30px;
   }
