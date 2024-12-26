@@ -220,8 +220,11 @@
     text-align: center;
   }
 }
+.services {
+  height: 100vh;
+}
 .services .services-swiper {
-  height: 700px;
+  height: 100vh;
 }
 .services .services-slide {
   background-size: cover !important;
@@ -332,6 +335,14 @@
   stroke-dasharray: 300;
 }
 
+@media only screen and (min-width: 768px) {
+  .services .swiper-button-prev {
+    right: 15%;
+  }
+  .services .progress-text {
+    font-size: 16px;
+  }
+}
 .about {
   padding: 250px 28.5%;
   background: url("../assets/GraniteBackground.png");
@@ -356,7 +367,13 @@
 
 @media only screen and (min-width: 768px) {
   .about {
-    padding: 120px 15.5%;
+    padding: 120px 19%;
+  }
+  .about__name {
+    font-size: 18px;
+  }
+  .about__title {
+    font-size: 35px;
   }
 }
 .allies {
