@@ -174,7 +174,7 @@
     padding: 80ps 5.55%;
   }
   .hero__title {
-    font-size: 34px;
+    font-size: 30px;
     letter-spacing: 1px;
   }
   .hero__image {
@@ -198,10 +198,10 @@
     left: 52%;
   }
   .hero__main .description__title {
-    font-size: 34px;
+    font-size: 30px;
   }
   .hero__main .description__title #animated-text {
-    font-size: 34px;
+    font-size: 30px;
   }
   .hero__main .description__button {
     padding: 12px 32px;
