@@ -440,6 +440,27 @@
   background-color: var(--button-black);
 }
 
+@media only screen and (min-width: 768px) {
+  .allies__why-us .text {
+    font-size: 16px;
+  }
+  .allies__why-us .text .title {
+    margin-bottom: 30px;
+  }
+  .allies__why-us .text .fact {
+    gap: 5px;
+  }
+  .allies__why-us .text .fact--last {
+    margin-bottom: 30px;
+  }
+  .allies__why-us .text .fact .arrow {
+    width: 20px;
+    transform: translate(0, 2px);
+  }
+  .allies__why-us .image {
+    width: 300px;
+  }
+}
 .working-with-us {
   position: relative;
   height: 700px;
