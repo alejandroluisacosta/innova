@@ -181,3 +181,53 @@
         }
     }
 }
+
+@media only screen and (max-width: 480px) {
+    .hero {
+        padding: 80px 3.55%;
+        &__title {
+            font-size: 32px;
+            margin-left: 1%;
+        }
+        &__image {
+            max-width: unset;
+            width: 99%;
+            margin-left: unset;
+        }
+        &__main {
+            flex-direction: column-reverse;
+            gap: 20px;
+            .hero-swiper {
+                height: 225px;
+                margin-right: unset;
+                .swiper-slide {
+                    text-align: center;
+                }
+            }
+            .description {
+                margin-left: 1%;
+                transform: unset;
+                &__title {
+                    font-size: 32px;
+                    min-height: 115px;
+                    margin-bottom: 20px;
+                    #animated-text {
+                        font-size: 32px;
+                    }
+                }
+                &__button {
+                    position: unset;
+                }
+            }
+        }
+        &__facts {
+            flex-direction: column;
+            align-items: end;
+            transform: unset;
+            .fact {
+                width: unset;
+                align-items: flex-end;
+            }
+        }
+    }
+}

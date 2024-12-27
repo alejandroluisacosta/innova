@@ -1,6 +1,7 @@
 @import 'nav', 'hero', 'services', 'about', 'allies', 'working-with-us', 'testimony', 'footer', 'contact', 'equipment';
 
 html, * { 
+    overflow-x: hidden;
     box-sizing: border-box;
     margin: 0; 
     padding: 0;
