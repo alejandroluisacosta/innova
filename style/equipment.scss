@@ -27,3 +27,13 @@
         }
     }
 }
+
+@media only screen and (max-width: 480px) {
+    .equipment {
+        &-swiper {
+            .swiper-slide {
+                font-size: 18px;
+            }
+        }
+    }
+}

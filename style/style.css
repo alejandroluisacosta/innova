@@ -830,6 +830,11 @@
   border: 1px solid #E5E6E6;
 }
 
+@media only screen and (max-width: 480px) {
+  .equipment-swiper .swiper-slide {
+    font-size: 18px;
+  }
+}
 html, * {
   overflow-x: hidden;
   box-sizing: border-box;
