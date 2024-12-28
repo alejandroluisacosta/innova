@@ -556,6 +556,17 @@
     width: 350px;
   }
 }
+@media only screen and (max-width: 480px) {
+  .allies__title-big {
+    font-size: 26px;
+  }
+  .allies-swiper {
+    top: 350px !important;
+  }
+  .allies-swiper .swiper-slide {
+    font-size: 18px;
+  }
+}
 .working-with-us {
   position: relative;
   height: 700px;
@@ -831,6 +842,9 @@
 }
 
 @media only screen and (max-width: 480px) {
+  .equipment__title-big {
+    font-size: 28px;
+  }
   .equipment-swiper .swiper-slide {
     font-size: 18px;
   }

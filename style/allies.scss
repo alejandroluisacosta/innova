@@ -87,3 +87,17 @@
         }
     }
 }
+
+@media only screen and (max-width: 480px) {
+    .allies {
+        &__title-big {
+            font-size: 26px;
+        }
+        &-swiper {
+            top: 350px !important;
+            .swiper-slide {
+                font-size: 18px;
+            }
+        }
+    }
+}
