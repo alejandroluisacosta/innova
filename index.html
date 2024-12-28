@@ -482,13 +482,15 @@
     </script>
     <script>
         window.addEventListener('load', () => {
-            const image = document.querySelector('.hero__image');
-            const scrollbar = document.querySelector('.swiper-scrollbar');
-            const nextButton = document.querySelector('.swiper-button-next');
-            const imageWidth = image.offsetWidth;
-
-            scrollbar.style.setProperty('--image-center-offset', `${imageWidth / 2}px`);
-            nextButton.style.setProperty('--image-right-offset', `${imageWidth - 30}px`);
+            if (window.innerWidth <= 480) {
+                const image = document.querySelector('.hero__image');
+                const scrollbar = document.querySelector('.swiper-scrollbar');
+                const nextButton = document.querySelector('.swiper-button-next');
+                const imageWidth = image.offsetWidth;
+    
+                scrollbar.style.setProperty('--image-center-offset', `${imageWidth / 2}px`);
+                nextButton.style.setProperty('--image-right-offset', `${imageWidth - 30}px`);
+            }
         });
     </script>
 </body>

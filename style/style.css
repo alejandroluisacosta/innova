@@ -186,6 +186,9 @@
   .hero__main .hero-swiper {
     height: 235px;
   }
+  .hero__main .hero-swiper .swiper-slide {
+    height: 100%;
+  }
   .hero__main .hero-swiper .swiper-button-next {
     right: 46px;
   }
@@ -221,6 +224,9 @@
   }
   .hero__learn-more {
     bottom: 68px;
+  }
+  .hero__learn-more .relative-container {
+    overflow: hidden;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -285,12 +291,6 @@
   }
   .hero__learn-more {
     bottom: 10%;
-  }
-  .hero__learn-more .relative-container {
-    height: 120px;
-  }
-  .hero__learn-more .arrow {
-    top: 22%;
   }
 }
 .services {
