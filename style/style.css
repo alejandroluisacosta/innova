@@ -416,6 +416,20 @@
     font-size: 16px;
   }
 }
+@media only screen and (max-width: 480px) {
+  .services__title {
+    font-size: 16px;
+  }
+  .services__service-name {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+  .services__service-description {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+}
 .about {
   padding: 250px 28.5%;
   background: url("../assets/GraniteBackground.png");
