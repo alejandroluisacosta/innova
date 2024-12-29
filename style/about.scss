@@ -31,3 +31,12 @@
         padding: 120px 19%;
     }
 }
+
+@media only screen and (max-width: 480px) {
+    .about {
+        padding: 120px 3.55%;
+        &__title {
+            line-height: unset;
+        }
+    }
+}

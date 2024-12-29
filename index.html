@@ -215,7 +215,7 @@
         <div class="working-with-us__text-container working-with-us__text-container--4">
             <p class="text text--outlined">Y ENTREGA</p>
             <p class="text">RESULTADOS</p>
-            <img class="image" src="assets/Trend.svg" alt="Ícono de tendencia alcista" />
+            <img class="image" id="trend-icon" src="assets/Trend.svg" alt="Ícono de tendencia alcista" />
         </div>
         <div class="working-with-us__text-container working-with-us__text-container--5">
             <p class="text">QUE MARCAN</p>
@@ -326,6 +326,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.js"></script>
     <script type="module">
         const progressLines = [...document.querySelectorAll(".autoplay-progress--slide svg")];
+        const progressContainers = [...document.querySelectorAll(".autoplay-progress--slide")];
+        const emptyProgressLines = [...document.querySelectorAll(".autoplay-progress--empty")];
     
         const servicesSwiper = new Swiper('.services-swiper', {
             loop: true,
@@ -353,6 +355,16 @@
                             line.style.setProperty("--progress", 0);
                         })
                     }
+
+                    if (window.innerWidth <= 480) {
+                        progressContainers.forEach((line, index) => {
+                            line.style.display = index === activeIndex ? 'block' : 'none';
+                        });
+                        emptyProgressLines.forEach((line, index) => {
+                            line.style.display = index === activeIndex ? 'block' : 'none';
+                        });
+                    };
+
                     progressLines[activeIndex].style.setProperty("--progress", (1 - progress));
 
                     document.querySelectorAll(".progress-text.active").forEach(el => el.classList.remove("active"));
@@ -478,6 +490,19 @@
 
             // Call it once to apply the styles on page load (in case the page is already scrolled)
             handleScroll();
+        });
+    </script>
+    <script>
+        window.addEventListener('load', () => {
+            if (window.innerWidth <= 480) {
+                const image = document.querySelector('.hero__image');
+                const scrollbar = document.querySelector('.swiper-scrollbar');
+                const nextButton = document.querySelector('.swiper-button-next');
+                const imageWidth = image.offsetWidth;
+    
+                scrollbar.style.setProperty('--image-center-offset', `${imageWidth / 2}px`);
+                nextButton.style.setProperty('--image-right-offset', `${imageWidth - 30}px`);
+            }
         });
     </script>
 </body>

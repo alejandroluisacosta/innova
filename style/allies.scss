@@ -44,6 +44,7 @@
                 gap: 30px;
                 font-size: 18px;
                 margin-bottom: 25px;
+                font-weight: 500;
                 &--last {
                     margin-bottom: 55px;
                 }
@@ -83,6 +84,36 @@
             }
             .image {
                 width: 350px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .allies {
+        &__title-big {
+            font-size: 26px;
+        }
+        &-swiper {
+            top: 350px !important;
+            .swiper-slide {
+                font-size: 18px;
+            }
+        }
+        &__why-us {
+            flex-direction: column;
+            gap: 30px;
+            .text {
+                .fact {
+                    gap: 12px;
+                    font-size: 16px;
+                    span {
+                        min-width: 20px;
+                    }
+                }
+            }
+            .image {
+                width: 100%;
             }
         }
     }
