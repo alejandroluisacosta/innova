@@ -551,6 +551,7 @@
   gap: 30px;
   font-size: 18px;
   margin-bottom: 25px;
+  font-weight: 500;
 }
 .allies__why-us .text .fact--last {
   margin-bottom: 55px;
@@ -596,6 +597,20 @@
   }
   .allies-swiper .swiper-slide {
     font-size: 18px;
+  }
+  .allies__why-us {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .allies__why-us .text .fact {
+    gap: 12px;
+    font-size: 16px;
+  }
+  .allies__why-us .text .fact span {
+    min-width: 20px;
+  }
+  .allies__why-us .image {
+    width: 100%;
   }
 }
 .working-with-us {
