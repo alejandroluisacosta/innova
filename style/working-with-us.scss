@@ -34,3 +34,41 @@
         }
     }
 }
+
+@media only screen and (max-width: 480px) {
+    .working-with-us {
+        gap: 15px;
+        &__text-container {
+            flex-wrap: wrap;
+            &--1 {
+                flex-wrap: wrap-reverse;
+            }
+            &--2 {
+                display: block;
+                max-width: 75%;
+            }
+            &--3 {
+                display: grid;
+                grid-template-columns: 190px 1fr;
+                row-gap: 10px;
+                .text:nth-child(3) {
+                    grid-column: span 2;
+                }
+            }
+            &--4 {
+                gap: 12px;
+            }
+            gap: 5px;
+            .text {
+                font-size: 24px;
+            }
+            .image {
+                width: 32px;
+                height: 32px;
+            }
+            #trend-icon {
+                display: none;
+            }
+        }
+    }
+}

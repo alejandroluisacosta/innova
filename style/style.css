@@ -649,6 +649,43 @@
     font-size: 32px;
   }
 }
+@media only screen and (max-width: 480px) {
+  .working-with-us {
+    gap: 15px;
+  }
+  .working-with-us__text-container {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .working-with-us__text-container--1 {
+    flex-wrap: wrap-reverse;
+  }
+  .working-with-us__text-container--2 {
+    display: block;
+    max-width: 75%;
+  }
+  .working-with-us__text-container--3 {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    row-gap: 10px;
+  }
+  .working-with-us__text-container--3 .text:nth-child(3) {
+    grid-column: span 2;
+  }
+  .working-with-us__text-container--4 {
+    gap: 12px;
+  }
+  .working-with-us__text-container .text {
+    font-size: 24px;
+  }
+  .working-with-us__text-container .image {
+    width: 32px;
+    height: 32px;
+  }
+  .working-with-us__text-container #trend-icon {
+    display: none;
+  }
+}
 .testimonies {
   padding: 150px 5.55%;
   text-align: center;
