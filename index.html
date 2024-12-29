@@ -326,6 +326,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.js"></script>
     <script type="module">
         const progressLines = [...document.querySelectorAll(".autoplay-progress--slide svg")];
+        const progressContainers = [...document.querySelectorAll(".autoplay-progress--slide")];
+        const emptyProgressLines = [...document.querySelectorAll(".autoplay-progress--empty")];
     
         const servicesSwiper = new Swiper('.services-swiper', {
             loop: true,
@@ -353,6 +355,16 @@
                             line.style.setProperty("--progress", 0);
                         })
                     }
+
+                    if (window.innerWidth <= 480) {
+                        progressContainers.forEach((line, index) => {
+                            line.style.display = index === activeIndex ? 'block' : 'none';
+                        });
+                        emptyProgressLines.forEach((line, index) => {
+                            line.style.display = index === activeIndex ? 'block' : 'none';
+                        });
+                    };
+
                     progressLines[activeIndex].style.setProperty("--progress", (1 - progress));
 
                     document.querySelectorAll(".progress-text.active").forEach(el => el.classList.remove("active"));
