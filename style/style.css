@@ -744,6 +744,33 @@
     font-size: 16px;
   }
 }
+@media only screen and (max-width: 480px) {
+  .testimonies {
+    padding: 56px 4%;
+  }
+  .testimonies__title {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  .testimonies__testimonies-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .testimonies__testimonies-container .single-testimony {
+    width: unset;
+  }
+  .testimonies__testimonies-container .single-testimony .quotes {
+    width: 24px;
+  }
+  .testimonies__testimonies-container .single-testimony .testimony {
+    margin-bottom: 18px;
+  }
+  .testimonies__testimonies-container .single-testimony .person-name,
+  .testimonies__testimonies-container .single-testimony .company-name,
+  .testimonies__testimonies-container .single-testimony .testimony {
+    font-size: 16px;
+  }
+}
 .footer {
   position: relative;
   height: 100vh;
@@ -933,7 +960,6 @@
   }
 }
 html, * {
-  overflow-x: hidden;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
