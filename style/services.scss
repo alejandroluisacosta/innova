@@ -141,4 +141,17 @@
             margin-bottom: 16px;
         }
     }
+    .swiper-wrapper {
+        position: relative;
+    }
+    .autoplay-progress,
+    .progress-2,
+    .progress-3 {
+        left: unset;
+    }
+    .autoplay-progress {
+        width: 90%;
+        margin-left: 3.55%;
+        margin-right: 3.55%;
+    }
 }
