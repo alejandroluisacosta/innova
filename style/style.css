@@ -921,6 +921,16 @@
     padding: 16px;
   }
 }
+@media only screen and (max-width: 480px) {
+  .contact {
+    padding: 100px 4%;
+  }
+  .contact__title {
+    font-size: 24px;
+    max-width: 300px;
+    margin: 0 auto 45px;
+  }
+}
 .equipment {
   position: relative;
   background: url("../assets/GraniteBackground.png");
