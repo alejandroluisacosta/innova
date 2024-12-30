@@ -25,7 +25,7 @@
                         <img class="hero__image" src="./assets/image1.png" alt="Constructores en obra" />
                     </div>
                     <div class="swiper-slide" data-text="PROCURA DE & MATERIALES">
-                        <img class="hero__image" src="./assets/image1.png" alt="Constructores en obra" />
+                        <img class="hero__image" src="./assets/Handshake.webp" alt="Constructores en obra" />
                     </div>
                     <div class="swiper-slide" data-text="PETROLEO">
                         <img class="hero__image" src="./assets/image1.png" alt="Constructores en obra" />
@@ -382,6 +382,7 @@
             const textElement = document.getElementById("animated-text");
             const heroSwiper = new Swiper(".hero-swiper", {
                 loop: true,
+                effect: 'fade',
                 slidesPerView: 'auto',
                 navigation: {
                 nextEl: ".swiper-button-next",
@@ -502,7 +503,7 @@
                 const imageWidth = image.offsetWidth;
     
                 scrollbar.style.setProperty('--image-center-offset', `${imageWidth / 2}px`);
-                nextButton.style.setProperty('--image-right-offset', `${imageWidth - 30}px`);
+                nextButton.style.setProperty('--image-right-offset', `${imageWidth - 25}px`);
             }
         });
     </script>
