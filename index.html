@@ -319,7 +319,8 @@
                 2024 | diseñado por <strong>TAISAHI</strong>
             </p>
             <p class="rif">RIF: J-40559370-9</p>
-            <img class="company-name" src="./assets/CompanyNameFooterBottom.svg" alt="Nombre de compañía" />
+            <img class="company-name" id="company-logo-footer--regular" src="./assets/CompanyNameFooterBottom.svg" alt="Nombre de compañía" />
+            <img class="company-name hidden" id="company-logo-footer--mini" src="./assets/CompanyLogoMini.webp" alt="Logo de compañía" />
         </div>
     </footer>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.css" />
@@ -504,6 +505,22 @@
                 nextButton.style.setProperty('--image-right-offset', `${imageWidth - 30}px`);
             }
         });
+    </script>
+    <script>
+        function toggleVisibility(regular, mini, condition) {
+            regular.classList.toggle('hidden', condition);
+            mini.classList.toggle('hidden', !condition);
+        }
+
+        function checkScreenWidth() {
+            const regularLogo = document.getElementById("company-logo-footer--regular");
+            const miniLogo = document.getElementById("company-logo-footer--mini");
+            const isSmallScreen = window.innerWidth <= 480;
+            toggleVisibility(regularLogo, miniLogo, isSmallScreen);
+        }
+
+        window.addEventListener('resize', checkScreenWidth);
+        window.addEventListener('load', checkScreenWidth);
     </script>
 </body>
 </html>
