@@ -821,7 +821,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 0.5px solid #303030;
+  border-top: 1.5px solid #303030;
   color: #ECECEC;
 }
 .footer__bottom .credits img {
@@ -844,6 +844,37 @@
   }
   .footer__subsection .text {
     margin-left: 15px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .footer {
+    height: unset;
+    padding: 80px 3.55% 150px;
+  }
+  .footer__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+  .footer__company-name {
+    margin-bottom: 12px;
+  }
+  .footer__subsection .text {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .footer__bottom {
+    padding: 16px 5.55%;
+  }
+  .footer__bottom .rif {
+    position: absolute;
+    top: -25px;
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .footer__bottom {
+    padding: 16px 3.55%;
   }
 }
 .contact {
@@ -991,6 +1022,10 @@ html, * {
   background: url("../assets/noise.svg");
   width: 100%;
   height: 100vh;
+}
+
+.hidden {
+  display: none;
 }
 
 @font-face {

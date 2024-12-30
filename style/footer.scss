@@ -47,7 +47,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-top: 0.5px solid #303030;
+        border-top: 1.5px solid #303030;
         color: #ECECEC;
         .credits {
             img {
@@ -72,6 +72,43 @@
             .text {
                 margin-left: 15px;
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .footer {
+        height: unset;
+        padding: 80px 3.55% 150px;
+        &__grid {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+        }
+        &__company-name {
+            margin-bottom: 12px;
+        }
+        &__subsection {
+            .text {
+                font-size: 14px;
+                line-height: 21px;
+            }
+        }
+        &__bottom {
+            padding: 16px 5.55%;
+            .rif {
+                position: absolute;
+                top: -25px;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .footer {
+        &__bottom {
+            padding: 16px 3.55%;
         }
     }
 }
