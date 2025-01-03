@@ -24,8 +24,8 @@
                     <div class="swiper-slide" data-text="PROYECTOS DE & INGENIERIA Y & CONSTRUCCION">
                         <img class="hero__image" src="./assets/image1.png" alt="Constructores en obra" />
                     </div>
-                    <div class="swiper-slide" data-text="PROCURA DE & MATERIALES">
-                        <img class="hero__image" src="./assets/Handshake.webp" alt="Constructores en obra" />
+                    <div class="swiper-slide" data-text="SOLUCIONES & INDUSTRIALES">
+                        <img class="hero__image" src="./assets/Engines.webp" alt="Constructores en obra" />
                     </div>
                     <div class="swiper-slide" data-text="PETROLEO">
                         <img class="hero__image" src="./assets/image1.png" alt="Constructores en obra" />
@@ -258,22 +258,22 @@
     </section>
     <section class="contact">
         <h4 class="contact__title">PONTE EN CONTACTO CON NOSOTROS</h4>
-        <div class="contact__form">
-            <label for="name">Nombre</label>
-            <input type="text" id="name" placeholder="Ingresa tu nombre"/>
-            <label for="email">Email</label>
-            <input type="text" id="email" placeholder="Ingresa tu correo electrónico" />
-            <label for="message">Mensaje</label>
-            <input type="text" id="message" placeholder="Ingresa tu mensaje" />
+            <form class="contact__form" method="POST" action="https://formspree.io/f/xkggprng">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="Nombre" placeholder="Ingresa tu nombre"/>
+                <label for="email">Email</label>
+                <input type="text" id="email" name="Email" placeholder="Ingresa tu correo electrónico" />
+                <label for="message">Mensaje</label>
+                <input type="text" id="message" name="Mensaje" placeholder="Ingresa tu mensaje" />
             <div class="terms-container">
                 <input type="checkbox" id="checkbox"/>
                 <label for="checkbox">Acepto los Términos de Servicio</label>
             </div>
-            <button>
+            <button type="submit" class="contact__button">
                 Enviar mensaje
                 <img src="assets/Arrow1.svg" alt="Flecha"/>
             </button>
-        </div>
+        </form>
     </section>
     <footer class="footer">
         <div class="footer__grid">
