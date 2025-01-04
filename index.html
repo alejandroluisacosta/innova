@@ -10,13 +10,13 @@
     <nav class="nav">
         <img class="company-name" src="./assets/CompanyNameHeader.svg" alt="Company's name"/>
         <ul class="nav__links">
-            <li>INICIO</li>
-            <li>SERVICIOS</li>
-            <li>NOSOTROS</li>
-            <li>CONTACTO</li>
+            <li><a href="#hero">INICIO</a></li>
+            <li><a href="#services">SERVICIOS</a></li>
+            <li><a href="#about">NOSOTROS</a></li>
+            <li><a href="#contact">CONTACTO</a></li>
         </ul>
     </nav>
-    <section class="hero">
+    <section class="hero" id="hero">
         <h2 class="hero__title">EXPERTOS EN</h2>
         <div class="hero__main">
             <div class="swiper hero-swiper">
@@ -24,11 +24,20 @@
                     <div class="swiper-slide" data-text="PROYECTOS DE & INGENIERIA Y & CONSTRUCCION">
                         <img class="hero__image" src="./assets/image1.png" alt="Constructores en obra" />
                     </div>
-                    <div class="swiper-slide" data-text="PROCURA DE & MATERIALES">
-                        <img class="hero__image" src="./assets/image1.png" alt="Constructores en obra" />
+                    <div class="swiper-slide" data-text="SOLUCIONES & INDUSTRIALES">
+                        <img class="hero__image" src="./assets/Engines.webp" alt="Engranajes de maquinaria" />
                     </div>
-                    <div class="swiper-slide" data-text="PETROLEO">
-                        <img class="hero__image" src="./assets/image1.png" alt="Constructores en obra" />
+                    <div class="swiper-slide" data-text="PROCURA Y & SUMINISTROS">
+                        <img class="hero__image" src="./assets/Logistics.webp" alt="Cinta en cadena de produccción" />
+                    </div>
+                    <div class="swiper-slide" data-text="SERVICIOS & PETROLEROS">
+                        <img class="hero__image" src="./assets/Oil2.webp" alt="Extracción de petróleo" />
+                    </div>
+                    <div class="swiper-slide" data-text="MANTENIMIENTO & ESPECIALIZADO">
+                        <img class="hero__image" src="./assets/Maintenance.webp" alt="Controles de seguridad" />
+                    </div>
+                    <div class="swiper-slide" data-text="CONSULTORIA & INTEGRAL">
+                        <img class="hero__image" src="./assets/Consulting.webp" alt="Gestión de riesgos en planta petrolera" />
                     </div>
                 </div>
                 
@@ -66,12 +75,12 @@
             </div>
         </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
         <p class="about__name">Nosotros</p>
         <h3 class="about__title">Innovación y excelencia para proyectos integrales</h3>
         <p class="about__description">INNOVA lleva soluciones integrales de ingeniería, construcción y consultoría a todo el territorio nacional e internacional.<br><br><strong>Desde 2015</strong> trabajamos con sectores públicos y privados, liderando proyectos multidisciplinarios en áreas civiles, mecánicas, eléctricas y petroleras.<br><br>Con sede en Puerto La Cruz, ofrecemos servicios que abarcan <strong>diseño, procura, mantenimiento y ejecución,</strong> adaptándonos a las necesidades únicas de cada cliente, industria y ubicación.</p>
     </section>
-    <section class="services">
+    <section class="services" id="services">
         <div class="swiper services-swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide services-slide services-slide--construction">
@@ -256,24 +265,24 @@
         <img class="collaborate__image" src="assets/InnovaBigText.png" alt="Nombre de la compañía" style="display: none"/>
 
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
         <h4 class="contact__title">PONTE EN CONTACTO CON NOSOTROS</h4>
-        <div class="contact__form">
-            <label for="name">Nombre</label>
-            <input type="text" id="name" placeholder="Ingresa tu nombre"/>
-            <label for="email">Email</label>
-            <input type="text" id="email" placeholder="Ingresa tu correo electrónico" />
-            <label for="message">Mensaje</label>
-            <input type="text" id="message" placeholder="Ingresa tu mensaje" />
+            <form class="contact__form" method="POST" action="https://formspree.io/f/xkggprng">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="Nombre" placeholder="Ingresa tu nombre"/>
+                <label for="email">Email</label>
+                <input type="text" id="email" name="Email" placeholder="Ingresa tu correo electrónico" />
+                <label for="message">Mensaje</label>
+                <input type="text" id="message" name="Mensaje" placeholder="Ingresa tu mensaje" />
             <div class="terms-container">
                 <input type="checkbox" id="checkbox"/>
                 <label for="checkbox">Acepto los Términos de Servicio</label>
             </div>
-            <button>
+            <button type="submit" class="contact__button">
                 Enviar mensaje
                 <img src="assets/Arrow1.svg" alt="Flecha"/>
             </button>
-        </div>
+        </form>
     </section>
     <footer class="footer">
         <div class="footer__grid">
@@ -382,6 +391,7 @@
             const textElement = document.getElementById("animated-text");
             const heroSwiper = new Swiper(".hero-swiper", {
                 loop: true,
+                effect: 'fade',
                 slidesPerView: 'auto',
                 navigation: {
                 nextEl: ".swiper-button-next",
@@ -502,7 +512,7 @@
                 const imageWidth = image.offsetWidth;
     
                 scrollbar.style.setProperty('--image-center-offset', `${imageWidth / 2}px`);
-                nextButton.style.setProperty('--image-right-offset', `${imageWidth - 30}px`);
+                nextButton.style.setProperty('--image-right-offset', `${imageWidth - 25}px`);
             }
         });
     </script>
@@ -521,6 +531,18 @@
 
         window.addEventListener('resize', checkScreenWidth);
         window.addEventListener('load', checkScreenWidth);
+    </script>
+    <script>
+        const image = document.querySelector('.hero__image');
+        const title = document.querySelector('.hero__main .description');
+
+        const setTitleHeight = () => {
+            const imageHeight = image.offsetHeight;
+            title.style.setProperty('--image-height', `${imageHeight}px`);
+        };
+
+        window.addEventListener('resize', setTitleHeight);
+        setTitleHeight();
     </script>
 </body>
 </html>

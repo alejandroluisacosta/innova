@@ -24,6 +24,10 @@
   font-size: 18px;
   padding: 24px 0px;
 }
+.nav li a {
+  text-decoration: none;
+  color: #303030;
+}
 
 .nav.scrolled {
   background-color: rgba(249, 250, 249, 0.5490196078);
@@ -94,7 +98,10 @@
   right: 83px;
 }
 .hero__main .description {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 285px;
   width: 100%;
   transform: translateX(-11%);
 }
@@ -112,11 +119,11 @@
   transition: opacity 0.5s ease-in-out;
 }
 .hero__main .description__button {
-  position: absolute;
   bottom: 55px;
   display: flex;
   gap: 12px;
   padding: 16px 32px;
+  width: 205px;
   border-radius: 2px;
   align-items: center;
   background-color: #303030;
@@ -200,8 +207,16 @@
     bottom: 24px;
     left: 52%;
   }
+  .hero__main .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: unset;
+    height: var(--image-height);
+  }
   .hero__main .description__title {
     font-size: 30px;
+    margin-bottom: 32px;
   }
   .hero__main .description__title #animated-text {
     font-size: 30px;
@@ -266,6 +281,10 @@
     left: 0;
   }
   .hero__main .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: unset;
     margin-left: 1%;
     transform: unset;
   }
@@ -273,12 +292,15 @@
     font-size: 32px;
     min-height: 115px;
     margin-bottom: 20px;
+    display: flex;
+    align-items: flex-end;
   }
   .hero__main .description__title #animated-text {
     font-size: 32px;
   }
   .hero__main .description__button {
     position: unset;
+    width: 178px;
   }
   .hero__facts {
     flex-direction: column;
@@ -1005,6 +1027,7 @@ html, * {
   margin: 0;
   padding: 0;
   font-size: 16px;
+  scroll-behavior: smooth;
   font-family: "New Science", Tahoma, Verdana;
   --button-black: #303030;
   --button-white: #F8F8F8;
