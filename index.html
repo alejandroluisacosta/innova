@@ -31,14 +31,14 @@
                         <img class="hero__image" src="./assets/Logistics.webp" alt="Cinta en cadena de produccción" />
                     </div>
                     <div class="swiper-slide" data-text="SERVICIOS & PETROLEROS">
-                        <img class="hero__image" src="./assets/Oil1.webp" alt="Extracción de petróleo" />
+                        <img class="hero__image" src="./assets/Oil2.webp" alt="Extracción de petróleo" />
                     </div>
                     <div class="swiper-slide" data-text="MANTENIMIENTO & ESPECIALIZADO">
                         <img class="hero__image" src="./assets/Maintenance.webp" alt="Controles de seguridad" />
                     </div>
-                </div>
-                <div class="swiper-slide" data-text="SEGURIDAD Y & MEDIO AMBIENTE">
-                    <img class="hero__image" src="./assets/Consulting.webp" alt="Gestión de riesgos en planta petrolera" />
+                    <div class="swiper-slide" data-text="CONSULTORIA & INTEGRAL">
+                        <img class="hero__image" src="./assets/Consulting.webp" alt="Gestión de riesgos en planta petrolera" />
+                    </div>
                 </div>
                 
                 <img class="swiper-button-prev" src="./assets/HeroSwiperArrowLeft.svg" alt="Botón 'anterior' carrusel de imágenes principal"/>
@@ -531,6 +531,18 @@
 
         window.addEventListener('resize', checkScreenWidth);
         window.addEventListener('load', checkScreenWidth);
+    </script>
+    <script>
+        const image = document.querySelector('.hero__image');
+        const title = document.querySelector('.hero__main .description');
+
+        const setTitleHeight = () => {
+            const imageHeight = image.offsetHeight;
+            title.style.setProperty('--image-height', `${imageHeight}px`);
+        };
+
+        window.addEventListener('resize', setTitleHeight);
+        setTitleHeight();
     </script>
 </body>
 </html>

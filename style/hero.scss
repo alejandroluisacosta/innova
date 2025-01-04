@@ -49,7 +49,7 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            padding-bottom: 50px;
+            height: 285px;
             width: 100%;
             transform: translateX(-11%);
             &__title {
@@ -160,8 +160,10 @@
                 flex-direction: column;
                 justify-content: flex-end;
                 padding-bottom: unset;
+                height: var(--image-height);
                 &__title {
                     font-size: 30px;
+                    margin-bottom: 32px;
                     & #animated-text {
                         font-size: 30px;
                     }
