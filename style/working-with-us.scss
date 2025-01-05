@@ -37,7 +37,7 @@
 
 @media only screen and (max-width: 480px) {
     .working-with-us {
-        gap: 15px;
+        gap: 6px;
         &__text-container {
             flex-wrap: wrap;
             &--1 {
@@ -46,6 +46,7 @@
             &--2 {
                 display: block;
                 max-width: 75%;
+                line-height: 38px;
             }
             &--3 {
                 display: grid;
