@@ -212,7 +212,7 @@
     flex-direction: column;
     justify-content: flex-end;
     padding-bottom: unset;
-    height: var(--image-height);
+    height: unset;
   }
   .hero__main .description__title {
     font-size: 30px;
@@ -246,12 +246,13 @@
 }
 @media only screen and (max-width: 480px) {
   .hero {
-    padding: 80px 3.55%;
+    padding: 124px 3.55%;
   }
   .hero__title {
     font-size: 32px;
     margin-left: 1%;
-    margin-bottom: 12px;
+    margin-top: 12px;
+    margin-bottom: 0;
   }
   .hero__image {
     max-width: 340px;
@@ -260,8 +261,8 @@
   }
   .hero__main {
     flex-direction: column-reverse;
-    gap: 20px;
-    margin-bottom: 20px;
+    gap: 28px;
+    margin-bottom: 40px;
   }
   .hero__main .hero-swiper {
     height: 275px;
@@ -287,10 +288,11 @@
     padding-bottom: unset;
     margin-left: 1%;
     transform: unset;
+    height: unset;
   }
   .hero__main .description__title {
     font-size: 32px;
-    min-height: 115px;
+    min-height: 80px;
     margin-bottom: 20px;
     display: flex;
     align-items: flex-end;
@@ -310,6 +312,12 @@
   .hero__facts .fact {
     width: unset;
     align-items: flex-end;
+  }
+  .hero__facts .fact__number {
+    font-size: 24px;
+  }
+  .hero__facts .fact__text {
+    font-size: 14px;
   }
   .hero__learn-more {
     bottom: 10%;
@@ -673,7 +681,7 @@
 }
 @media only screen and (max-width: 480px) {
   .working-with-us {
-    gap: 15px;
+    gap: 6px;
   }
   .working-with-us__text-container {
     flex-wrap: wrap;
@@ -685,6 +693,7 @@
   .working-with-us__text-container--2 {
     display: block;
     max-width: 75%;
+    line-height: 38px;
   }
   .working-with-us__text-container--3 {
     display: grid;
@@ -731,6 +740,7 @@
   line-height: 27px;
 }
 .testimonies__testimonies-container .single-testimony .quotes {
+  color: #964301;
   transform: translate(7.5px, 0);
   margin-bottom: 15px;
 }
