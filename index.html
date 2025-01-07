@@ -443,6 +443,8 @@
             speed: 2000,
         });
     </script>
+
+    <!-- Fact numbers -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const numbers = document.querySelectorAll('.fact__number');
@@ -470,6 +472,7 @@
             animateNumber(numbers[2], 100, 200); // Same speed for the third number
         });
     </script>
+    <!-- Navigation slide -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const navbar = document.querySelector(".nav");
@@ -503,9 +506,10 @@
             handleScroll();
         });
     </script>
+    <!-- Hero arrows alignment -->
     <script>
         window.addEventListener('load', () => {
-            if (window.innerWidth <= 480) {
+            if (window.innerWidth <= 480 || window.innerWidth >= 1920) {
                 const image = document.querySelector('.hero__image');
                 const scrollbar = document.querySelector('.swiper-scrollbar');
                 const nextButton = document.querySelector('.swiper-button-next');

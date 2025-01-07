@@ -323,6 +323,20 @@
     bottom: 10%;
   }
 }
+@media only screen and (min-width: 1920px) {
+  .hero__main .hero-swiper {
+    height: unset;
+    max-width: unset;
+  }
+  .hero__main .hero-swiper .swiper-slide {
+    height: unset;
+  }
+  .hero__image {
+    object-fit: cover;
+    width: 90%;
+    height: 80%;
+  }
+}
 .services {
   height: 100vh;
 }
