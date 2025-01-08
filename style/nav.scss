@@ -20,9 +20,9 @@
         width: 42%;
     }
     li {
-        font-size: 18px;
         padding: 24px 0px;
         a {
+            font-size: 18px;
             text-decoration: none;
             color: #303030;
         }
@@ -47,6 +47,19 @@
         }
         li {
             font-size: 12px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .nav {
+        .company-name {
+            height: 32px;
+        }
+        li {
+            a {
+                font-size: 24px;
+            }
         }
     }
 }

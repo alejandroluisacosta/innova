@@ -328,5 +328,24 @@
             height: 80%;
             margin-left: 0;
         }
+        &__facts {
+            .fact {
+                &__number {
+                    font-size: 74px;
+                }
+                &__text {
+                    font-size: 24px;
+                }
+            }
+        }
+        &__learn-more {
+            width: 180px;
+            transform: translate(0, 45px);
+            .arrow {
+                top: 32%;
+                left: 31%;
+                transform: unset;
+            }
+        }
     }
 }
