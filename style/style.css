@@ -923,6 +923,30 @@
     font-size: 16px;
   }
 }
+@media only screen and (min-width: 1920px) {
+  .testimonies {
+    padding: 220px 5.55%;
+  }
+  .testimonies__title {
+    font-size: 48px;
+    margin-bottom: 150px;
+  }
+  .testimonies__testimonies-container {
+    gap: 4%;
+  }
+  .testimonies__testimonies-container .single-testimony {
+    width: unset;
+  }
+  .testimonies__testimonies-container .single-testimony .testimony {
+    font-size: 24px;
+  }
+  .testimonies__testimonies-container .single-testimony .testimony strong {
+    font-size: 24px;
+  }
+  .testimonies__testimonies-container .single-testimony .person-name, .testimonies__testimonies-container .single-testimony .company-name {
+    font-size: 24px;
+  }
+}
 .footer {
   position: relative;
   height: 100vh;
