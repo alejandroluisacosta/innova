@@ -622,6 +622,17 @@
     line-height: unset;
   }
 }
+@media only screen and (min-width: 1920px) {
+  .about__title {
+    font-size: 54px;
+  }
+  .about__description {
+    font-size: 24px;
+  }
+  .about__description strong {
+    font-size: 24px;
+  }
+}
 .allies {
   position: relative;
   padding: 165px 5.5% 90px;
