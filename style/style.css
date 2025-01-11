@@ -744,6 +744,17 @@
     width: 100%;
   }
 }
+@media only screen and (min-width: 1920px) {
+  .allies__why-us .text .title {
+    font-size: 40px;
+  }
+  .allies__why-us .text .fact, .allies__why-us .text .button {
+    font-size: 24px;
+  }
+  .allies__why-us .image {
+    width: 630px;
+  }
+}
 .working-with-us {
   position: relative;
   height: 700px;
