@@ -46,7 +46,9 @@
             height: 20px;
         }
         li {
-            font-size: 12px;
+            a {
+                font-size: 12px;
+            }
         }
     }
 }

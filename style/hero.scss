@@ -149,26 +149,25 @@
                     width: 20px;
                 }
                 .swiper-button-next {
-                    right: 46px;
+                    right: -3px;
                 }
                 .swiper-button-prev {
                     left: 62px;
                 }
                 .swiper-scrollbar {
-                    width: 40%;
-                    bottom: 24px;
-                    left: 52%;
+                    width: 60%;
+                    left: 54%;
                 }
             }
             .description {
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
-                padding-bottom: unset;
+                padding-bottom: 45px;
                 height: unset;
                 &__title {
                     font-size: 30px;
-                    margin-bottom: 32px;
+                    margin-bottom: 20px;
                     & #animated-text {
                         font-size: 30px;
                     }
@@ -177,6 +176,7 @@
                     padding: 12px 32px;
                     bottom: 55px;
                     font-size: 14px;
+                    width: 173px;
                 }
             }
         }
