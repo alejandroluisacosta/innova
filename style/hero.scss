@@ -11,7 +11,9 @@
     }
     &__image {
         margin-left: 3px;
-        width: 85%;
+        width: 99%;
+        object-fit: cover;
+        height: 100%;
     }
     &__main {
         display: flex;
@@ -26,11 +28,11 @@
                 overflow-y: hidden;
             }
             .swiper-scrollbar {
-                width: 50%;
+                width: 65%;
                 position: absolute;
-                bottom: 25px;
+                bottom: 20px;
                 left: 50%;
-                transform: translateX(-50%);
+                transform: translateX(-40%);
             }
             .swiper-button-prev,
             .swiper-button-next {
@@ -42,7 +44,7 @@
                 left: 68px;
             }
             .swiper-button-next {
-                right: 83px;
+                right: 0;
             }
         }
         .description {
@@ -51,7 +53,6 @@
             justify-content: flex-end;
             height: 285px;
             width: 100%;
-            transform: translateX(-11%);
             &__title {
                 margin-bottom: 40px;
                 font-family: sans-serif; 
@@ -134,7 +135,7 @@
             letter-spacing: 1px;
         }
         &__image {
-            max-width: 270px;
+            max-height: 80%;
         }
         &__main {
             max-width: 665px;
@@ -143,27 +144,30 @@
                 .swiper-slide {
                     height: 100%;
                 }
+                .swiper-button-next,
+                .swiper-button-prev {
+                    width: 20px;
+                }
                 .swiper-button-next {
-                    right: 46px;
+                    right: -3px;
                 }
                 .swiper-button-prev {
                     left: 62px;
                 }
                 .swiper-scrollbar {
-                    width: 40%;
-                    bottom: 24px;
-                    left: 52%;
+                    width: 60%;
+                    left: 54%;
                 }
             }
             .description {
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
-                padding-bottom: unset;
+                padding-bottom: 45px;
                 height: unset;
                 &__title {
                     font-size: 30px;
-                    margin-bottom: 32px;
+                    margin-bottom: 20px;
                     & #animated-text {
                         font-size: 30px;
                     }
@@ -172,6 +176,7 @@
                     padding: 12px 32px;
                     bottom: 55px;
                     font-size: 14px;
+                    width: 173px;
                 }
             }
         }
@@ -207,8 +212,10 @@
             margin-bottom: 0;
         }
         &__image {
-            max-width: 340px;
-            width: 99%;
+            object-fit: cover;
+            width: 100%;
+            height: 80%;
+            max-width: unset;
             margin-left: unset;
         }
         &__main {
@@ -222,11 +229,18 @@
                     height: 100%;
                 }
                 .swiper-scrollbar {
-                    width: 50%;
+                    width: 70%;
                     left: var(--image-center-offset, 0px);
+                    bottom: 20px;
+                    transform: translateX(-48%);
+                }
+                .swiper-button-next,
+                .swiper-button-prev {
+                    width: 25px;
+                    // bottom: 
                 }
                 .swiper-button-next {
-                    left: var(--image-right-offset, 330px);
+                    right: -5px;
                 }
                 .swiper-button-prev {
                     left: 0;
@@ -273,6 +287,83 @@
         }
         &__learn-more {
             bottom: 10%;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1920px) {
+    .hero {
+        &__title {
+            font-size: 74px;
+        }
+        &__main {
+            overflow: hidden;
+            .hero-swiper {
+                height: unset;
+                max-width: unset;
+                margin-right: unset;
+                .swiper-slide {
+                    height: unset;
+                }
+                .swiper-scrollbar {
+                    width: 65%;
+                    bottom: 50px
+                }
+                .swiper-button-next,
+                .swiper-button-prev {
+                    bottom: 27px;
+                    width: 40px;
+                }
+                .swiper-button-next {
+                    right: -10px;
+                }
+                .swiper-button-prev {
+                    left: 100px;
+                }
+            }
+            .description {
+                transform: unset;
+                margin: 80px 0 0 35px;
+                &__title {
+                    font-size: 74px;
+                    margin-bottom: 40px;
+                    & #animated-text {
+                        font-size: 74px;
+                    }
+                }
+                &__button {
+                    padding: 20px 32px;
+                    font-size: 20px;
+                    width: 220px;
+                    justify-content: space-around;
+                }
+            }
+        }
+        &__image {
+            object-fit: cover;
+            width: 100%;
+            height: 80%;
+            margin-left: 0;
+        }
+        &__facts {
+            .fact {
+                &__number {
+                    font-size: 74px;
+                }
+                &__text {
+                    font-size: 24px;
+                }
+            }
+        }
+        &__learn-more {
+            width: 180px;
+            transform: translate(0, 45px);
+            .arrow {
+                top: 32%;
+                left: 31%;
+                transform: unset;
+            }
         }
     }
 }

@@ -112,3 +112,38 @@
         }
     }
 }
+
+@media only screen and (min-width: 1920px) {
+    .footer {
+        padding: 80px 20% 100px 5.55%;
+        &__company-name {
+            width: 400px;
+        }
+        &__subsection {
+            .title {
+                gap: 6px;
+                .title__number {
+                    font-size: 16px;
+                }
+                .title__title {
+                    font-size: 32px;
+                }
+            }
+            .text {
+                font-size: 24px;
+                line-height: 36px;
+                margin-bottom: 10px;
+            }
+        }
+        &__bottom {
+            .credits,
+            .credits strong,
+            .rif {
+                font-size: 20px;
+            }
+            .company-name {
+                width: 175px;
+            }
+        }
+    }
+}

@@ -1,6 +1,6 @@
 .working-with-us {
     position: relative;
-    height: 700px;
+    height: 100vh;
     background: url('../assets/BrownGraniteBackground.png');
     background-color: #532501;
     padding: 125px 5.55%;
@@ -69,6 +69,19 @@
             }
             #trend-icon {
                 display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .working-with-us {
+        &__text-container {
+            .text {
+                font-size: 80px;
+            }
+            .image {
+                width: 90px;
             }
         }
     }

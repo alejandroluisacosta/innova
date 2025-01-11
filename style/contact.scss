@@ -86,3 +86,20 @@
         }
     }
 }
+
+@media only screen and (min-width: 1920px) {
+    .contact {
+        padding: 150px 5.55% 300px;
+        &__title {
+            font-size: 48px;
+            margin-bottom: 100px;
+        }
+        &__form {
+            max-width: 1000px;
+            gap: 25px;
+            label, input, button {
+                font-size: 24px;
+            }
+        }
+    }
+}

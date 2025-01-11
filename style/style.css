@@ -21,10 +21,10 @@
   width: 42%;
 }
 .nav li {
-  font-size: 18px;
   padding: 24px 0px;
 }
 .nav li a {
+  font-size: 18px;
   text-decoration: none;
   color: #303030;
 }
@@ -44,8 +44,16 @@
   .nav .company-name {
     height: 20px;
   }
-  .nav li {
+  .nav li a {
     font-size: 12px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .nav .company-name {
+    height: 32px;
+  }
+  .nav li a {
+    font-size: 24px;
   }
 }
 .hero {
@@ -62,7 +70,9 @@
 }
 .hero__image {
   margin-left: 3px;
-  width: 85%;
+  width: 99%;
+  object-fit: cover;
+  height: 100%;
 }
 .hero__main {
   display: flex;
@@ -79,11 +89,11 @@
   overflow-y: hidden;
 }
 .hero__main .hero-swiper .swiper-scrollbar {
-  width: 50%;
+  width: 65%;
   position: absolute;
-  bottom: 25px;
+  bottom: 20px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-40%);
 }
 .hero__main .hero-swiper .swiper-button-prev,
 .hero__main .hero-swiper .swiper-button-next {
@@ -95,7 +105,7 @@
   left: 68px;
 }
 .hero__main .hero-swiper .swiper-button-next {
-  right: 83px;
+  right: 0;
 }
 .hero__main .description {
   display: flex;
@@ -103,7 +113,6 @@
   justify-content: flex-end;
   height: 285px;
   width: 100%;
-  transform: translateX(-11%);
 }
 .hero__main .description__title {
   margin-bottom: 40px;
@@ -185,7 +194,7 @@
     letter-spacing: 1px;
   }
   .hero__image {
-    max-width: 270px;
+    max-height: 80%;
   }
   .hero__main {
     max-width: 665px;
@@ -196,27 +205,30 @@
   .hero__main .hero-swiper .swiper-slide {
     height: 100%;
   }
+  .hero__main .hero-swiper .swiper-button-next,
+  .hero__main .hero-swiper .swiper-button-prev {
+    width: 20px;
+  }
   .hero__main .hero-swiper .swiper-button-next {
-    right: 46px;
+    right: -3px;
   }
   .hero__main .hero-swiper .swiper-button-prev {
     left: 62px;
   }
   .hero__main .hero-swiper .swiper-scrollbar {
-    width: 40%;
-    bottom: 24px;
-    left: 52%;
+    width: 60%;
+    left: 54%;
   }
   .hero__main .description {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding-bottom: unset;
+    padding-bottom: 45px;
     height: unset;
   }
   .hero__main .description__title {
     font-size: 30px;
-    margin-bottom: 32px;
+    margin-bottom: 20px;
   }
   .hero__main .description__title #animated-text {
     font-size: 30px;
@@ -225,6 +237,7 @@
     padding: 12px 32px;
     bottom: 55px;
     font-size: 14px;
+    width: 173px;
   }
   .hero__facts .fact {
     min-width: unset;
@@ -255,8 +268,10 @@
     margin-bottom: 0;
   }
   .hero__image {
-    max-width: 340px;
-    width: 99%;
+    object-fit: cover;
+    width: 100%;
+    height: 80%;
+    max-width: unset;
     margin-left: unset;
   }
   .hero__main {
@@ -272,11 +287,17 @@
     height: 100%;
   }
   .hero__main .hero-swiper .swiper-scrollbar {
-    width: 50%;
+    width: 70%;
     left: var(--image-center-offset, 0px);
+    bottom: 20px;
+    transform: translateX(-48%);
+  }
+  .hero__main .hero-swiper .swiper-button-next,
+  .hero__main .hero-swiper .swiper-button-prev {
+    width: 25px;
   }
   .hero__main .hero-swiper .swiper-button-next {
-    left: var(--image-right-offset, 330px);
+    right: -5px;
   }
   .hero__main .hero-swiper .swiper-button-prev {
     left: 0;
@@ -321,6 +342,75 @@
   }
   .hero__learn-more {
     bottom: 10%;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .hero__title {
+    font-size: 74px;
+  }
+  .hero__main {
+    overflow: hidden;
+  }
+  .hero__main .hero-swiper {
+    height: unset;
+    max-width: unset;
+    margin-right: unset;
+  }
+  .hero__main .hero-swiper .swiper-slide {
+    height: unset;
+  }
+  .hero__main .hero-swiper .swiper-scrollbar {
+    width: 65%;
+    bottom: 50px;
+  }
+  .hero__main .hero-swiper .swiper-button-next,
+  .hero__main .hero-swiper .swiper-button-prev {
+    bottom: 27px;
+    width: 40px;
+  }
+  .hero__main .hero-swiper .swiper-button-next {
+    right: -10px;
+  }
+  .hero__main .hero-swiper .swiper-button-prev {
+    left: 100px;
+  }
+  .hero__main .description {
+    transform: unset;
+    margin: 80px 0 0 35px;
+  }
+  .hero__main .description__title {
+    font-size: 74px;
+    margin-bottom: 40px;
+  }
+  .hero__main .description__title #animated-text {
+    font-size: 74px;
+  }
+  .hero__main .description__button {
+    padding: 20px 32px;
+    font-size: 20px;
+    width: 220px;
+    justify-content: space-around;
+  }
+  .hero__image {
+    object-fit: cover;
+    width: 100%;
+    height: 80%;
+    margin-left: 0;
+  }
+  .hero__facts .fact__number {
+    font-size: 74px;
+  }
+  .hero__facts .fact__text {
+    font-size: 24px;
+  }
+  .hero__learn-more {
+    width: 180px;
+    transform: translate(0, 45px);
+  }
+  .hero__learn-more .arrow {
+    top: 32%;
+    left: 31%;
+    transform: unset;
   }
 }
 .services {
@@ -491,6 +581,11 @@
     right: 25%;
   }
 }
+@media only screen and (min-width: 1920px) {
+  .services__button {
+    font-size: 18px;
+  }
+}
 .about {
   padding: 250px 28.5%;
   background: url("../assets/GraniteBackground.png");
@@ -530,6 +625,17 @@
   }
   .about__title {
     line-height: unset;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .about__title {
+    font-size: 54px;
+  }
+  .about__description {
+    font-size: 24px;
+  }
+  .about__description strong {
+    font-size: 24px;
   }
 }
 .allies {
@@ -643,9 +749,20 @@
     width: 100%;
   }
 }
+@media only screen and (min-width: 1920px) {
+  .allies__why-us .text .title {
+    font-size: 40px;
+  }
+  .allies__why-us .text .fact, .allies__why-us .text .button {
+    font-size: 24px;
+  }
+  .allies__why-us .image {
+    width: 630px;
+  }
+}
 .working-with-us {
   position: relative;
-  height: 700px;
+  height: 100vh;
   background: url("../assets/BrownGraniteBackground.png");
   background-color: #532501;
   padding: 125px 5.55%;
@@ -715,6 +832,14 @@
   }
   .working-with-us__text-container #trend-icon {
     display: none;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .working-with-us__text-container .text {
+    font-size: 80px;
+  }
+  .working-with-us__text-container .image {
+    width: 90px;
   }
 }
 .testimonies {
@@ -801,6 +926,30 @@
   .testimonies__testimonies-container .single-testimony .company-name,
   .testimonies__testimonies-container .single-testimony .testimony {
     font-size: 16px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .testimonies {
+    padding: 220px 5.55%;
+  }
+  .testimonies__title {
+    font-size: 48px;
+    margin-bottom: 150px;
+  }
+  .testimonies__testimonies-container {
+    gap: 4%;
+  }
+  .testimonies__testimonies-container .single-testimony {
+    width: unset;
+  }
+  .testimonies__testimonies-container .single-testimony .testimony {
+    font-size: 24px;
+  }
+  .testimonies__testimonies-container .single-testimony .testimony strong {
+    font-size: 24px;
+  }
+  .testimonies__testimonies-container .single-testimony .person-name, .testimonies__testimonies-container .single-testimony .company-name {
+    font-size: 24px;
   }
 }
 .footer {
@@ -909,6 +1058,36 @@
     padding: 16px 3.55%;
   }
 }
+@media only screen and (min-width: 1920px) {
+  .footer {
+    padding: 80px 20% 100px 5.55%;
+  }
+  .footer__company-name {
+    width: 400px;
+  }
+  .footer__subsection .title {
+    gap: 6px;
+  }
+  .footer__subsection .title .title__number {
+    font-size: 16px;
+  }
+  .footer__subsection .title .title__title {
+    font-size: 32px;
+  }
+  .footer__subsection .text {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 10px;
+  }
+  .footer__bottom .credits,
+  .footer__bottom .credits strong,
+  .footer__bottom .rif {
+    font-size: 20px;
+  }
+  .footer__bottom .company-name {
+    width: 175px;
+  }
+}
 .contact {
   padding: 144px 5.55%;
   text-align: center;
@@ -992,6 +1171,22 @@
     font-size: 24px;
     max-width: 300px;
     margin: 0 auto 45px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .contact {
+    padding: 150px 5.55% 300px;
+  }
+  .contact__title {
+    font-size: 48px;
+    margin-bottom: 100px;
+  }
+  .contact__form {
+    max-width: 1000px;
+    gap: 25px;
+  }
+  .contact__form label, .contact__form input, .contact__form button {
+    font-size: 24px;
   }
 }
 .equipment {

@@ -91,3 +91,28 @@
         }
     }
 }
+
+@media only screen and (min-width: 1920px) {
+    .testimonies {
+        padding: 220px 5.55%;
+        &__title {
+            font-size: 48px;
+            margin-bottom: 150px;
+        }
+        &__testimonies-container {
+            gap: 4%;
+            .single-testimony {
+                width: unset;
+                .testimony {
+                    font-size: 24px;
+                    strong {
+                        font-size: 24px;
+                    }
+                }
+                .person-name, .company-name {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
