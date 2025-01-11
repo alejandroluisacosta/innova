@@ -70,7 +70,9 @@
 }
 .hero__image {
   margin-left: 3px;
-  width: 85%;
+  width: 99%;
+  object-fit: cover;
+  height: 100%;
 }
 .hero__main {
   display: flex;
@@ -87,11 +89,11 @@
   overflow-y: hidden;
 }
 .hero__main .hero-swiper .swiper-scrollbar {
-  width: 50%;
+  width: 65%;
   position: absolute;
-  bottom: 25px;
+  bottom: 20px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-40%);
 }
 .hero__main .hero-swiper .swiper-button-prev,
 .hero__main .hero-swiper .swiper-button-next {
@@ -103,7 +105,7 @@
   left: 68px;
 }
 .hero__main .hero-swiper .swiper-button-next {
-  right: 83px;
+  right: 0;
 }
 .hero__main .description {
   display: flex;
@@ -111,7 +113,6 @@
   justify-content: flex-end;
   height: 285px;
   width: 100%;
-  transform: translateX(-11%);
 }
 .hero__main .description__title {
   margin-bottom: 40px;
@@ -193,7 +194,7 @@
     letter-spacing: 1px;
   }
   .hero__image {
-    max-width: 270px;
+    max-height: 80%;
   }
   .hero__main {
     max-width: 665px;
@@ -203,6 +204,10 @@
   }
   .hero__main .hero-swiper .swiper-slide {
     height: 100%;
+  }
+  .hero__main .hero-swiper .swiper-button-next,
+  .hero__main .hero-swiper .swiper-button-prev {
+    width: 20px;
   }
   .hero__main .hero-swiper .swiper-button-next {
     right: 46px;
@@ -282,11 +287,17 @@
     height: 100%;
   }
   .hero__main .hero-swiper .swiper-scrollbar {
-    width: 50%;
+    width: 70%;
     left: var(--image-center-offset, 0px);
+    bottom: 20px;
+    transform: translateX(-48%);
+  }
+  .hero__main .hero-swiper .swiper-button-next,
+  .hero__main .hero-swiper .swiper-button-prev {
+    width: 25px;
   }
   .hero__main .hero-swiper .swiper-button-next {
-    left: var(--image-right-offset, 330px);
+    right: -5px;
   }
   .hero__main .hero-swiper .swiper-button-prev {
     left: 0;
@@ -349,13 +360,19 @@
     height: unset;
   }
   .hero__main .hero-swiper .swiper-scrollbar {
-    width: 80%;
+    width: 65%;
+    bottom: 50px;
+  }
+  .hero__main .hero-swiper .swiper-button-next,
+  .hero__main .hero-swiper .swiper-button-prev {
+    bottom: 27px;
+    width: 40px;
   }
   .hero__main .hero-swiper .swiper-button-next {
-    right: 0;
+    right: -10px;
   }
   .hero__main .hero-swiper .swiper-button-prev {
-    left: 0;
+    left: 100px;
   }
   .hero__main .description {
     transform: unset;
