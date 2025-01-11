@@ -1053,6 +1053,36 @@
     padding: 16px 3.55%;
   }
 }
+@media only screen and (min-width: 1920px) {
+  .footer {
+    padding: 80px 20% 100px 5.55%;
+  }
+  .footer__company-name {
+    width: 400px;
+  }
+  .footer__subsection .title {
+    gap: 6px;
+  }
+  .footer__subsection .title .title__number {
+    font-size: 16px;
+  }
+  .footer__subsection .title .title__title {
+    font-size: 32px;
+  }
+  .footer__subsection .text {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 10px;
+  }
+  .footer__bottom .credits,
+  .footer__bottom .credits strong,
+  .footer__bottom .rif {
+    font-size: 20px;
+  }
+  .footer__bottom .company-name {
+    width: 175px;
+  }
+}
 .contact {
   padding: 144px 5.55%;
   text-align: center;
