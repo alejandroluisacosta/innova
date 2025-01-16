@@ -51,7 +51,19 @@
     display: block;
   }
   .nav__links {
-    display: none;
+    position: absolute;
+    height: 90vh;
+    top: 0;
+    right: 0;
+    width: 90%;
+    background-color: #F9FAF9;
+    flex-direction: column;
+    padding: 40px;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+  .nav li {
+    padding: 20px 0;
   }
 }
 @media only screen and (max-width: 1000px) {
@@ -986,6 +998,7 @@
   grid-auto-flow: column;
   letter-spacing: unset;
   align-items: start;
+  margin-left: 1%;
 }
 .footer__company-name {
   grid-column: span 2;
@@ -1011,6 +1024,7 @@
   margin-left: 19px;
   letter-spacing: 0;
   line-height: 27px;
+  margin-bottom: 5px;
 }
 .footer__bottom {
   position: absolute;

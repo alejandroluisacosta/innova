@@ -12,6 +12,7 @@
         grid-auto-flow: column;
         letter-spacing: unset;
         align-items: start;
+        margin-left: 1%;
     }
     &__company-name {
         grid-column: span 2;
@@ -36,6 +37,7 @@
             margin-left: 19px;
             letter-spacing: 0;
             line-height: 27px;
+            margin-bottom: 5px;
         }
     }
     &__bottom {
