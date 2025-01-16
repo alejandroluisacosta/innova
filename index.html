@@ -15,6 +15,7 @@
             <li><a href="#about">NOSOTROS</a></li>
             <li><a href="#contact">CONTACTO</a></li>
         </ul>
+        <img class="burger-menu" src="./assets/BurgerMenu.webp" alt="Menu" />
     </nav>
     <section class="hero" id="hero">
         <h2 class="hero__title">EXPERTOS EN</h2>
@@ -563,18 +564,15 @@
 
             termsElement.addEventListener("click", () => {
                 modal.classList.remove("hidden");
-                // console.log(modal.classList);
             });
             
             button.addEventListener("click", () => {
                 console.log(modal.classList);
                 modal.classList.add("hidden");
-                console.log(modal.classList);
             });
             
             document.addEventListener("click", (e) => {
                 if (!modal.classList.contains("hidden") && !modal.contains(e.target)) {
-                    console.log(modal.classList.contains("hidden"));
                     // modal.classList.add("hidden");
                 }
             });

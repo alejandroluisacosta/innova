@@ -12,6 +12,9 @@
     .company-name {
         height: 24px;
     }
+    .burger-menu {
+        display: none;
+    }
     &__links {
         display: flex;
         justify-content: space-between;
@@ -38,6 +41,18 @@
 
 .nav-hidden {
     transform: translateY(-100%);
+}
+
+@media only screen and (max-width: 480px) {
+    .nav {
+        padding: 12px 3.55% 0;
+        .burger-menu {
+            display: block;
+        }
+        &__links {
+            display: none;
+        }
+    }
 }
 
 @media only screen and (max-width: 1000px) {
