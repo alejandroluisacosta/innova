@@ -16,6 +16,7 @@
         display: none;
     }
     .links-container {
+        width: 42%;
         .close-container {
             display: none;
         }
@@ -28,7 +29,6 @@
         justify-content: space-between;
         list-style: none;
         padding-inline-start: 0;
-        width: 42%;
     }
     li {
         padding: 24px 0px;

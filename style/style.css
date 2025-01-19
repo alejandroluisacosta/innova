@@ -16,6 +16,9 @@
 .nav .burger-menu {
   display: none;
 }
+.nav .links-container {
+  width: 42%;
+}
 .nav .links-container .close-container {
   display: none;
 }
@@ -27,7 +30,6 @@
   justify-content: space-between;
   list-style: none;
   padding-inline-start: 0;
-  width: 42%;
 }
 .nav li {
   padding: 24px 0px;
