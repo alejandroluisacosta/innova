@@ -286,15 +286,16 @@
                 <input type="text" id="message" name="Mensaje" placeholder="Ingresa tu mensaje" />
             <div class="terms-container">
                 <input type="checkbox" id="checkbox"/>
-                <label for="checkbox">Acepto los <a class="terms">Términos de Servicio</a></label>
+                <label for="checkbox">Acepto los </label>
+                <a class="terms">Términos de Servicio</a>
             </div>
             <button type="submit" class="contact__button">
                 Enviar mensaje
                 <img src="assets/Arrow1.svg" alt="Flecha"/>
             </button>
-            <div class="contact__modal">
+            <div class="contact__modal hidden">
                 <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <button type="button" class="button">Cerrar</button>
+                <button type="button" class="button" id="modal-button">Cerrar</button>
             </div>
         </form>
     </section>
@@ -491,7 +492,6 @@
             const navbar = document.querySelector(".nav");
             let lastScrollY = window.scrollY;
 
-            // Handle scroll event
             const handleScroll = () => {
                 if (window.scrollY > 100) {
                     navbar.classList.add("scrolled");
@@ -499,23 +499,17 @@
                     navbar.classList.remove("scrolled");
                 }
 
-                // Check scroll direction (down or up)
                 if (window.scrollY > lastScrollY) { 
-                    // Scrolling down: hide navbar
                     navbar.classList.add("nav-hidden");
                 } else {
-                    // Scrolling up: show navbar
                     navbar.classList.remove("nav-hidden");
                 }
 
-                // Update the last scroll position
                 lastScrollY = window.scrollY;
             };
 
-            // Listen for scroll events
             window.addEventListener("scroll", handleScroll);
 
-            // Call it once to apply the styles on page load (in case the page is already scrolled)
             handleScroll();
         });
     </script>
@@ -563,26 +557,40 @@
     </script>
     <!-- Modal -->
     <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const modal = document.querySelector(".contact__modal");
-        const button = document.querySelector(".contact__modal .button");
-        const termsElement = document.querySelector(".terms-container .terms");
+        document.addEventListener("DOMContentLoaded", () => {
+            const modal = document.querySelector(".contact__modal");
+            const button = document.querySelector(".contact__modal .button");
+            const termsElement = document.querySelector(".terms-container .terms");
 
-        termsElement.addEventListener("click", () => {
-            modal.classList.remove("hidden");
+            termsElement.addEventListener("click", () => {
+                modal.classList.remove("hidden");
+            });
+            
+            button.addEventListener("click", () => {
+                modal.classList.add("hidden");
+            });
+
+            document.addEventListener("keydown", (event) => {
+                if (event.key === "Escape") {
+                    modal.classList.add("hidden");
+                }
+            });
+            
+            document.addEventListener("click", (event) => {
+                if (event.target !== modal && event.target !== termsElement) {
+                    modal.classList.add("hidden");
+                }
+            });
+
+            const modalChildren = Array.from(modal.querySelectorAll("*"));
+            modalChildren.forEach(child => {
+                if (child.id !== "modal-button") {
+                    child.addEventListener("click", (event) => {
+                        event.stopPropagation();
+                    });
+                }
+            });
         });
-        
-        button.addEventListener("click", () => {
-            console.log(modal.classList);
-            modal.classList.add("hidden");
-        });
-        
-        document.addEventListener("click", (e) => {
-            if (!modal.classList.contains("hidden") && !modal.contains(e.target)) {
-                // modal.classList.add("hidden");
-            }
-        });
-    });
     </script>
     <!-- Mobile Navbar -->
     <script>
