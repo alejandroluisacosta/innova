@@ -9,19 +9,26 @@
 <body>
     <nav class="nav">
         <img class="company-name" src="./assets/CompanyNameHeader.svg" alt="Company's name"/>
-        <ul class="nav__links">
-            <li><a href="#hero">INICIO</a></li>
-            <li><a href="#services">SERVICIOS</a></li>
-            <li><a href="#about">NOSOTROS</a></li>
-            <li><a href="#contact">CONTACTO</a></li>
-        </ul>
+        <div class="links-container">
+            <div class="close-container">
+                <img class="close-menu" src="./assets/CloseMenu.svg" alt="Cerrar menu" />
+            </div>
+            <ul class="links">
+                <li><a href="#hero">INICIO</a></li>
+                <li><a href="#about">NOSOTROS</a></li>
+                <li><a href="#services">SERVICIOS</a></li>
+                <li><a href="#contact">CONTACTO</a></li>
+            </ul>
+            <img class="links-container__company-name" src="./assets/CompanyNameHeader.svg" />
+        </div>
+        <img class="burger-menu" src="./assets/BurgerMenu.webp" alt="Menu" />
     </nav>
     <section class="hero" id="hero">
         <h2 class="hero__title">EXPERTOS EN</h2>
         <div class="hero__main">
             <div class="swiper hero-swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide" data-text="INGENIERÍA & Y CONSTRUCCION">
+                    <div class="swiper-slide" data-text="INGENIERÍA & Y CONSTRUCCIÓN">
                         <img class="hero__image" src="./assets/image1.png" alt="Constructores en obra" />
                     </div>
                     <div class="swiper-slide" data-text="SOLUCIONES & INDUSTRIALES">
@@ -36,7 +43,7 @@
                     <div class="swiper-slide" data-text="MANTENIMIENTO & ESPECIALIZADO">
                         <img class="hero__image" src="./assets/Maintenance.webp" alt="Controles de seguridad" />
                     </div>
-                    <div class="swiper-slide" data-text="CONSULTORIA & INTEGRAL">
+                    <div class="swiper-slide" data-text="CONSULTORÍA & INTEGRAL">
                         <img class="hero__image" src="./assets/Consulting.webp" alt="Gestión de riesgos en planta petrolera" />
                     </div>
                     <div class="swiper-slide" data-text="SEGURIDAD Y & MEDIO AMBIENTE">
@@ -88,7 +95,7 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide services-slide services-slide--construction">
                     <h3 class="services__title">Servicios</h3>
-                    <h1 class="services__service-name">CONSTRUCCION</h1>
+                    <h1 class="services__service-name">CONSTRUCCIÓN</h1>
                     <p class="services__service-description">Diseño y ejecución de obras civiles, eléctricas e hidráulicas.<br>Supervisión, gerencia y mantenimiento industrial.<br>Proyectos urbanísticos y ambientales.</p>
                     <button class="services__button">
                         Más información
@@ -135,7 +142,7 @@
                 <svg viewBox="0 0 300 48">
                     <line x1="4" y1="24" x2="300" y2="24" stroke="#ffffff" stroke-width="4"></line>
                 </svg>
-                <p class="progress-text progress-text--0 active">01<br>CONSTRUCCION</p>
+                <p class="progress-text progress-text--0 active">01<br>CONSTRUCCIÓN</p>
             </div>
             <div class="autoplay-progress autoplay-progress--slide progress-2" id="progress-slide-2">
                 <svg viewBox="0 0 300 48">
@@ -184,7 +191,7 @@
           </div>
         <div class="allies__why-us">
             <div class="text">
-                <h4 class="title">¿POR QUE ELEGIRNOS?</h4>
+                <h4 class="title">¿POR QUÉ ELEGIRNOS?</h4>
                 <p class="fact">
                     <span>
                         <img class="arrow" src="./assets/AlliesArrow.svg" alt="Ícono de flecha" />
@@ -236,7 +243,7 @@
         </div>
     </section>
     <section class="testimonies">
-        <h4 class="testimonies__title">NUESTROS CLIENTES, NUESTRA MEJOR RECOMENDACION</h4>
+        <h4 class="testimonies__title">NUESTROS CLIENTES, NUESTRA MEJOR RECOMENDACIÓN</h4>
         <div class="testimonies__testimonies-container">
             <div class="single-testimony">
                 <img class="quotes" src="assets/Quote.svg" alt="Comillas abiertas" />
@@ -279,12 +286,17 @@
                 <input type="text" id="message" name="Mensaje" placeholder="Ingresa tu mensaje" />
             <div class="terms-container">
                 <input type="checkbox" id="checkbox"/>
-                <label for="checkbox">Acepto los Términos de Servicio</label>
+                <label for="checkbox">Acepto los </label>
+                <a class="terms">Términos de Servicio</a>
             </div>
             <button type="submit" class="contact__button">
                 Enviar mensaje
                 <img src="assets/Arrow1.svg" alt="Flecha"/>
             </button>
+            <div class="contact__modal hidden">
+                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <button type="button" class="button" id="modal-button">Cerrar</button>
+            </div>
         </form>
     </section>
     <footer class="footer">
@@ -480,7 +492,6 @@
             const navbar = document.querySelector(".nav");
             let lastScrollY = window.scrollY;
 
-            // Handle scroll event
             const handleScroll = () => {
                 if (window.scrollY > 100) {
                     navbar.classList.add("scrolled");
@@ -488,23 +499,17 @@
                     navbar.classList.remove("scrolled");
                 }
 
-                // Check scroll direction (down or up)
                 if (window.scrollY > lastScrollY) { 
-                    // Scrolling down: hide navbar
                     navbar.classList.add("nav-hidden");
                 } else {
-                    // Scrolling up: show navbar
                     navbar.classList.remove("nav-hidden");
                 }
 
-                // Update the last scroll position
                 lastScrollY = window.scrollY;
             };
 
-            // Listen for scroll events
             window.addEventListener("scroll", handleScroll);
 
-            // Call it once to apply the styles on page load (in case the page is already scrolled)
             handleScroll();
         });
     </script>
@@ -549,6 +554,101 @@
 
         window.addEventListener('resize', setTitleHeight);
         setTitleHeight();
+    </script>
+    <!-- Modal -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const modal = document.querySelector(".contact__modal");
+            const button = document.querySelector(".contact__modal .button");
+            const termsElement = document.querySelector(".terms-container .terms");
+
+            termsElement.addEventListener("click", () => {
+                modal.classList.remove("hidden");
+            });
+            
+            button.addEventListener("click", () => {
+                modal.classList.add("hidden");
+            });
+
+            document.addEventListener("keydown", (event) => {
+                if (event.key === "Escape") {
+                    modal.classList.add("hidden");
+                }
+            });
+            
+            document.addEventListener("click", (event) => {
+                if (event.target !== modal && event.target !== termsElement) {
+                    modal.classList.add("hidden");
+                }
+            });
+
+            const modalChildren = Array.from(modal.querySelectorAll("*"));
+            modalChildren.forEach(child => {
+                if (child.id !== "modal-button") {
+                    child.addEventListener("click", (event) => {
+                        event.stopPropagation();
+                    });
+                }
+            });
+        });
+    </script>
+    <!-- Mobile Navbar -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        let isMobile = window.innerWidth <= 480;
+        let linksContainer, closeButton, burgerMenu, links;
+
+        const initialize = () => {
+            linksContainer = document.querySelector(".links-container");
+            closeButton = document.querySelector(".close-menu");
+            burgerMenu = document.querySelector(".burger-menu");
+            links = document.querySelectorAll(".links li");
+
+            const openNavbar = () => {
+                linksContainer.style.transform = "translateX(0)"; // Slide into view
+            };
+
+            const closeNavbar = () => {
+                linksContainer.style.transform = "translateX(100%)"; // Slide out of view
+            };
+
+            burgerMenu.addEventListener("click", openNavbar); // Open navbar on burger menu click
+            closeButton.addEventListener("click", closeNavbar); // Close navbar on close button click
+            links.forEach((link) => {
+                link.addEventListener("click", closeNavbar); // Close navbar on link click
+            });
+
+            linksContainer.style.transition = "transform 0.3s ease-in-out";
+        };
+
+        const cleanUp = () => {
+            burgerMenu?.removeEventListener("click", openNavbar);
+            closeButton?.removeEventListener("click", closeNavbar);
+            links?.forEach((link) => {
+                link.removeEventListener("click", closeNavbar);
+            });
+        };
+
+        const handleResize = () => {
+            const isNowMobile = window.innerWidth <= 480;
+
+            if (isMobile !== isNowMobile) {
+                isMobile = isNowMobile;
+
+                if (isMobile) {
+                    initialize();
+                } else {
+                    cleanUp();
+                }
+            }
+        };
+
+        if (isMobile) {
+            initialize();
+        }
+
+        window.addEventListener("resize", handleResize);
+        });
     </script>
 </body>
 </html>

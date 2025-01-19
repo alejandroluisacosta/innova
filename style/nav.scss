@@ -12,12 +12,23 @@
     .company-name {
         height: 24px;
     }
-    &__links {
+    .burger-menu {
+        display: none;
+    }
+    .links-container {
+        width: 42%;
+        .close-container {
+            display: none;
+        }
+        &__company-name {
+            display: none;
+        }
+    }
+    .links {
         display: flex;
         justify-content: space-between;
         list-style: none;
         padding-inline-start: 0;
-        width: 42%;
     }
     li {
         padding: 24px 0px;
@@ -38,6 +49,48 @@
 
 .nav-hidden {
     transform: translateY(-100%);
+}
+
+@media only screen and (max-width: 480px) {
+    .nav {
+        padding: 12px 3.55% 0;
+        .burger-menu {
+            display: block;
+        }
+        .links-container {
+            transform: translateX(100%);
+            position: absolute;
+            height: 90vh;
+            top: 0;
+            right: 0;
+            width: 90%;
+            background-color: #F9FAF9;
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+            align-items: flex-end;
+            justify-content: flex-start;
+            transition: transform 0.3s ease-in-out;
+            .close-container {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                width: 40px;
+                height: 40px;
+            }
+            &__company-name {
+                display: block;
+            }
+            .links {
+                align-items: flex-end;
+                flex-direction: column;
+                margin-bottom: 30px;
+            }
+            li {
+                padding: 20px 0;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 1000px) {

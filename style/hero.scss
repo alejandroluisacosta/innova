@@ -294,6 +294,8 @@
 
 @media only screen and (min-width: 1920px) {
     .hero {
+        min-height: 85vh;
+        padding: 220px 5.55% 120px 5.25%;
         &__title {
             font-size: 74px;
         }
