@@ -9,12 +9,18 @@
 <body>
     <nav class="nav">
         <img class="company-name" src="./assets/CompanyNameHeader.svg" alt="Company's name"/>
-        <ul class="nav__links">
-            <li><a href="#hero">INICIO</a></li>
-            <li><a href="#services">SERVICIOS</a></li>
-            <li><a href="#about">NOSOTROS</a></li>
-            <li><a href="#contact">CONTACTO</a></li>
-        </ul>
+        <div class="links-container">
+            <div class="close-container">
+                <img class="close-menu" src="./assets/CloseMenu.svg" alt="Cerrar menu" />
+            </div>
+            <ul class="links">
+                <li><a href="#hero">INICIO</a></li>
+                <li><a href="#about">NOSOTROS</a></li>
+                <li><a href="#services">SERVICIOS</a></li>
+                <li><a href="#contact">CONTACTO</a></li>
+            </ul>
+            <img class="links-container__company-name" src="./assets/CompanyNameHeader.svg" />
+        </div>
         <img class="burger-menu" src="./assets/BurgerMenu.webp" alt="Menu" />
     </nav>
     <section class="hero" id="hero">
@@ -556,27 +562,85 @@
         setTitleHeight();
     </script>
     <!-- Modal -->
-     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const modal = document.querySelector(".contact__modal");
-            const button = document.querySelector(".contact__modal .button");
-            const termsElement = document.querySelector(".terms-container .terms");
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const modal = document.querySelector(".contact__modal");
+        const button = document.querySelector(".contact__modal .button");
+        const termsElement = document.querySelector(".terms-container .terms");
 
-            termsElement.addEventListener("click", () => {
-                modal.classList.remove("hidden");
-            });
-            
-            button.addEventListener("click", () => {
-                console.log(modal.classList);
-                modal.classList.add("hidden");
-            });
-            
-            document.addEventListener("click", (e) => {
-                if (!modal.classList.contains("hidden") && !modal.contains(e.target)) {
-                    // modal.classList.add("hidden");
-                }
-            });
+        termsElement.addEventListener("click", () => {
+            modal.classList.remove("hidden");
         });
-     </script>
+        
+        button.addEventListener("click", () => {
+            console.log(modal.classList);
+            modal.classList.add("hidden");
+        });
+        
+        document.addEventListener("click", (e) => {
+            if (!modal.classList.contains("hidden") && !modal.contains(e.target)) {
+                // modal.classList.add("hidden");
+            }
+        });
+    });
+    </script>
+    <!-- Mobile Navbar -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        let isMobile = window.innerWidth <= 480;
+        let linksContainer, closeButton, burgerMenu, links;
+
+        const initialize = () => {
+            linksContainer = document.querySelector(".links-container");
+            closeButton = document.querySelector(".close-menu");
+            burgerMenu = document.querySelector(".burger-menu");
+            links = document.querySelectorAll(".links li");
+
+            const openNavbar = () => {
+                linksContainer.style.transform = "translateX(0)"; // Slide into view
+            };
+
+            const closeNavbar = () => {
+                linksContainer.style.transform = "translateX(100%)"; // Slide out of view
+            };
+
+            burgerMenu.addEventListener("click", openNavbar); // Open navbar on burger menu click
+            closeButton.addEventListener("click", closeNavbar); // Close navbar on close button click
+            links.forEach((link) => {
+                link.addEventListener("click", closeNavbar); // Close navbar on link click
+            });
+
+            linksContainer.style.transition = "transform 0.3s ease-in-out";
+        };
+
+        const cleanUp = () => {
+            burgerMenu?.removeEventListener("click", openNavbar);
+            closeButton?.removeEventListener("click", closeNavbar);
+            links?.forEach((link) => {
+                link.removeEventListener("click", closeNavbar);
+            });
+        };
+
+        const handleResize = () => {
+            const isNowMobile = window.innerWidth <= 480;
+
+            if (isMobile !== isNowMobile) {
+                isMobile = isNowMobile;
+
+                if (isMobile) {
+                    initialize();
+                } else {
+                    cleanUp();
+                }
+            }
+        };
+
+        if (isMobile) {
+            initialize();
+        }
+
+        window.addEventListener("resize", handleResize);
+        });
+    </script>
 </body>
 </html>
