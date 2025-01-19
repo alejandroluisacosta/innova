@@ -123,6 +123,17 @@
             label, input, button {
                 font-size: 24px;
             }
+            .terms-container {
+                a {
+                    font-size: 24px;
+                }
+            }
+        }
+        &__modal {
+            max-width: 800px;
+            .text {
+                font-size: 24px;
+            }
         }
     }
 }
