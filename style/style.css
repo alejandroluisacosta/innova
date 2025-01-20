@@ -1213,6 +1213,9 @@
 .contact__form button img {
   transform: translate(0, 1px);
 }
+.contact__form .error-message {
+  color: red;
+}
 .contact__modal {
   position: absolute;
   width: 80%;

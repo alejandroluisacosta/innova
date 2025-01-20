@@ -277,27 +277,72 @@
     </section>
     <section class="contact" id="contact">
         <h4 class="contact__title">PONTE EN CONTACTO CON NOSOTROS</h4>
-            <form class="contact__form" method="POST" action="https://formspree.io/f/xkggprng">
-                <label for="name">Nombre</label>
-                <input type="text" id="name" name="Nombre" placeholder="Ingresa tu nombre"/>
-                <label for="email">Email</label>
-                <input type="text" id="email" name="Email" placeholder="Ingresa tu correo electrónico" />
-                <label for="message">Mensaje</label>
-                <input type="text" id="message" name="Mensaje" placeholder="Ingresa tu mensaje" />
+        <form class="contact__form" method="POST" action="https://formspree.io/f/xkggprng" onsubmit="return validateForm()">
+            <label for="name">Nombre</label>
+            <span id="name-error" class="error-message"></span>
+            <input type="text" id="name" name="Nombre" placeholder="Ingresa tu nombre"  />
+            <label for="email">Email</label>
+            <span id="email-error" class="error-message"></span>
+            <input type="email" id="email" name="Email" placeholder="Ingresa tu correo electrónico"  />
+            <label for="message">Mensaje</label>
+            <span id="message-error" class="error-message"></span>
+            <input type="text" id="message" name="Mensaje" placeholder="Ingresa tu mensaje"  />
+            <span id="checkbox-error" class="error-message"></span>
             <div class="terms-container">
-                <input type="checkbox" id="checkbox"/>
+                <input type="checkbox" id="checkbox" />
                 <label for="checkbox">Acepto los </label>
                 <a class="terms">Términos de Servicio</a>
             </div>
             <button type="submit" class="contact__button">
-                Enviar mensaje
-                <img src="assets/Arrow1.svg" alt="Flecha"/>
+            Enviar mensaje
+            <img src="assets/Arrow1.svg" alt="Flecha"/>
             </button>
             <div class="contact__modal hidden">
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <button type="button" class="button" id="modal-button">Cerrar</button>
+            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <button type="button" class="button" id="modal-button">Cerrar</button>
             </div>
         </form>
+        <script>
+            function validateForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const checkbox = document.getElementById('checkbox').checked;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            let isValid = true;
+
+            if (name.length < 3) {
+            document.getElementById('name-error').textContent = 'El nombre debe tener al menos 3 letras.';
+            isValid = false;
+            } else {
+            document.getElementById('name-error').textContent = '';
+            }
+
+            if (!emailPattern.test(email)) {
+            document.getElementById('email-error').textContent = 'Por favor, ingresa un correo electrónico válido.';
+            isValid = false;
+            } else {
+            document.getElementById('email-error').textContent = '';
+            }
+
+            if (message.length < 8) {
+            document.getElementById('message-error').textContent = 'El mensaje debe tener al menos 8 letras.';
+            isValid = false;
+            } else {
+            document.getElementById('message-error').textContent = '';
+            }
+
+            if (!checkbox) {
+            document.getElementById('checkbox-error').textContent = 'Debes aceptar los Términos de Servicio.';
+            isValid = false;
+            } else {
+            document.getElementById('checkbox-error').textContent = '';
+            }
+
+            return isValid;
+            }
+        </script>
     </section>
     <footer class="footer">
         <div class="footer__grid">

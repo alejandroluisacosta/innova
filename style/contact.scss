@@ -62,6 +62,9 @@
                 transform: translate(0, 1px);
             }
         }
+        .error-message {
+            color: red;
+        }
     }
     &__modal {
         position: absolute;
