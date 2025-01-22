@@ -302,47 +302,6 @@
             <button type="button" class="button" id="modal-button">Cerrar</button>
             </div>
         </form>
-        <script>
-            function validateForm() {
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            const checkbox = document.getElementById('checkbox').checked;
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-            let isValid = true;
-
-            if (name.length < 3) {
-            document.getElementById('name-error').textContent = 'El nombre debe tener al menos 3 letras.';
-            isValid = false;
-            } else {
-            document.getElementById('name-error').textContent = '';
-            }
-
-            if (!emailPattern.test(email)) {
-            document.getElementById('email-error').textContent = 'Por favor, ingresa un correo electrónico válido.';
-            isValid = false;
-            } else {
-            document.getElementById('email-error').textContent = '';
-            }
-
-            if (message.length < 8) {
-            document.getElementById('message-error').textContent = 'El mensaje debe tener al menos 8 letras.';
-            isValid = false;
-            } else {
-            document.getElementById('message-error').textContent = '';
-            }
-
-            if (!checkbox) {
-            document.getElementById('checkbox-error').textContent = 'Debes aceptar los Términos de Servicio.';
-            isValid = false;
-            } else {
-            document.getElementById('checkbox-error').textContent = '';
-            }
-
-            return isValid;
-            }
-        </script>
     </section>
     <footer class="footer">
         <div class="footer__grid">
@@ -368,25 +327,25 @@
                     <p class="title__number">3</p>
                     <h5 class="title__title">REDES</h5>
                 </div>
-                <p class="text">IG [Innova.c.a]</p>
-                <p class="text">WhatsApp</p>
+                <p class="text clickable">IG [Innova.c.a]</p>
+                <p class="text clickable">WhatsApp</p>
             </div>
             <div class="footer__subsection">
                 <div class="title">
                     <p class="title__number">4</p>
                     <h5 class="title__title">SITIO</h5>
                 </div>
-                <p class="text">Inicio</p>
-                <p class="text">Nosotros</p>
-                <p class="text">Servicios</p>
-                <p class="text">Contacto</p>
+                <p class="text"><a href="#hero">Inicio</a></p>
+                <p class="text"><a href="#about">Nosotros</a></p>
+                <p class="text"><a href="#services">Servicios</a></p>
+                <p class="text"><a href="#contact">Contacto</a></p>
             </div>
         </div>
         <div class="footer__bottom">
-            <p class="credits">
-                <img class="image" src="./assets/Copyright.svg" alt="Copyright" />
-                2024 | diseñado por <strong>TAISAHI</strong>
-            </p>
+                <p class="credits">
+                    <img class="image" src="./assets/Copyright.svg" alt="Copyright" />
+                    2024 | diseñado por <strong><a href="https://www.linkedin.com/in/taisirahissami/" target="_blank">TAISAHI</a></strong>
+                </p>
             <p class="rif">RIF: J-40559370-9</p>
             <img class="company-name" id="company-logo-footer--regular" src="./assets/CompanyNameFooterBottom.svg" alt="Nombre de compañía" />
             <img class="company-name hidden" id="company-logo-footer--mini" src="./assets/CompanyLogoMini.webp" alt="Logo de compañía" />
@@ -694,6 +653,48 @@
 
         window.addEventListener("resize", handleResize);
         });
+    </script>
+    <!-- Form validation -->
+    <script>
+        function validateForm() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        const checkbox = document.getElementById('checkbox').checked;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        let isValid = true;
+
+        if (name.length < 3) {
+        document.getElementById('name-error').textContent = 'El nombre debe tener al menos 3 letras.';
+        isValid = false;
+        } else {
+        document.getElementById('name-error').textContent = '';
+        }
+
+        if (!emailPattern.test(email)) {
+        document.getElementById('email-error').textContent = 'Por favor, ingresa un correo electrónico válido.';
+        isValid = false;
+        } else {
+        document.getElementById('email-error').textContent = '';
+        }
+
+        if (message.length < 8) {
+        document.getElementById('message-error').textContent = 'El mensaje debe tener al menos 8 letras.';
+        isValid = false;
+        } else {
+        document.getElementById('message-error').textContent = '';
+        }
+
+        if (!checkbox) {
+        document.getElementById('checkbox-error').textContent = 'Debes aceptar los Términos de Servicio.';
+        isValid = false;
+        } else {
+        document.getElementById('checkbox-error').textContent = '';
+        }
+
+        return isValid;
+        }
     </script>
 </body>
 </html>

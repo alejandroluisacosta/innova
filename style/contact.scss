@@ -40,10 +40,12 @@
                 border: 1px solid #747474;
                 border-radius: 0;
                 margin-right: 3px;
+                cursor: pointer;
             }
             a {
                 color: #303030;
                 text-decoration: underline;
+                cursor: pointer;
             }
         }
         button {
@@ -58,6 +60,7 @@
             padding: 18px;
             font-size: 18px;
             font-weight: 500;
+            cursor: pointer;
             img {
                 transform: translate(0, 1px);
             }

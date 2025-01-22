@@ -190,6 +190,7 @@
   background-color: #303030;
   color: #F8F8F8;
   font-weight: 600;
+  cursor: pointer;
 }
 .hero__main .description__button .arrow {
   margin-top: -3px;
@@ -513,6 +514,7 @@
   font-weight: 600;
   display: flex;
   gap: 12px;
+  cursor: pointer;
 }
 .services .swiper-button-prev,
 .services .swiper-button-next {
@@ -757,6 +759,7 @@
   align-items: center;
   color: var(--button-white);
   background-color: var(--button-black);
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -1052,6 +1055,17 @@
   line-height: 27px;
   margin-bottom: 5px;
 }
+.footer__subsection .text.clickable {
+  cursor: pointer;
+  color: #E5E6E6;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2.5px;
+}
+.footer__subsection a {
+  color: unset;
+  text-decoration: none;
+}
 .footer__bottom {
   position: absolute;
   bottom: 0;
@@ -1066,6 +1080,10 @@
 }
 .footer__bottom .credits img {
   transform: translateY(4px);
+}
+.footer__bottom .credits strong a {
+  text-decoration: none;
+  color: unset;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -1192,10 +1210,12 @@
   border: 1px solid #747474;
   border-radius: 0;
   margin-right: 3px;
+  cursor: pointer;
 }
 .contact__form .terms-container a {
   color: #303030;
   text-decoration: underline;
+  cursor: pointer;
 }
 .contact__form button {
   width: 100%;
@@ -1209,6 +1229,7 @@
   padding: 18px;
   font-size: 18px;
   font-weight: 500;
+  cursor: pointer;
 }
 .contact__form button img {
   transform: translate(0, 1px);

@@ -39,6 +39,17 @@
             line-height: 27px;
             margin-bottom: 5px;
         }
+        .text.clickable {
+            cursor: pointer;
+            color: #E5E6E6;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 2.5px;
+        }
+        a {
+            color: unset;
+            text-decoration: none;
+        }
     }
     &__bottom {
         position: absolute;
@@ -54,6 +65,12 @@
         .credits {
             img {
                 transform: translateY(4px);
+            }
+            strong {
+                a {
+                    text-decoration: none;
+                    color: unset;
+                }
             }
         }
     }
