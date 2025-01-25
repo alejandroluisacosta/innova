@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css" />
+    <link rel="icon" href="assets/CompanyLogoMiniBrowser.webp" type="image/webp">
     <title>Innova</title>
 </head>
 <body>
@@ -373,7 +374,7 @@
                 </p>
             <p class="rif">RIF: J-40559370-9</p>
             <img class="company-name" id="company-logo-footer--regular" src="./assets/CompanyNameFooterBottom.svg" alt="Nombre de compañía" />
-            <img class="company-name hidden" id="company-logo-footer--mini" src="./assets/CompanyLogoMini.webp" alt="Logo de compañía" />
+            <img class="company-name hidden" id="company-logo-footer--mini" src="./assets/CompanyLogoMini.svg" alt="Logo de compañía" />
         </div>
     </footer>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.css" />
@@ -541,7 +542,6 @@
 
             const handleScroll = () => {
                 if (navbar.hasAttribute("data-ignore-scroll")) {
-                    console.log('Ignoring scroll');
                     return;
                 }
 
