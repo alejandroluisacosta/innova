@@ -9,11 +9,11 @@
     &__title-big {
         font-size: 32px;
         font-weight: 600;
-        margin-bottom: 400px;
+        margin-bottom: 300px;
     }
     &-swiper {
         position: absolute !important;
-        top: 325px !important;
+        bottom: 150px !important;
         left: 0 !important;
         height: 100px !important;
         width: 100% !important;
@@ -32,6 +32,7 @@
         gap: 5%;
         align-items: center;
         justify-content: space-between;
+        margin-bottom: 200px;
         .text {
             text-align: start;
             .title {
