@@ -30,14 +30,38 @@
 
 @media only screen and (max-width: 480px) {
     .equipment {
+        &__title-small {
+            text-align: start;
+        }
         &__title-big {
             font-size: 28px;
+            text-align: start;
+            margin-bottom: 30px;
         }
         &-swiper {
             .swiper-slide {
                 font-size: 18px;
                 padding: 0 30px;
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .equipment {
+        &__title-big {
+            font-size: 26px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .equipment {
+        &__title-small {
+            font-size: 24px;
+        }
+        &__title-big {
+            font-size: 48px;
         }
     }
 }

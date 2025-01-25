@@ -17,7 +17,7 @@
     }
     &__main {
         display: flex;
-        margin-bottom: 45px;
+        margin-bottom: 90px;
         .hero-swiper {
             margin-right: 2.22%;
             max-width: 560px;
@@ -130,7 +130,7 @@
 
 @media only screen and (max-width: 1000px) {
     .hero {
-        padding: 80px 5.55%;
+        padding: 140px 5.55%;
         &__title {
             font-size: 30px;
             letter-spacing: 1px;
@@ -140,6 +140,7 @@
         }
         &__main {
             max-width: 665px;
+            margin-bottom: 120px;
             .hero-swiper {
                 height: 235px;
                 .swiper-slide {
@@ -195,7 +196,7 @@
             }
         }
         &__learn-more {
-            bottom: 68px;
+            bottom: 130px;
             .relative-container {
                 overflow: hidden;
             }

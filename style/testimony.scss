@@ -104,13 +104,16 @@
             .single-testimony {
                 width: unset;
                 .testimony {
-                    font-size: 24px;
+                    font-size: 32px;
+                    line-height: 48px;
                     strong {
-                        font-size: 24px;
+                        font-size: 32px;
+                        line-height: 48px;
                     }
                 }
                 .person-name, .company-name {
-                    font-size: 24px;
+                    font-size: 32px;
+                    line-height: 48px;
                 }
             }
         }
