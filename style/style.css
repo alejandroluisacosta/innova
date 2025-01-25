@@ -1360,6 +1360,7 @@
   }
   .equipment-swiper .swiper-slide {
     font-size: 18px;
+    padding: 0 30px;
   }
 }
 html, * {

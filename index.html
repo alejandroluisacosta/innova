@@ -458,10 +458,10 @@
             speed: 2000,
         });
     </script>
+    <!-- Equipment swiper -->
     <script>
         const equipmentSwiper = new Swiper('.equipment-swiper', {
             loop: true,
-            slidesPerView: '4',
             freeMode: true,  
             freeModeMomentum: false,
             freeModeMomentumBounce: false,
@@ -471,6 +471,14 @@
                 reverseDirection: true,
             },
             speed: 2000,
+            breakpoints: {
+                0: {
+                    slidesPerView: 2,
+                },
+                481: {
+                    slidesPerView: 3,
+                }
+            }
         });
     </script>
     <!-- Fact numbers -->
