@@ -1,7 +1,7 @@
 .equipment {
     position: relative;
     background: url('../assets/GraniteBackground.png');
-    padding: 250px 5.5% 180px;
+    padding: 150px 5.5% 180px;
     text-align: center;
     &__title-small {
         margin-bottom: 10px;
@@ -36,6 +36,7 @@
         &-swiper {
             .swiper-slide {
                 font-size: 18px;
+                padding: 0 30px;
             }
         }
     }
