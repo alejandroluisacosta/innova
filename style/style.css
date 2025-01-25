@@ -796,7 +796,7 @@
   }
   .allies__why-us {
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
   }
   .allies__why-us .text .fact {
     gap: 12px;
