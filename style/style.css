@@ -63,7 +63,7 @@
   }
   .nav .links-container {
     transform: translateX(100%);
-    position: absolute;
+    position: fixed;
     height: 100vh;
     top: 0;
     right: 0;
