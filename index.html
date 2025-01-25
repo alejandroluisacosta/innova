@@ -10,8 +10,11 @@
     <nav class="nav">
         <img class="company-name" src="./assets/CompanyNameHeader.svg" alt="Company's name"/>
         <div class="links-container">
-            <div class="close-container">
-                <img class="close-menu" src="./assets/CloseMenu.svg" alt="Cerrar menu" />
+            <div class="links-container__top">
+                <img class="links-container__company-name" src="./assets/CompanyNameMobileNav.svg" />
+                <div class="close-container">
+                    <img class="close-menu" src="./assets/CloseMenu.svg" alt="Cerrar menu" />
+                </div>
             </div>
             <ul class="links">
                 <li><a href="#hero">INICIO</a></li>
@@ -19,7 +22,6 @@
                 <li><a href="#services">SERVICIOS</a></li>
                 <li><a href="#contact">CONTACTO</a></li>
             </ul>
-            <img class="links-container__company-name" src="./assets/CompanyNameHeader.svg" />
         </div>
         <img class="burger-menu" src="./assets/BurgerMenu.webp" alt="Menu" />
     </nav>
@@ -630,7 +632,7 @@
 
         const initialize = () => {
             linksContainer = document.querySelector(".links-container");
-            closeButton = document.querySelector(".close-menu");
+            closeButton = document.querySelector(".close-container");
             burgerMenu = document.querySelector(".burger-menu");
             links = document.querySelectorAll(".links li");
 
