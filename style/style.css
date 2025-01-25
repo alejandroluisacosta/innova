@@ -789,7 +789,7 @@
     font-size: 26px;
   }
   .allies-swiper {
-    top: 350px !important;
+    bottom: 150px !important;
   }
   .allies-swiper .swiper-slide {
     font-size: 18px;
