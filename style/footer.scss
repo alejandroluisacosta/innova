@@ -136,32 +136,41 @@
     .footer {
         padding: 80px 20% 100px 5.55%;
         &__company-name {
-            width: 400px;
+            width: 585px;
         }
         &__subsection {
             .title {
                 gap: 6px;
                 .title__number {
-                    font-size: 16px;
+                    font-size: 24px;
                 }
                 .title__title {
-                    font-size: 32px;
+                    font-size: 48px;
                 }
             }
             .text {
-                font-size: 24px;
-                line-height: 36px;
+                font-size: 32px;
+                line-height: 48px;
                 margin-bottom: 10px;
+                a {
+                    font-size: 32px;
+                    line-height: 48px;
+                }
             }
         }
         &__bottom {
             .credits,
             .credits strong,
+            .credits a,
             .rif {
-                font-size: 20px;
+                font-size: 32px;
+            }
+            .credits img {
+                transform: scale(1.5);
+                margin-right: 12px;
             }
             .company-name {
-                width: 175px;
+                width: 220px;
             }
         }
     }

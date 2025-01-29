@@ -139,19 +139,31 @@
     .contact {
         padding: 150px 5.55% 300px;
         &__title {
-            font-size: 48px;
+            font-size: 64px;
             margin-bottom: 100px;
         }
         &__form {
             max-width: 1000px;
-            gap: 25px;
+            gap: 12px;
             label, input, button {
-                font-size: 24px;
+                font-size: 32px;
+            }
+            input {
+                margin-bottom: 45px;
             }
             .terms-container {
-                a {
-                    font-size: 24px;
+                margin-bottom: 40px;
+                input {
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 5px;
                 }
+                a {
+                    font-size: 32px;
+                }
+            }
+            button {
+                padding: 26px;
             }
         }
         &__modal {

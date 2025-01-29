@@ -31,14 +31,15 @@
         height: unset;
         padding: 100px 5.5%;
         .text {
-            font-size: 32px;
+            font-size: 35px;
         }
     }
 }
 
 @media only screen and (max-width: 480px) {
     .working-with-us {
-        gap: 6px;
+        gap: 15px;
+        padding: 65px 5.5%;
         &__text-container {
             flex-wrap: wrap;
             &--1 {
@@ -51,7 +52,7 @@
             }
             &--3 {
                 display: grid;
-                grid-template-columns: 190px 1fr;
+                grid-template-columns: 215px 1fr;
                 row-gap: 10px;
                 .text:nth-child(3) {
                     grid-column: span 2;
@@ -62,11 +63,17 @@
             }
             gap: 5px;
             .text {
-                font-size: 24px;
+                font-size: 28px;
+                &--outlined {
+                    line-height: 40px;
+                }
             }
             .image {
                 width: 32px;
                 height: 32px;
+                &--checkbox {
+                    margin-left: 7px;
+                }
             }
             #trend-icon {
                 display: none;
@@ -75,11 +82,25 @@
     }
 }
 
-@media only screen and (min-width: 1920px) {
+@media only screen and (max-width: 375px) {
     .working-with-us {
         &__text-container {
             .text {
-                font-size: 80px;
+                font-size: 26px;
+            }
+            &--3 {
+                grid-template-columns: 205px 1fr;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .working-with-us {
+        gap: 72px;
+        &__text-container {
+            .text {
+                font-size: 100px;
             }
             .image {
                 width: 90px;

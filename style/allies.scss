@@ -36,7 +36,7 @@
         .text {
             text-align: start;
             .title {
-                font-size: 24px;
+                font-size: 32px;
                 font-weight: 600;
                 margin-bottom: 55px;
             }
@@ -85,7 +85,10 @@
                 }
             }
             .image {
-                width: 350px;
+                width: 300px;
+                height: 345px;
+                object-fit: cover;
+                object-position: left;
             }
         }
     }
@@ -93,11 +96,17 @@
 
 @media only screen and (max-width: 480px) {
     .allies {
+        padding: 65px 5.5% 60px;
+        &__title-small {
+            text-align: start;
+        }
         &__title-big {
             font-size: 26px;
+            text-align: start;
+            margin-bottom: 200px;
         }
         &-swiper {
-            bottom: 150px !important;
+            bottom: 40px !important;
             .swiper-slide {
                 font-size: 18px;
             }
@@ -105,6 +114,7 @@
         &__why-us {
             flex-direction: column;
             gap: 40px;
+            margin-bottom: 130px;
             .text {
                 .fact {
                     gap: 12px;
@@ -116,6 +126,9 @@
             }
             .image {
                 width: 100%;
+                height: unset;
+                object-fit: unset;
+                object-position: unset;
             }
         }
     }
@@ -123,13 +136,19 @@
 
 @media only screen and (min-width: 1920px) {
     .allies {
+        &__title-small {
+            font-size: 24px;
+        }
+        &__title-big {
+            font-size: 48px;
+        }
         &__why-us {
             .text {
                 .title {
-                    font-size: 40px;
+                    font-size: 48px;
                 }
                 .fact, .button {
-                    font-size: 24px;
+                    font-size: 32px;
                 }
             }
             .image {
