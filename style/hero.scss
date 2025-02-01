@@ -75,13 +75,16 @@
                 border-radius: 2px;
                 align-items: center;
                 background-color: #303030;
-                color: #F8F8F8;
+                color: var(--button-white);
                 font-weight: 600;
                 cursor: pointer;
                 .arrow {
                     margin-top: -3px;
                 }
                 text-decoration: none;
+                &:visited {
+                    color: var(--button-white);
+                }
             }
         }
     }

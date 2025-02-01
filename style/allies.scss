@@ -23,8 +23,25 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: white;
-            border: 1px solid #E5E6E6;
+            img {
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+            }
+            #alcasa {
+                width: 160px;
+            }
+            #cvg {
+                height: 80px;
+                width: unset;
+            }
+            #ferrominera {
+                height: unset;
+                width: 30%;
+            }
+            #venalum {
+                width: unset;
+            }
         }
     }
     &__why-us {
@@ -51,15 +68,19 @@
                 }
             }
             .button {
-                display: flex;
+                display: inline-flex;
                 gap: 12px;
                 padding: 16px 32px;
                 border-radius: 2px;
                 font-weight: 400;
                 align-items: center;
-                color: var(--button-white);
                 background-color: var(--button-black);
                 cursor: pointer;
+                color: var(--button-white);
+                text-decoration: none;
+                &:visited {
+                    color: var(--button-white);
+                }
             }
         }
     }
@@ -67,6 +88,29 @@
 
 @media only screen and (max-width: 1000px) {
     .allies {
+        &-swiper {
+            .swiper-slide {
+                img {
+                    width: 70px;
+                    height: 70px;
+                    object-fit: cover;
+                }
+                #bauxilum {
+                    width: 135px;
+                }
+                #alcasa {
+                    width: 120px;
+                }
+                #cvg {
+                    height: 60px;
+                    width: unset;
+                }
+                #ferrominera {
+                    height: unset;
+                    width: 35%;
+                }
+            }
+        }
         &__why-us {
             .text {
                 .title {
@@ -109,6 +153,25 @@
             bottom: 40px !important;
             .swiper-slide {
                 font-size: 18px;
+                img {
+                    width: 50px;
+                    height: 50px;
+                    object-fit: cover;
+                }
+                #bauxilum {
+                    width: 120px;
+                }
+                #alcasa {
+                    width: 100px;
+                }
+                #cvg {
+                    height: 50px;
+                    width: unset;
+                }
+                #ferrominera {
+                    height: unset;
+                    width: 35%;
+                }
             }
         }
         &__why-us {
@@ -147,8 +210,15 @@
                 .title {
                     font-size: 48px;
                 }
-                .fact, .button {
+                .fact {
                     font-size: 32px;
+                }
+                .button {
+                    font-size: 28px;
+                    .arrow {
+                        width: 19px;
+                        transform: translate(0, 3px);
+                    }
                 }
             }
             .image {
