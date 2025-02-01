@@ -220,6 +220,7 @@
   color: #F8F8F8;
   font-weight: 600;
   cursor: pointer;
+  text-decoration: none;
 }
 .hero__main .description__button .arrow {
   margin-top: -3px;
@@ -539,12 +540,18 @@
   margin-bottom: 25px;
 }
 .services__button {
+  display: inline-flex;
   padding: 18px 32px;
   border-radius: 2px;
   font-weight: 600;
-  display: flex;
   gap: 12px;
   cursor: pointer;
+  text-decoration: none;
+  color: var(--button-black);
+  background-color: var(--button-white);
+}
+.services__button:visited {
+  color: var(--button-black);
 }
 .services .swiper-button-prev,
 .services .swiper-button-next {

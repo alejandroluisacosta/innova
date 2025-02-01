@@ -36,12 +36,18 @@
         margin-bottom: 25px;
     }
     &__button {
+        display: inline-flex;
         padding: 18px 32px;
         border-radius: 2px;
         font-weight: 600;
-        display: flex;
         gap: 12px;
         cursor: pointer;
+        text-decoration: none;
+        color: var(--button-black);
+        background-color: var(--button-white);
+        &:visited {
+            color: var(--button-black);
+        }
     }
     .swiper-button-prev,
     .swiper-button-next {
