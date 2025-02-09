@@ -28,6 +28,10 @@
                 height: 100px;
                 object-fit: cover;
             }
+            #bauxilum {
+                height: 140px;
+                width: 200px;
+            }
             #alcasa {
                 width: 160px;
             }
@@ -37,10 +41,15 @@
             }
             #ferrominera {
                 height: unset;
-                width: 30%;
+                width: 24%;
             }
             #venalum {
                 width: unset;
+            }
+            .pdvsa {
+                width: 70%;
+                height: 90px;
+                margin: 0 20px;
             }
         }
     }
@@ -97,6 +106,7 @@
                 }
                 #bauxilum {
                     width: 135px;
+                    height: 100px;
                 }
                 #alcasa {
                     width: 120px;
@@ -108,6 +118,14 @@
                 #ferrominera {
                     height: unset;
                     width: 35%;
+                }
+                .pdvsa {
+                    width: 80%;
+                    height: 65px;
+                }
+                #pdvsa-white {
+                    height: 100px;
+                    margin: 0 30px;
                 }
             }
         }
@@ -160,6 +178,7 @@
                 }
                 #bauxilum {
                     width: 120px;
+                    height: 80px;
                 }
                 #alcasa {
                     width: 100px;
@@ -171,6 +190,14 @@
                 #ferrominera {
                     height: unset;
                     width: 35%;
+                }
+                .pdvsa {
+                    width: 80%;
+                    height: 50px;
+                }
+                #pdvsa-white {
+                    height: 80px;
+                    margin: 0 30px;
                 }
             }
         }
@@ -204,6 +231,13 @@
         }
         &__title-big {
             font-size: 48px;
+        }
+        &-swiper {
+            .swiper-slide {
+                #ferrominera {
+                    width: 18%;
+                }
+            }
         }
         &__why-us {
             .text {

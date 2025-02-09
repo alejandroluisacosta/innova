@@ -785,6 +785,10 @@
   height: 100px;
   object-fit: cover;
 }
+.allies-swiper .swiper-slide #bauxilum {
+  height: 140px;
+  width: 200px;
+}
 .allies-swiper .swiper-slide #alcasa {
   width: 160px;
 }
@@ -794,10 +798,15 @@
 }
 .allies-swiper .swiper-slide #ferrominera {
   height: unset;
-  width: 30%;
+  width: 24%;
 }
 .allies-swiper .swiper-slide #venalum {
   width: unset;
+}
+.allies-swiper .swiper-slide .pdvsa {
+  width: 70%;
+  height: 90px;
+  margin: 0 20px;
 }
 .allies__why-us {
   display: flex;
@@ -848,6 +857,7 @@
   }
   .allies-swiper .swiper-slide #bauxilum {
     width: 135px;
+    height: 100px;
   }
   .allies-swiper .swiper-slide #alcasa {
     width: 120px;
@@ -859,6 +869,14 @@
   .allies-swiper .swiper-slide #ferrominera {
     height: unset;
     width: 35%;
+  }
+  .allies-swiper .swiper-slide .pdvsa {
+    width: 80%;
+    height: 65px;
+  }
+  .allies-swiper .swiper-slide #pdvsa-white {
+    height: 100px;
+    margin: 0 30px;
   }
   .allies__why-us .text {
     font-size: 16px;
@@ -908,6 +926,7 @@
   }
   .allies-swiper .swiper-slide #bauxilum {
     width: 120px;
+    height: 80px;
   }
   .allies-swiper .swiper-slide #alcasa {
     width: 100px;
@@ -919,6 +938,14 @@
   .allies-swiper .swiper-slide #ferrominera {
     height: unset;
     width: 35%;
+  }
+  .allies-swiper .swiper-slide .pdvsa {
+    width: 80%;
+    height: 50px;
+  }
+  .allies-swiper .swiper-slide #pdvsa-white {
+    height: 80px;
+    margin: 0 30px;
   }
   .allies__why-us {
     flex-direction: column;
@@ -945,6 +972,9 @@
   }
   .allies__title-big {
     font-size: 48px;
+  }
+  .allies-swiper .swiper-slide #ferrominera {
+    width: 18%;
   }
   .allies__why-us .text .title {
     font-size: 48px;
