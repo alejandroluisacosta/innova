@@ -1,7 +1,10 @@
 .hero {
     position: relative;
     padding: 115px 5.55% 120px 5.25%;
-    background: url('../assets/GraniteBackground.png');
+    background: var(--button-white);
+    &::before {
+        z-index: 0;
+    }
     &__title {
         font-size: 54px;
         font-weight: 700;
@@ -105,7 +108,7 @@
         }
     }
     &__learn-more {
-        position: absolute;
+        position: absolute !important;
         bottom: 110px;
         left: 5.55%;
         .relative-container {
@@ -130,6 +133,11 @@
             transform: scale(0.8);
         }
     }
+}
+
+#hero > * {
+    position: relative;
+    z-index: 1;
 }
 
 @media only screen and (max-width: 1000px) {

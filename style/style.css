@@ -147,7 +147,10 @@
 .hero {
   position: relative;
   padding: 115px 5.55% 120px 5.25%;
-  background: url("../assets/GraniteBackground.png");
+  background: var(--button-white);
+}
+.hero::before {
+  z-index: 0;
 }
 .hero__title {
   font-size: 54px;
@@ -252,7 +255,7 @@
   font-size: 54px;
 }
 .hero__learn-more {
-  position: absolute;
+  position: absolute !important;
   bottom: 110px;
   left: 5.55%;
 }
@@ -276,6 +279,11 @@
   top: 26%;
   left: 28%;
   transform: scale(0.8);
+}
+
+#hero > * {
+  position: relative;
+  z-index: 1;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -523,6 +531,11 @@
   background-position: center;
   padding: 80px 5.55%;
   color: #F8F8F8;
+  z-index: 0;
+}
+.services .services-slide > * {
+  position: relative;
+  z-index: 1;
 }
 .services .services-slide--construction {
   background: url("../assets/Construction.webp");
@@ -699,8 +712,6 @@
 }
 .about {
   padding: 250px 28.5%;
-  background: url("../assets/GraniteBackground.png");
-  background-color: #F9F9F9;
 }
 .about__name {
   font-size: 24px;
@@ -756,7 +767,6 @@
   position: relative;
   padding: 165px 5.5% 90px;
   text-align: center;
-  background: url("../assets/GraniteBackground.png");
 }
 .allies__title-small {
   margin-bottom: 10px;
@@ -785,6 +795,10 @@
   height: 100px;
   object-fit: cover;
 }
+.allies-swiper .swiper-slide #bauxilum {
+  height: 140px;
+  width: 200px;
+}
 .allies-swiper .swiper-slide #alcasa {
   width: 160px;
 }
@@ -794,10 +808,15 @@
 }
 .allies-swiper .swiper-slide #ferrominera {
   height: unset;
-  width: 30%;
+  width: 24%;
 }
 .allies-swiper .swiper-slide #venalum {
   width: unset;
+}
+.allies-swiper .swiper-slide .pdvsa {
+  width: 70%;
+  height: 90px;
+  margin: 0 20px;
 }
 .allies__why-us {
   display: flex;
@@ -848,6 +867,7 @@
   }
   .allies-swiper .swiper-slide #bauxilum {
     width: 135px;
+    height: 100px;
   }
   .allies-swiper .swiper-slide #alcasa {
     width: 120px;
@@ -859,6 +879,14 @@
   .allies-swiper .swiper-slide #ferrominera {
     height: unset;
     width: 35%;
+  }
+  .allies-swiper .swiper-slide .pdvsa {
+    width: 80%;
+    height: 65px;
+  }
+  .allies-swiper .swiper-slide #pdvsa-white {
+    height: 100px;
+    margin: 0 30px;
   }
   .allies__why-us .text {
     font-size: 16px;
@@ -908,6 +936,7 @@
   }
   .allies-swiper .swiper-slide #bauxilum {
     width: 120px;
+    height: 80px;
   }
   .allies-swiper .swiper-slide #alcasa {
     width: 100px;
@@ -919,6 +948,14 @@
   .allies-swiper .swiper-slide #ferrominera {
     height: unset;
     width: 35%;
+  }
+  .allies-swiper .swiper-slide .pdvsa {
+    width: 80%;
+    height: 50px;
+  }
+  .allies-swiper .swiper-slide #pdvsa-white {
+    height: 80px;
+    margin: 0 30px;
   }
   .allies__why-us {
     flex-direction: column;
@@ -946,6 +983,9 @@
   .allies__title-big {
     font-size: 48px;
   }
+  .allies-swiper .swiper-slide #ferrominera {
+    width: 18%;
+  }
   .allies__why-us .text .title {
     font-size: 48px;
   }
@@ -966,7 +1006,6 @@
 .working-with-us {
   position: relative;
   height: 100vh;
-  background: url("../assets/BrownGraniteBackground.png");
   background-color: #532501;
   padding: 125px 5.55%;
   display: flex;
@@ -1513,7 +1552,6 @@
 }
 .equipment {
   position: relative;
-  background: url("../assets/GraniteBackground.png");
   padding: 150px 5.5% 180px;
   text-align: center;
 }
