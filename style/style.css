@@ -768,6 +768,9 @@
   padding: 165px 5.5% 90px;
   text-align: center;
 }
+.allies::before {
+  z-index: 0;
+}
 .allies__title-small {
   margin-bottom: 10px;
 }
@@ -857,6 +860,11 @@
 }
 .allies__why-us .text .button:visited {
   color: var(--button-white);
+}
+
+#allies > * {
+  position: relative;
+  z-index: 1;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -1097,7 +1105,7 @@
     gap: 72px;
   }
   .working-with-us__text-container .text {
-    font-size: 100px;
+    font-size: 90px;
   }
   .working-with-us__text-container .image {
     width: 90px;
