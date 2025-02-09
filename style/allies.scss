@@ -2,6 +2,9 @@
     position: relative;
     padding: 165px 5.5% 90px;
     text-align: center;
+    &::before {
+        z-index: 0;
+    }
     &__title-small {
         margin-bottom: 10px;
     }
@@ -92,6 +95,11 @@
             }
         }
     }
+}
+
+#allies > * {
+    position: relative;
+    z-index: 1;
 }
 
 @media only screen and (max-width: 1000px) {
