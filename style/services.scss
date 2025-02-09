@@ -9,6 +9,11 @@
         background-position: center;
         padding: 80px 5.55%;
         color: #F8F8F8;
+        z-index: 0;
+        & > * {
+            position: relative;
+            z-index: 1;   
+        }
         &--construction {
             background: url('../assets/Construction.webp');
         }

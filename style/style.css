@@ -147,7 +147,10 @@
 .hero {
   position: relative;
   padding: 115px 5.55% 120px 5.25%;
-  background: url("../assets/GraniteBackground.png");
+  background: var(--button-white);
+}
+.hero::before {
+  z-index: 0;
 }
 .hero__title {
   font-size: 54px;
@@ -252,7 +255,7 @@
   font-size: 54px;
 }
 .hero__learn-more {
-  position: absolute;
+  position: absolute !important;
   bottom: 110px;
   left: 5.55%;
 }
@@ -276,6 +279,11 @@
   top: 26%;
   left: 28%;
   transform: scale(0.8);
+}
+
+#hero > * {
+  position: relative;
+  z-index: 1;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -523,6 +531,11 @@
   background-position: center;
   padding: 80px 5.55%;
   color: #F8F8F8;
+  z-index: 0;
+}
+.services .services-slide > * {
+  position: relative;
+  z-index: 1;
 }
 .services .services-slide--construction {
   background: url("../assets/Construction.webp");
@@ -699,8 +712,6 @@
 }
 .about {
   padding: 250px 28.5%;
-  background: url("../assets/GraniteBackground.png");
-  background-color: #F9F9F9;
 }
 .about__name {
   font-size: 24px;
@@ -756,7 +767,6 @@
   position: relative;
   padding: 165px 5.5% 90px;
   text-align: center;
-  background: url("../assets/GraniteBackground.png");
 }
 .allies__title-small {
   margin-bottom: 10px;
@@ -996,7 +1006,6 @@
 .working-with-us {
   position: relative;
   height: 100vh;
-  background: url("../assets/BrownGraniteBackground.png");
   background-color: #532501;
   padding: 125px 5.55%;
   display: flex;
@@ -1543,7 +1552,6 @@
 }
 .equipment {
   position: relative;
-  background: url("../assets/GraniteBackground.png");
   padding: 150px 5.5% 180px;
   text-align: center;
 }

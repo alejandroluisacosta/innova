@@ -108,7 +108,7 @@
     <section class="services" id="services">
         <div class="swiper services-swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide services-slide services-slide--construction">
+                <div class="swiper-slide services-slide services-slide--construction" id="services-slide-1">
                     <h3 class="services__title">Servicios</h3>
                     <h1 class="services__service-name">CONSTRUCCIÓN</h1>
                     <p class="services__service-description">Diseño y ejecución de obras civiles, eléctricas e hidráulicas.<br>Supervisión, gerencia y mantenimiento industrial.<br>Proyectos urbanísticos y ambientales.</p>
@@ -117,7 +117,7 @@
                         <img class="arrow" src="./assets/ButtonArrowBlack.svg" alt="Arrow icon" />
                     </a>
                 </div>
-                <div class="swiper-slide services-slide services-slide--procurement">
+                <div class="swiper-slide services-slide services-slide--procurement" id="services-slide-2">
                     <h3 class="services__title">Servicios</h3>
                     <h1 class="services__service-name">PROCURA Y SUMINISTROS</h1>
                     <p class="services__service-description">Compra y suministro de equipos de protección industrial.<br>Gestión nacional e internacional de materiales y equipos.<br>Soluciones integrales de equipamiento.</p>
@@ -126,7 +126,7 @@
                         <img class="arrow" src="./assets/ButtonArrowBlack.svg" alt="Arrow icon" />
                     </a>
                 </div>
-                <div class="swiper-slide services-slide services-slide--oil">
+                <div class="swiper-slide services-slide services-slide--oil" id="services-slide-3">
                     <h3 class="services__title">Servicios</h3>
                     <h1 class="services__service-name">SECTOR PETROLERO</h1>
                     <p class="services__service-description">Torqueo, desensamble y alquiler de herramientas.<br>Diagnóstico y mantenimiento de equipos especializados.<br>Soluciones avanzadas en bombeo, instrumentación y tendido de tuberías.</p>
@@ -173,7 +173,7 @@
               </div>
         </div>
     </section>
-    <section class="equipment">
+    <section class="equipment" id="equipment">
         <p class="equipment__title-small">Impulsamos tus proyectos</p>
         <h4 class="equipment__title-big">EQUIPOS DISPONIBLES PARA ALQUILER</h4>
         <div class="swiper equipment-swiper">
@@ -186,7 +186,7 @@
             </div>
           </div>    
     </section>
-    <section class="allies">
+    <section class="allies" id="allies">
         <div class="allies__why-us">
             <div class="text">
                 <h4 class="title">¿POR QUÉ ELEGIRNOS?</h4>
@@ -252,7 +252,7 @@
             </div>
         </div>
     </section>
-    <section class="working-with-us">
+    <section class="working-with-us" id="working-with-us">
         <div class="working-with-us__text-container working-with-us__text-container--1">
             <p class="text">ELEGIRNOS SIGNIFICA</p>
             <img class="image" src="assets/Human.svg" alt="Ícono de humano" />
@@ -398,6 +398,89 @@
     </footer>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.js"></script>
+    <!-- Grains effect -->
+    <script src="./js/grained.js"></script>
+    <script>
+        grained("#hero", {
+            animate: true,
+            patternWidth: 100,
+            patternHeight: 100,
+            grainOpacity: 0.1,
+            grainDensity: 1,
+            grainWidth: 1,
+            grainHeight: 1
+        });
+
+        grained("#about", {
+            animate: true,
+            patternWidth: 100,
+            patternHeight: 100,
+            grainOpacity: 0.1,
+            grainDensity: 1,
+            grainWidth: 1,
+            grainHeight: 1
+        });
+
+        grained("#services-slide-1", {
+            animate: true,
+            patternWidth: 100,
+            patternHeight: 100,
+            grainOpacity: 0.1,
+            grainDensity: 1,
+            grainWidth: 1,
+            grainHeight: 1
+        });
+
+        grained("#services-slide-2", {
+            animate: true,
+            patternWidth: 100,
+            patternHeight: 100,
+            grainOpacity: 0.1,
+            grainDensity: 1,
+            grainWidth: 1,
+            grainHeight: 1
+        });
+
+        grained("#services-slide-3", {
+            animate: true,
+            patternWidth: 100,
+            patternHeight: 100,
+            grainOpacity: 0.1,
+            grainDensity: 1,
+            grainWidth: 1,
+            grainHeight: 1
+        });
+
+        grained("#equipment", {
+            animate: true,
+            patternWidth: 100,
+            patternHeight: 100,
+            grainOpacity: 0.1,
+            grainDensity: 1,
+            grainWidth: 1,
+            grainHeight: 1
+        });
+
+        grained("#allies", {
+            animate: true,
+            patternWidth: 100,
+            patternHeight: 100,
+            grainOpacity: 0.1,
+            grainDensity: 1,
+            grainWidth: 1,
+            grainHeight: 1
+        });
+
+        grained("#working-with-us", {
+            animate: true,
+            patternWidth: 100,
+            patternHeight: 100,
+            grainOpacity: 0.1,
+            grainDensity: 1,
+            grainWidth: 1,
+            grainHeight: 1
+        });
+    </script>
     <!-- Services Loading Lines -->
     <script type="module">
         const progressLines = [...document.querySelectorAll(".autoplay-progress--slide svg")];
