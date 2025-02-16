@@ -1352,31 +1352,31 @@
     padding: 80px 20% 100px 5.55%;
   }
   .footer__company-name {
-    width: 585px;
+    width: 450px;
   }
   .footer__subsection .title {
     gap: 6px;
   }
   .footer__subsection .title .title__number {
-    font-size: 24px;
+    font-size: 18px;
   }
   .footer__subsection .title .title__title {
-    font-size: 48px;
+    font-size: 36px;
   }
   .footer__subsection .text {
-    font-size: 32px;
-    line-height: 48px;
+    font-size: 24px;
+    line-height: 36px;
     margin-bottom: 10px;
   }
   .footer__subsection .text a {
-    font-size: 32px;
-    line-height: 48px;
+    font-size: 24px;
+    line-height: 36px;
   }
   .footer__bottom .credits,
   .footer__bottom .credits strong,
   .footer__bottom .credits a,
   .footer__bottom .rif {
-    font-size: 32px;
+    font-size: 24px;
   }
   .footer__bottom .credits img {
     transform: scale(1.5);
