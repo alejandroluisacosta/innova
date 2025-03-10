@@ -238,6 +238,9 @@
 .hero__main .description__button:visited {
   color: var(--button-white);
 }
+.hero__main .description__button:active {
+  background-color: #191A1A;
+}
 .hero__facts {
   display: flex;
   justify-content: flex-end;
@@ -576,6 +579,9 @@
 .services__button:visited {
   color: var(--button-black);
 }
+.services__button:active {
+  background-color: #E5E6E6;
+}
 .services .swiper-button-prev,
 .services .swiper-button-next {
   width: 48px;
@@ -860,6 +866,9 @@
 }
 .allies__why-us .text .button:visited {
   color: var(--button-white);
+}
+.allies__why-us .text .button:active {
+  background-color: #191A1A;
 }
 
 #allies > * {
@@ -1454,6 +1463,9 @@
 }
 .contact__form button img {
   transform: translate(0, 1px);
+}
+.contact__form button:active {
+  background-color: #191A1A;
 }
 .contact__form .error-message {
   color: red;

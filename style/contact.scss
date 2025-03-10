@@ -64,6 +64,9 @@
             img {
                 transform: translate(0, 1px);
             }
+            &:active {
+                background-color: #191A1A;
+            }
         }
         .error-message {
             color: red;

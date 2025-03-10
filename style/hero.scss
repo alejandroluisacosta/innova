@@ -88,6 +88,9 @@
                 &:visited {
                     color: var(--button-white);
                 }
+                &:active {
+                    background-color: #191A1A;
+                }
             }
         }
     }

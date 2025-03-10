@@ -53,6 +53,9 @@
         &:visited {
             color: var(--button-black);
         }
+        &:active {
+            background-color: #E5E6E6;
+        }
     }
     .swiper-button-prev,
     .swiper-button-next {
