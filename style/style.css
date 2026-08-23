@@ -393,9 +393,9 @@
   }
   .hero__main .hero-swiper .swiper-scrollbar {
     width: 70%;
-    left: var(--image-center-offset, 0px);
+    left: 50%;
     bottom: 20px;
-    transform: translateX(-48%);
+    transform: translateX(-50%);
   }
   .hero__main .hero-swiper .swiper-button-next,
   .hero__main .hero-swiper .swiper-button-prev {
