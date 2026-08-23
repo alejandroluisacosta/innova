@@ -4,6 +4,8 @@
         height: 100vh;
     }
     .services-slide {
+        display: flex;
+        flex-direction: column;
         background-size: cover !important;
         background-repeat: no-repeat !important;
         background-position: center;
@@ -42,6 +44,7 @@
     }
     &__button {
         display: inline-flex;
+        align-self: flex-start;
         padding: 18px 32px;
         border-radius: 2px;
         font-weight: 600;
@@ -57,23 +60,31 @@
             background-color: #E5E6E6;
         }
     }
-    .swiper-button-prev,
-    .swiper-button-next {
+    &__nav {
+        display: flex;
+        justify-content: flex-end;
+        gap: 16px;
+        width: 100%;
+        margin-top: auto;
+        padding-top: 24px;
+    }
+    &__nav-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
         width: 48px;
         height: 48px;
+        padding: 12px;
         border-radius: 50%;
         background: transparent;
         border: 2.5px solid #ECECECBF;
-        top: unset;
-        bottom: 100px;
-        padding: 12px;
-    }
-    .swiper-button-prev {
-        left: unset;
-        right: 10%;
-    }
-    .swiper-button-next {
-        right: 5.5%;
+        cursor: pointer;
+        appearance: none;
+        img {
+            display: block;
+            pointer-events: none;
+        }
     }
 }
 
@@ -132,9 +143,6 @@
 
 @media only screen and (max-width: 1000px) {
     .services {
-        .swiper-button-prev {
-            right: 15%;
-        }
         .progress-text {
             font-size: 16px;
         }
@@ -164,18 +172,19 @@
             line-height: 24px;
             margin-bottom: 16px;
         }
+        &__nav {
+            justify-content: space-between;
+            margin-top: 16px;
+            padding-top: 0;
+        }
         .services-swiper {
             height: 90vh;
         }
         .swiper-wrapper {
             position: relative;
         }
-        .swiper-button-prev,
-        .swiper-button-next {
-            bottom: 40px;
-        }
-        .swiper-button-prev {
-            right: 20%;
+        .services-slide {
+            padding-bottom: 160px;
         }
         .autoplay-progress,
         .progress-2,
@@ -187,15 +196,6 @@
             margin-left: 3.55%;
             margin-right: 3.55%;
             bottom: 100px;
-        }
-    }
-}
-
-
-@media only screen and (max-width: 375px) {
-    .services {
-        .swiper-button-prev {
-            right: 25%;
         }
     }
 }
